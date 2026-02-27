@@ -1,6 +1,6 @@
 
 ## What does this PR do?
-Clearly decribe the changes made.
+Clearly describe the changes made.
 
 ## What issue does this close?
 Closes #
@@ -9,6 +9,7 @@ Closes #
 Describe what tests were performed and the results.
 
 ## Checklist
+To confirm replace '[ ]' with '[x]'
 - [ ] Code runs without errors
 - [ ] Tested locally
 - [ ] Existing functionality still works
