@@ -1,0 +1,40 @@
+name: Feature request
+description: Suggest a new feature or improvement.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: feature_description
+    attributes:
+      label: Feature description
+      description: What would you like to include to this project?
+      placeholder: Clearly describe the new feature.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem it solves
+      description: Why is this feature needed?
+      placeholder: Explain what problem exists that makes this feature necessary.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: Proposed solution (optional)
+      description: How could this feature work?
+      placeholder: Describe mechanics or behaviour.
+    validations:
+      required: false
+      
+  - type: textarea
+    id: additional_notes
+    attributes:
+      lable: Additional notes
+      descriprion:  Add screenshots, links, examples, or technical details that can help.
+      placeholder: Optional extra information.
+    validations:
+      required: false
