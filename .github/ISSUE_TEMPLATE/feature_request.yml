@@ -33,8 +33,8 @@ body:
   - type: textarea
     id: additional_notes
     attributes:
-      lable: Additional notes
-      descriprion:  Add screenshots, links, examples, or technical details that can help.
+      label: Additional notes
+      description: Add screenshots, links, examples, or technical details that can help.
       placeholder: Optional extra information.
     validations:
       required: false
