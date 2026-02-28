@@ -1,6 +1,6 @@
 <b>DRAFT!!!!!</b>
 
-**Contribution Guidelines**
+# Contribution Guidelines
 
 Thank you for taking interest and even contributing in our open source project [ Insert name ]. A rouge-like playable open source game!
 We welcome everyone, from developers, artists, game designers and testers who want to help improve the project.
@@ -11,7 +11,7 @@ The inspiration for this comes from games such as "The Binding Of Issac" and old
 Here we have set up the contribution guidelines for ye to read before you get started!
 Before getting started, the game was developed using Godot game engine (from steam or github) with an external editor for scripts, for us it was VS code.
 
-🎉 **GETTING STARTED!**
+## 🎉 GETTING STARTED
 1. Fork the repository on GitHub.
 2. Clone your fork locally.
 3. Open the project using the latest Godot Game Engine (Version X.X).
@@ -19,7 +19,8 @@ Before getting started, the game was developed using Godot game engine (from ste
 
 <code>feature/your-feature-name</code>
 
-🧬 **PROJECT STRUCTURE**
+## 🧬 PROJECT STRUCTURE
+
 - <code>scenes/</code> - Game scenes and levels
 - <code>scripts/</code> - GDScript files
 - <code>assests/</code> - Sprites, audio, and visual
@@ -28,7 +29,7 @@ Before getting started, the game was developed using Godot game engine (from ste
 ⚠️Please keep files organised and tidy within the folder structure.
 
 
-✨ **CODING STRUCTURE**
+## ✨ CODING STRUCTURE
 
 Please follow the coding standards to ensure consistency and maintainability
 End of the day we aren't animals 🐖
@@ -38,7 +39,7 @@ End of the day we aren't animals 🐖
 - Comment important logic. Again we want everyone to understand the code.
 - Avoid commenting test files.
 
-🎨 **ASSEST CONTRIBUTIONS**
+## 🎨 ASSEST CONTRIBUTIONS
 
 For all the designers and artists.
 
@@ -48,4 +49,27 @@ If you are contributing sprites, sounds, levels or maps, please follow the guide
 - Ensure all assets are original or licensed for open-source use. Leave comment on the author if it not your own.
 - Include attribution if required.
 
-📃 **Submitting Changes**
+## 📃 Submitting Changes
+
+- Commit your work with clear commit messages
+- Push to the correct branch
+- Open PR (pull request) explaining the following:
+   - Why the change is needed
+   - What you added or changed
+   - Screenshots are optional, but add if they help the explaination
+
+⚠️ Please note all PR will be reviewed before merging
+
+
+## 🐞 Reporting Bugs/ Issues
+
+If there are any issues or bugs:
+- Use GitHub issues or add it into bug branch with clear comments
+- Include steps to solve the problem
+- Add logs if possible
+
+## ✌️ Community Guidelines
+
+ Please be respectful to everyone and when giving feedback. <br>
+ The goal is for everyone to have fun and creating a positive environment for everyone.<br>
+ Please read Code of Conduct for more info.
