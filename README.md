@@ -49,5 +49,7 @@ Project structure may change during development!
 **Next phases to come**
 
 # License
-**TBD**
+MIT License - Please see the <code>License.md</code>
+
+Creative Commons Atrribution (CC 4.0) - This is for creative assests involved, please see the <code>Assets_license.md</code>
   
