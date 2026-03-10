@@ -1,4 +1,4 @@
-# [ PROJECT NAME ]
+# MacroBacterium
 ## Overview
 This projects aim is to develop an open-source rogue-like adventure game inspired by other titles such as "The Binding Of Issac", while keeping the old school acrade feel to it. The game will focus on replayability, using random seeds, the map, eneimes and chests will be random everytime. 
 
