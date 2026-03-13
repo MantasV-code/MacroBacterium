@@ -1,8 +1,6 @@
-<b>DRAFT!!!!!</b>
-
 # Contribution Guidelines
 
-Thank you for taking interest and even contributing in our open source project [ Insert name ]. A rouge-like playable open source game!
+Thank you for taking interest and even contributing in our open source project Macro-Bacterium. A rouge-like playable open source game!
 We welcome everyone, from developers, artists, game designers and testers who want to help improve the project.
 
 A little backstory on the OSS. We are 3 software developer students with an interst and passion for game. We are creating this project as part of college curriculum.
