@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8u6fhjt6x6p0"
-path="res://.godot/imported/Boarder walls.png-20c67ba2b8bbaffc45d31d984a1e5dea.ctex"
+uid="uid://dwypbgyj36lag"
+path="res://.godot/imported/BobBody12.png-161abc1baa007a2f42bc4ee918608fc7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Boarder walls.png"
-dest_files=["res://.godot/imported/Boarder walls.png-20c67ba2b8bbaffc45d31d984a1e5dea.ctex"]
+source_file="res://assets/sprites/Player/Bob/BobBody/BobBody12.png"
+dest_files=["res://.godot/imported/BobBody12.png-161abc1baa007a2f42bc4ee918608fc7.ctex"]
 
 [params]
 
