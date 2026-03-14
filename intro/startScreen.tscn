@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://0q32rtwhatxd"]
+
+[ext_resource type="Script" uid="uid://pshp7tg2254n" path="res://scripts/start_screen.gd" id="1_acos6"]
+[ext_resource type="Shader" uid="uid://kdp7iavon3nx" path="res://assests/starfield_shader_v5.gdshader" id="2_vc6w1"]
+[ext_resource type="Texture2D" uid="uid://bj7ixgy2th0td" path="res://assests/gamelogo2.png" id="3_r4uaw"]
+[ext_resource type="Script" uid="uid://ckopcjh8vjx53" path="res://scripts/label.gd" id="4_fv056"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3pj0e"]
+shader = ExtResource("2_vc6w1")
+shader_parameter/dimensions = Vector2(1024, 600)
+shader_parameter/small_stars = 50.0
+shader_parameter/small_stars_far_size = 0.5
+shader_parameter/small_stars_near_size = 1.0
+shader_parameter/large_stars = 8.0
+shader_parameter/large_stars_far_size = 0.5
+shader_parameter/large_stars_near_size = 1.0
+shader_parameter/far_stars_color = Color(0.5, 0, 1, 1)
+shader_parameter/near_stars_color = Color(1, 1, 1, 1)
+shader_parameter/base_scroll_speed = 0.05
+shader_parameter/additional_scroll_speed = 0.05
+
+[sub_resource type="SystemFont" id="SystemFont_3pj0e"]
+
+[sub_resource type="FontVariation" id="FontVariation_ev681"]
+base_font = SubResource("SystemFont_3pj0e")
+
+[sub_resource type="LabelSettings" id="LabelSettings_3pj0e"]
+font = SubResource("FontVariation_ev681")
+font_size = 60
+outline_size = 5
+outline_color = Color(0, 0.8039216, 0.21568628, 1)
+
+[node name="startScreen" type="Node2D" unique_id=231754964]
+script = ExtResource("1_acos6")
+
+[node name="Background" type="ColorRect" parent="." unique_id=443675249]
+material = SubResource("ShaderMaterial_3pj0e")
+offset_left = -18.0
+offset_right = 1166.0
+offset_bottom = 662.0
+color = Color(0, 0, 0, 1)
+
+[node name="Logo" type="Sprite2D" parent="." unique_id=1101376189]
+position = Vector2(578, 223)
+scale = Vector2(0.4259259, 0.42592594)
+texture = ExtResource("3_r4uaw")
+
+[node name="Label" type="Label" parent="." unique_id=888308586]
+offset_left = 359.0
+offset_top = 401.0
+offset_right = 782.0
+offset_bottom = 484.0
+text = "START"
+label_settings = SubResource("LabelSettings_3pj0e")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_fv056")
+
+[node name="Label2" type="Label" parent="." unique_id=1825005273]
+offset_left = 353.0
+offset_top = 490.0
+offset_right = 776.0
+offset_bottom = 573.0
+text = "QUIT"
+label_settings = SubResource("LabelSettings_3pj0e")
+horizontal_alignment = 1
+vertical_alignment = 1

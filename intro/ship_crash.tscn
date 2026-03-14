@@ -1,0 +1,260 @@
+[gd_scene format=3 uid="uid://dye28ns3renqx"]
+
+[ext_resource type="Script" uid="uid://c1kuq6gonls2r" path="res://scripts/ship_crash.gd" id="1_mdo4s"]
+[ext_resource type="Texture2D" uid="uid://buxvse7g4eh8q" path="res://assests/Planet_1.png" id="2_4hpj5"]
+[ext_resource type="Texture2D" uid="uid://clga1sjejkvex" path="res://assests/exp2_0.png" id="3_5hasw"]
+[ext_resource type="Texture2D" uid="uid://q4fvxptnrwiq" path="res://assests/pitrizzo-SpaceShip-gpl3-opengameart-24x24.png" id="4_dqi1x"]
+[ext_resource type="Texture2D" uid="uid://c1sn22xgkreq5" path="res://assests/Fiyah.png" id="5_r5k87"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hijt5"]
+atlas = ExtResource("3_5hasw")
+region = Rect2(0, 0, 61, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10521"]
+atlas = ExtResource("3_5hasw")
+region = Rect2(65, 0, 61, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3rafu"]
+atlas = ExtResource("3_5hasw")
+region = Rect2(130, 0, 61, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdg7d"]
+atlas = ExtResource("3_5hasw")
+region = Rect2(195, 0, 61, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nuv8t"]
+atlas = ExtResource("3_5hasw")
+region = Rect2(0, 65, 61, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kfge"]
+atlas = ExtResource("3_5hasw")
+region = Rect2(65, 65, 61, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6gnb"]
+atlas = ExtResource("3_5hasw")
+region = Rect2(130, 65, 61, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e7uwo"]
+atlas = ExtResource("3_5hasw")
+region = Rect2(195, 65, 61, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ynylv"]
+atlas = ExtResource("3_5hasw")
+region = Rect2(0, 130, 61, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85bhn"]
+atlas = ExtResource("3_5hasw")
+region = Rect2(65, 130, 61, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_few5b"]
+atlas = ExtResource("3_5hasw")
+region = Rect2(130, 130, 61, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpfoo"]
+atlas = ExtResource("3_5hasw")
+region = Rect2(195, 130, 61, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ei0lh"]
+atlas = ExtResource("3_5hasw")
+region = Rect2(0, 195, 61, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jiuxl"]
+atlas = ExtResource("3_5hasw")
+region = Rect2(65, 195, 61, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lj5ge"]
+atlas = ExtResource("3_5hasw")
+region = Rect2(130, 195, 61, 61)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4uo6d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hijt5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10521")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3rafu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bdg7d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nuv8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kfge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m6gnb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e7uwo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ynylv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_85bhn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_few5b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rpfoo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ei0lh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jiuxl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lj5ge")
+}],
+"loop": false,
+"name": &"explosion",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhihy"]
+atlas = ExtResource("5_r5k87")
+region = Rect2(0, 0, 74, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgoqv"]
+atlas = ExtResource("5_r5k87")
+region = Rect2(75, 0, 74, 84)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nvmqf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhihy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wgoqv")
+}],
+"loop": true,
+"name": &"booster",
+"speed": 8.0
+}]
+
+[sub_resource type="Animation" id="Animation_52hco"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ship:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1193.0001, -33)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Ship:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.7974325, 1.7974325)]
+}
+
+[sub_resource type="Animation" id="Animation_86wh2"]
+resource_name = "crash"
+length = 8.5
+markers = [{
+"color": Color(0, 0.5647059, 0.56078434, 1),
+"name": &"new_marker",
+"time": 4.866667
+}]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ship:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.5771204, 2, 2.585058, 3, 3.7602715, 4, 4.9097204, 5, 5.16348, 5.8225894, 6.01, 6.6820555, 7, 7.29449, 7.48449, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1193.0001, -33), Vector2(1114, 39.00003), Vector2(1062.0592, 77.089966), Vector2(1024, 105), Vector2(943, 115.99997), Vector2(960, 168), Vector2(906.02075, 210.57523), Vector2(889, 224.00003), Vector2(815.3126, 294.04852), Vector2(808, 301.00003), Vector2(767, 302.99994), Vector2(741.99994, 399), Vector2(726, 383.00003), Vector2(665, 469), Vector2(629, 469.99997), Vector2(573.00006, 480.00003), Vector2(562, 525), Vector2(531, 575)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Ship:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(3.4414086, 5.9934254, 7.014216),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.7974325, 1.7974325), Vector2(2.9597144, 2.9597144), Vector2(4.5018344, 4.5018344)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dmlvp"]
+_data = {
+&"RESET": SubResource("Animation_52hco"),
+&"crash": SubResource("Animation_86wh2")
+}
+
+[node name="shipCrash" type="Node2D" unique_id=1555671254]
+script = ExtResource("1_mdo4s")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1593715648]
+position = Vector2(575, 328.50003)
+scale = Vector2(0.61481476, 0.6231482)
+texture = ExtResource("2_4hpj5")
+
+[node name="Explosion" type="AnimatedSprite2D" parent="." unique_id=880823906]
+visible = false
+position = Vector2(498.99997, 565)
+scale = Vector2(2.4590163, 2.4590163)
+sprite_frames = SubResource("SpriteFrames_4uo6d")
+animation = &"explosion"
+frame_progress = 0.7268947
+
+[node name="Ship" type="Sprite2D" parent="." unique_id=1356374909]
+position = Vector2(1193.0001, -33)
+rotation = -2.0943952
+scale = Vector2(1.7974325, 1.7974325)
+texture = ExtResource("4_dqi1x")
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Ship" unique_id=21514736]
+position = Vector2(-7.7489624, 4.5199585)
+rotation = 0.113446765
+scale = Vector2(0.055706434, 0.05570645)
+sprite_frames = SubResource("SpriteFrames_nvmqf")
+animation = &"booster"
+frame_progress = 0.6862189
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Ship" unique_id=1679482025]
+position = Vector2(10.118042, 5.841675)
+rotation = 0.23038375
+scale = Vector2(0.090881884, 0.090881884)
+sprite_frames = SubResource("SpriteFrames_nvmqf")
+animation = &"booster"
+frame_progress = 0.4335286
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Ship" unique_id=75199653]
+position = Vector2(0.27282465, 16.217926)
+rotation = 1.5114552
+scale = Vector2(0.14826861, 0.14826861)
+sprite_frames = SubResource("SpriteFrames_nvmqf")
+animation = &"booster"
+frame_progress = 0.035420597
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2054105803]
+libraries/ = SubResource("AnimationLibrary_dmlvp")
+
+[node name="Shake_camera" type="Camera2D" parent="." unique_id=450114136]
+position = Vector2(581, 329)
