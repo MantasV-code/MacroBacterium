@@ -1,0 +1,154 @@
+[gd_scene format=3 uid="uid://bltqlc4l3vim7"]
+
+[ext_resource type="Script" uid="uid://b8mvgh3iafuax" path="res://space_flight.gd" id="1_q3ndn"]
+[ext_resource type="Shader" uid="uid://kdp7iavon3nx" path="res://assests/starfield_shader_v5.gdshader" id="2_80cbr"]
+[ext_resource type="Texture2D" uid="uid://q4fvxptnrwiq" path="res://assests/pitrizzo-SpaceShip-gpl3-opengameart-24x24.png" id="3_6h8f3"]
+[ext_resource type="Texture2D" uid="uid://c1sn22xgkreq5" path="res://assests/Fiyah.png" id="4_x5y1u"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_elfyb"]
+shader = ExtResource("2_80cbr")
+shader_parameter/dimensions = Vector2(1024, 600)
+shader_parameter/small_stars = 50.0
+shader_parameter/small_stars_far_size = 0.5
+shader_parameter/small_stars_near_size = 1.0
+shader_parameter/large_stars = 8.0
+shader_parameter/large_stars_far_size = 0.5
+shader_parameter/large_stars_near_size = 1.0
+shader_parameter/far_stars_color = Color(0.5, 0, 1, 1)
+shader_parameter/near_stars_color = Color(1, 1, 1, 1)
+shader_parameter/base_scroll_speed = 0.05
+shader_parameter/additional_scroll_speed = 0.05
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f67no"]
+atlas = ExtResource("4_x5y1u")
+region = Rect2(0, 0, 74, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_enokr"]
+atlas = ExtResource("4_x5y1u")
+region = Rect2(75, 0, 74, 84)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hshkp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f67no")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_enokr")
+}],
+"loop": true,
+"name": &"booster",
+"speed": 8.0
+}]
+
+[sub_resource type="Animation" id="Animation_xpagt"]
+length = 8.033334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ship:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1234, 337.00003)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ship:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.5760323]
+}
+
+[sub_resource type="Animation" id="Animation_wo2rb"]
+resource_name = "fly"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ship:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.98, 2, 3.02, 3.99, 4.99, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1234, 337.00003), Vector2(1234, 337.00003), Vector2(1089.9999, 338), Vector2(784, 340.00003), Vector2(577.00006, 336), Vector2(407.00006, 329), Vector2(-30.000122, 342)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ship:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.98, 1.57, 2.03, 2.5, 3.02, 3.54, 4, 4.55, 4.99),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-1.5760323, -1.5760323, -1.410226, -1.7575465, -1.4329153, -1.6632987, -1.4905112, -1.6632987, -1.4817846, -1.579523]
+}
+
+[sub_resource type="Animation" id="Animation_1flac"]
+resource_name = "new_animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a0136"]
+_data = {
+&"RESET": SubResource("Animation_xpagt"),
+&"fly": SubResource("Animation_wo2rb"),
+&"new_animation": SubResource("Animation_1flac")
+}
+
+[node name="space_flight" type="Node2D" unique_id=1025137404]
+script = ExtResource("1_q3ndn")
+
+[node name="spacebackground" type="ColorRect" parent="." unique_id=1185531451]
+material = SubResource("ShaderMaterial_elfyb")
+offset_left = -16.0
+offset_top = -6.0
+offset_right = 1163.0
+offset_bottom = 664.0
+color = Color(0, 0, 0, 1)
+
+[node name="ship" type="Sprite2D" parent="." unique_id=1418822446]
+position = Vector2(1234, 337.00003)
+rotation = -1.5760323
+scale = Vector2(3.8821867, 4.56473)
+texture = ExtResource("3_6h8f3")
+
+[node name="booster1" type="AnimatedSprite2D" parent="ship" unique_id=1559402376]
+position = Vector2(-0.33267424, 16.208797)
+rotation = 1.5830137
+scale = Vector2(0.1605232, 0.19122274)
+sprite_frames = SubResource("SpriteFrames_hshkp")
+animation = &"booster"
+frame_progress = 0.49705458
+
+[node name="booster2" type="AnimatedSprite2D" parent="ship" unique_id=2121054065]
+position = Vector2(-1.1040115, 28.686295)
+rotation = -4.694936
+scale = Vector2(0.08446363, 0.111609675)
+skew = 0.0042972565
+sprite_frames = SubResource("SpriteFrames_hshkp")
+animation = &"booster"
+frame_progress = 0.58719695
+
+[node name="fly" type="AnimationPlayer" parent="." unique_id=1922824862]
+libraries/ = SubResource("AnimationLibrary_a0136")
+
+[node name="Fade" type="ColorRect" parent="." unique_id=1464425398]
+modulate = Color(1, 1, 1, 0)
+offset_left = -9.0
+offset_top = -3.0
+offset_right = 1159.0
+offset_bottom = 654.0
+color = Color(0, 0, 0, 1)
+
+[connection signal="animation_finished" from="fly" to="." method="_on_fly_animation_finished"]
