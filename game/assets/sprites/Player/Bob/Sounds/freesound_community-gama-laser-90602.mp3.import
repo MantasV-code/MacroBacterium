@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cscdum80w48pt"
-path="res://.godot/imported/freesound_community-gama-laser-90602.mp3-f8dcd4739baeaa590e0f90d2bdd2ecf5.mp3str"
+path="res://.godot/imported/freesound_community-gama-laser-90602.mp3-76bfbdfd0c546214044efbaf511539e5.mp3str"
 
 [deps]
 
-source_file="res://Bob/Sounds/freesound_community-gama-laser-90602.mp3"
-dest_files=["res://.godot/imported/freesound_community-gama-laser-90602.mp3-f8dcd4739baeaa590e0f90d2bdd2ecf5.mp3str"]
+source_file="res://assets/sprites/Player/Bob/Sounds/freesound_community-gama-laser-90602.mp3"
+dest_files=["res://.godot/imported/freesound_community-gama-laser-90602.mp3-76bfbdfd0c546214044efbaf511539e5.mp3str"]
 
 [params]
 

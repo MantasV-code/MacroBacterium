@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bybif1cb6eumm"
-path="res://.godot/imported/Projectile10.png-daf5b56165ca5f5309c310d58c275a44.ctex"
+path="res://.godot/imported/Projectile10.png-408c64307f102e5aa999ea70ad734db4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Bob/Projectile/sprites/Projectile10.png"
-dest_files=["res://.godot/imported/Projectile10.png-daf5b56165ca5f5309c310d58c275a44.ctex"]
+source_file="res://assets/sprites/Player/Bob/Projectile/sprites/Projectile10.png"
+dest_files=["res://.godot/imported/Projectile10.png-408c64307f102e5aa999ea70ad734db4.ctex"]
 
 [params]
 

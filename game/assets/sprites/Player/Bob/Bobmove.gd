@@ -6,12 +6,37 @@ const FRICTION = 2800.0
 @onready var Body = %Body
 @onready var SFX1 = %Shoot
 
+@export var max_health: int = 3
+var current_health: int
+
 var is_shooting = false
 
 func _ready() -> void:
+	current_health = max_health
 	head.sprite_frames.set_animation_loop("ShootF", false)
 	head.sprite_frames.set_animation_loop("ShootB", false)
 	head.sprite_frames.set_animation_loop("ShootLR", false)
+	
+#decrease bobs health	
+func decrease_health(amount: int) -> void:
+	current_health -= amount
+	print("Bob's Health: ", current_health)
+	
+	if current_health <= 0:
+		die()
+		
+# increase bobs health 
+func increase_health(amount: int) -> void:
+	if current_health < 3:
+		current_health += amount
+		print("Bob's Health: ", current_health )
+	else:
+		print("Bob has full health")
+	
+# remove bob from the game
+func die() -> void:
+	print("Player died")
+	queue_free()
 	
 func _physics_process(delta: float) -> void:
 	var move_direction := Vector2(

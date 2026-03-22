@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://d1h7kiatxxg1r"]
+
+[ext_resource type="Texture2D" uid="uid://grm75jnnmnmq" path="res://assets/sprites/Enviroment/fire.png" id="1_xqmqg"]
+[ext_resource type="PackedScene" uid="uid://djohpnhiega2x" path="res://scenes/damagezone.tscn" id="2_g5mbl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xqmqg"]
+radius = 7.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g5mbl"]
+size = Vector2(3, 16.75)
+
+[node name="fire" type="Node2D" unique_id=1066398813]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1840601349]
+position = Vector2(0, -15)
+rotation = 1.5707964
+texture = ExtResource("1_xqmqg")
+
+[node name="Damagezone" parent="." unique_id=1596236458 instance=ExtResource("2_g5mbl")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Damagezone" unique_id=1431646758]
+position = Vector2(1, -8)
+shape = SubResource("CircleShape2D_xqmqg")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Damagezone" unique_id=840384822]
+position = Vector2(0.5, -23)
+shape = SubResource("RectangleShape2D_g5mbl")
