@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj7ixgy2th0td"
-path="res://.godot/imported/gamelogo2.png-f881d588811b1dc86bdef8903a539b5f.ctex"
+uid="uid://7tyxrdvbttq4"
+path="res://.godot/imported/O2 canister.png-380af267aad31f13c839fb215eded899.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/intro/gamelogo2.png"
-dest_files=["res://.godot/imported/gamelogo2.png-f881d588811b1dc86bdef8903a539b5f.ctex"]
+source_file="res://assets/sprites/pick-ups/O2 canister.png"
+dest_files=["res://.godot/imported/O2 canister.png-380af267aad31f13c839fb215eded899.ctex"]
 
 [params]
 

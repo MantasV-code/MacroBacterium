@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1sn22xgkreq5"
-path="res://.godot/imported/Fiyah.png-f6c0255fd530bc59dfde4f4281fbed3c.ctex"
+path="res://.godot/imported/Fiyah.png-ece335b5d72cfc90a5a14d51a4437677.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests/Fiyah.png"
-dest_files=["res://.godot/imported/Fiyah.png-f6c0255fd530bc59dfde4f4281fbed3c.ctex"]
+source_file="res://assets/sprites/intro/Fiyah.png"
+dest_files=["res://.godot/imported/Fiyah.png-ece335b5d72cfc90a5a14d51a4437677.ctex"]
 
 [params]
 

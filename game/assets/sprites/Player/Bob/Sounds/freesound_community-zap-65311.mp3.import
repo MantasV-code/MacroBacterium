@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://b6xw22o0y250g"
-path="res://.godot/imported/freesound_community-zap-65311.mp3-7a34791c9d1c33e8dd25047bc5424c3e.mp3str"
+path="res://.godot/imported/freesound_community-zap-65311.mp3-7e8fd715e233df861e20261220208f78.mp3str"
 
 [deps]
 
-source_file="res://Bob/Sounds/freesound_community-zap-65311.mp3"
-dest_files=["res://.godot/imported/freesound_community-zap-65311.mp3-7a34791c9d1c33e8dd25047bc5424c3e.mp3str"]
+source_file="res://assets/sprites/Player/Bob/Sounds/freesound_community-zap-65311.mp3"
+dest_files=["res://.godot/imported/freesound_community-zap-65311.mp3-7e8fd715e233df861e20261220208f78.mp3str"]
 
 [params]
 

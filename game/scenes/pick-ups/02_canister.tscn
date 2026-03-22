@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://bxtcu3muha6qw"]
+
+[ext_resource type="Texture2D" uid="uid://7tyxrdvbttq4" path="res://assets/sprites/pick-ups/O2 canister.png" id="1_bhtji"]
+[ext_resource type="Script" uid="uid://cjyuybwstaiou" path="res://scripts/02_canister.gd" id="1_tpn3m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpn3m"]
+atlas = ExtResource("1_bhtji")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wbvu"]
+atlas = ExtResource("1_bhtji")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwwjc"]
+atlas = ExtResource("1_bhtji")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdld8"]
+atlas = ExtResource("1_bhtji")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pofe0"]
+atlas = ExtResource("1_bhtji")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_udp47"]
+atlas = ExtResource("1_bhtji")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qi0po"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tpn3m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wbvu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jwwjc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xdld8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pofe0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_udp47")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_caw4h"]
+size = Vector2(11, 28)
+
+[node name="02Canister" type="Area2D" unique_id=1802849633]
+collision_mask = 2
+script = ExtResource("1_tpn3m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=71766846]
+position = Vector2(1, -16)
+sprite_frames = SubResource("SpriteFrames_qi0po")
+autoplay = "default"
+frame_progress = 0.7563137
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1506599061]
+position = Vector2(0.5, -14)
+shape = SubResource("RectangleShape2D_caw4h")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
