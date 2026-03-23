@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c1xq8ebktrpos" path="res://assets/sprites/Enviroment/Spaceship Objects/Control Panel Buttons.png" id="3_u0gge"]
 [ext_resource type="Texture2D" uid="uid://cd5pq2pthib34" path="res://assets/sprites/Enviroment/Spaceship Objects/Door Front.png" id="4_tfjet"]
 [ext_resource type="PackedScene" uid="uid://dad7bc4523ujr" path="res://assets/sprites/Player/Bob/Bob.tscn" id="5_u0gge"]
+[ext_resource type="PackedScene" uid="uid://bxtcu3muha6qw" path="res://scenes/pick-ups/02_canister.tscn" id="7_vwbyx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vwbyx"]
 texture = ExtResource("2_n8hqy")
@@ -121,6 +122,7 @@ texture_region_size = Vector2i(32, 32)
 0:7/0 = 0
 1:7/0 = 0
 2:7/0 = 0
+2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 3:7/0 = 0
 4:7/0 = 0
 5:7/0 = 0
@@ -200,6 +202,7 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSet" id="TileSet_uubay"]
 tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_vwbyx")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u3a22"]
@@ -430,8 +433,9 @@ tile_map_data = PackedByteArray("AAANAAUAAAAEAAEAAAAOAAUAAAAEAAEAAAAPAAUAAAAEAAE
 tile_set = SubResource("TileSet_u0gge")
 
 [node name="Bob" parent="." unique_id=1335707608 instance=ExtResource("5_u0gge")]
-position = Vector2(456.99997, 296)
+z_index = 1
+position = Vector2(446.99997, 304)
 scale = Vector2(0.2, 0.2)
 
-[node name="Camera2D" type="Camera2D" parent="Bob" unique_id=1557372172]
-zoom = Vector2(2, 2)
+[node name="02Canister" parent="." unique_id=1802849633 instance=ExtResource("7_vwbyx")]
+position = Vector2(208, 315)
