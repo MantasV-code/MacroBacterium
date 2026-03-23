@@ -9,16 +9,19 @@ func _ready() -> void:
 	area_entered.connect(_on_area_entered)
 	print("bullet ready, monitoring: ", monitoring)
 
-func setup(dir: Vector2, projectile_data: ProjectileData) -> void:
+func setup(dir: Vector2, projectile_data: ProjectileData, inherited_velocity: Vector2 = Vector2.ZERO) -> void:
 	direction = dir
 	data = projectile_data
+	var velocity_bonus = inherited_velocity.dot(dir)
+	direction = dir * (data.speed + max(velocity_bonus, 0.0))
 	
 	var sprite = $AnimatedSprite2D
 	sprite.play("Shoot")
-	rotation = direction.angle()
+	rotation = dir.angle()
 	
 	var mat = ShaderMaterial.new()
-	mat.shader = preload("res://Bob/Projectile/Bullet.gdshader")
+	mat.shader = preload("res://assets/sprites/Player/Bob/Projectile/Bullet.gdshader")
+	mat.set_shader_parameter("tint", data.color)
 	sprite.material = mat
 	
 	scale = Vector2.ONE * data.scale_multiplier
@@ -28,7 +31,7 @@ func setup(dir: Vector2, projectile_data: ProjectileData) -> void:
 
 func _physics_process(delta: float) -> void:
 	if !hit:
-		position += direction * data.speed * delta
+		position += direction * delta 
 
 func _on_body_entered(body: Node2D) -> void:
 	print("body hit: ", body.name)

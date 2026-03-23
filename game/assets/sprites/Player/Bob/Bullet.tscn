@@ -1,22 +1,22 @@
 [gd_scene format=3 uid="uid://f3s1ve20pivp"]
 
-[ext_resource type="Script" uid="uid://ha818u3gr5aj" path="res://Bob/Projectile/bullet.gd" id="1_4s4u5"]
-[ext_resource type="Shader" uid="uid://bxttpp6el7sk1" path="res://Bob/Projectile/Bullet.gdshader" id="2_7281b"]
-[ext_resource type="Texture2D" uid="uid://besrqo6yb0b6o" path="res://Bob/Projectile/sprites/Projectile06.png" id="3_0f6np"]
-[ext_resource type="Texture2D" uid="uid://i86na62bdwhh" path="res://Bob/Projectile/sprites/Projectile00.png" id="3_a8g78"]
-[ext_resource type="Texture2D" uid="uid://vky66r0uvqwl" path="res://Bob/Projectile/sprites/Projectile07.png" id="4_15xph"]
-[ext_resource type="Texture2D" uid="uid://cv7ctvnhxiieh" path="res://Bob/Projectile/sprites/Projectile01.png" id="4_fd626"]
-[ext_resource type="Texture2D" uid="uid://kshd0symjnpv" path="res://Bob/Projectile/sprites/Projectile08.png" id="5_4q36y"]
-[ext_resource type="Texture2D" uid="uid://8ark0dqyr5ox" path="res://Bob/Projectile/sprites/Projectile02.png" id="5_ljq6d"]
-[ext_resource type="Texture2D" uid="uid://df624qxunnf23" path="res://Bob/Projectile/sprites/Projectile03.png" id="6_jl2hs"]
-[ext_resource type="Texture2D" uid="uid://cx4pu6v6q3vfi" path="res://Bob/Projectile/sprites/Projectile09.png" id="6_kd5ar"]
-[ext_resource type="Texture2D" uid="uid://bo8gu1s2semwm" path="res://Bob/Projectile/sprites/Projectile04.png" id="7_7gbgb"]
-[ext_resource type="Texture2D" uid="uid://bybif1cb6eumm" path="res://Bob/Projectile/sprites/Projectile10.png" id="7_60wpv"]
-[ext_resource type="Texture2D" uid="uid://c5sk4suvdl60q" path="res://Bob/Projectile/sprites/Projectile05.png" id="8_0f6np"]
+[ext_resource type="Script" uid="uid://ha818u3gr5aj" path="res://assets/sprites/Player/Bob/Projectile/bullet.gd" id="1_4s4u5"]
+[ext_resource type="Shader" uid="uid://bxttpp6el7sk1" path="res://assets/sprites/Player/Bob/Projectile/Bullet.gdshader" id="2_7281b"]
+[ext_resource type="Texture2D" uid="uid://besrqo6yb0b6o" path="res://assets/sprites/Player/Bob/Projectile/sprites/Projectile06.png" id="3_0f6np"]
+[ext_resource type="Texture2D" uid="uid://i86na62bdwhh" path="res://assets/sprites/Player/Bob/Projectile/sprites/Projectile00.png" id="3_a8g78"]
+[ext_resource type="Texture2D" uid="uid://vky66r0uvqwl" path="res://assets/sprites/Player/Bob/Projectile/sprites/Projectile07.png" id="4_15xph"]
+[ext_resource type="Texture2D" uid="uid://cv7ctvnhxiieh" path="res://assets/sprites/Player/Bob/Projectile/sprites/Projectile01.png" id="4_fd626"]
+[ext_resource type="Texture2D" uid="uid://kshd0symjnpv" path="res://assets/sprites/Player/Bob/Projectile/sprites/Projectile08.png" id="5_4q36y"]
+[ext_resource type="Texture2D" uid="uid://8ark0dqyr5ox" path="res://assets/sprites/Player/Bob/Projectile/sprites/Projectile02.png" id="5_ljq6d"]
+[ext_resource type="Texture2D" uid="uid://df624qxunnf23" path="res://assets/sprites/Player/Bob/Projectile/sprites/Projectile03.png" id="6_jl2hs"]
+[ext_resource type="Texture2D" uid="uid://cx4pu6v6q3vfi" path="res://assets/sprites/Player/Bob/Projectile/sprites/Projectile09.png" id="6_kd5ar"]
+[ext_resource type="Texture2D" uid="uid://bo8gu1s2semwm" path="res://assets/sprites/Player/Bob/Projectile/sprites/Projectile04.png" id="7_7gbgb"]
+[ext_resource type="Texture2D" uid="uid://bybif1cb6eumm" path="res://assets/sprites/Player/Bob/Projectile/sprites/Projectile10.png" id="7_60wpv"]
+[ext_resource type="Texture2D" uid="uid://c5sk4suvdl60q" path="res://assets/sprites/Player/Bob/Projectile/sprites/Projectile05.png" id="8_0f6np"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_u8st5"]
 shader = ExtResource("2_7281b")
-shader_parameter/tint = Color(1.899009e-05, 1.3743325, 0.9271903, 1)
+shader_parameter/tint = Color(0.64049494, 0.78989494, 0.9996143, 1)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4s4u5"]
 animations = [{

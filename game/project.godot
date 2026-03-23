@@ -15,6 +15,14 @@ run/main_scene="uid://btuta6js2x2y1"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+ProjectileManager="*uid://bv243e0t7dalp"
+
+[global_group]
+
+player=""
+
 [input]
 
 move_left={

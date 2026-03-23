@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://c1xq8ebktrpos" path="res://assets/sprites/Enviroment/Spaceship Objects/Control Panel Buttons.png" id="3_u0gge"]
 [ext_resource type="Texture2D" uid="uid://cd5pq2pthib34" path="res://assets/sprites/Enviroment/Spaceship Objects/Door Front.png" id="4_tfjet"]
 [ext_resource type="PackedScene" uid="uid://dad7bc4523ujr" path="res://assets/sprites/Player/Bob/Bob.tscn" id="5_u0gge"]
+[ext_resource type="Texture2D" uid="uid://yk2ldrb7ltdg" path="res://assets/sprites/Enviroment/Smoke1.png" id="5_uubay"]
+[ext_resource type="Script" uid="uid://co2frnk5otirw" path="res://scenes/rooms/smoke_grate.gd" id="6_go65c"]
 [ext_resource type="PackedScene" uid="uid://bxtcu3muha6qw" path="res://scenes/pick-ups/02_canister.tscn" id="7_vwbyx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vwbyx"]
@@ -427,6 +429,66 @@ texture = ExtResource("3_u0gge")
 position = Vector2(525, 554)
 texture = ExtResource("4_tfjet")
 
+[node name="SmokeGrate" type="CPUParticles2D" parent="level 1" unique_id=115243524]
+position = Vector2(305, 239)
+amount = 7
+texture = ExtResource("5_uubay")
+lifetime = 1.48
+explosiveness = 0.25
+randomness = 0.34
+emission_shape = 3
+emission_rect_extents = Vector2(13.97, 11.92)
+gravity = Vector2(0, -98)
+angular_velocity_min = -100.41
+angular_velocity_max = 108.14
+scale_amount_max = 2.2
+script = ExtResource("6_go65c")
+
+[node name="SmokeGrate2" type="CPUParticles2D" parent="level 1" unique_id=1049560946]
+position = Vector2(333, 400)
+amount = 7
+texture = ExtResource("5_uubay")
+lifetime = 1.48
+explosiveness = 0.25
+randomness = 0.34
+emission_shape = 3
+emission_rect_extents = Vector2(13.97, 11.92)
+gravity = Vector2(0, -98)
+angular_velocity_min = -100.41
+angular_velocity_max = 108.14
+scale_amount_max = 2.2
+script = ExtResource("6_go65c")
+
+[node name="SmokeGrate3" type="CPUParticles2D" parent="level 1" unique_id=1704678101]
+position = Vector2(721, 432)
+amount = 7
+texture = ExtResource("5_uubay")
+lifetime = 1.48
+explosiveness = 0.25
+randomness = 0.34
+emission_shape = 3
+emission_rect_extents = Vector2(13.97, 11.92)
+gravity = Vector2(0, -98)
+angular_velocity_min = -100.41
+angular_velocity_max = 108.14
+scale_amount_max = 2.2
+script = ExtResource("6_go65c")
+
+[node name="SmokeGrate4" type="CPUParticles2D" parent="level 1" unique_id=1823277391]
+position = Vector2(625, 304)
+amount = 7
+texture = ExtResource("5_uubay")
+lifetime = 1.48
+explosiveness = 0.25
+randomness = 0.34
+emission_shape = 3
+emission_rect_extents = Vector2(13.97, 11.92)
+gravity = Vector2(0, -98)
+angular_velocity_min = -100.41
+angular_velocity_max = 108.14
+scale_amount_max = 2.2
+script = ExtResource("6_go65c")
+
 [node name="level 2" type="TileMapLayer" parent="." unique_id=1412084471]
 z_index = 1
 tile_map_data = PackedByteArray("AAANAAUAAAAEAAEAAAAOAAUAAAAEAAEAAAAPAAUAAAAEAAEAAAAQAAUAAAAEAAEAAAARAAUAAAAEAAEAAAASAAUAAAAEAAEAAAATAAUAAAAEAAEAAAAUAAUAAAAEAAEAAAALAAQAAAAPAAQAAAAWAAQAAAAPAAQAAAAIAAQAAAAPAAIAAAAYAAQAAAAPAAIAAAAHAAQAAAAMAAIAAAAZAAQAAAAMAAIAAAAQAAYAAAAGAAAAAAARAAYAAAAGAAAAAAARAAcAAAAGAAAAAAAQAAcAAAAGAAAAAAAQAAgAAAAGAAAAAAARAAgAAAAGAAAAAAARAAkAAAAGAAAAAAAQAAkAAAAGAAAAAAAQAAoAAAAGAAAAAAARAAoAAAAGAAAAAAARAAsAAAAGAAAAAAAQAAsAAAAGAAAAAAAQAAwAAAAGAAAAAAARAAwAAAAGAAAAAAARAA0AAAAGAAAAAAAQAA0AAAAGAAAAAAAQAA4AAAAGAAAAAAARAA4AAAAGAAAAAAAQAA8AAAAGAAAAAAARAA8AAAAGAAAAAAA=")
@@ -435,7 +497,7 @@ tile_set = SubResource("TileSet_u0gge")
 [node name="Bob" parent="." unique_id=1335707608 instance=ExtResource("5_u0gge")]
 z_index = 1
 position = Vector2(446.99997, 304)
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.245, 0.245)
 
 [node name="02Canister" parent="." unique_id=1802849633 instance=ExtResource("7_vwbyx")]
 position = Vector2(208, 315)

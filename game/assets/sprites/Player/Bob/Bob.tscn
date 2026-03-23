@@ -230,11 +230,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rj586"]
 size = Vector2(120, 302)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ubxvs"]
-
 [node name="Bob" type="Node2D" unique_id=1335707608]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1991758981]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1991758981 groups=["player"]]
 collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_ubxvs")
@@ -266,20 +264,6 @@ pitch_scale = 3.26
 unique_name_in_owner = true
 position = Vector2(1, -75)
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=197441498]
-zoom = Vector2(2, 2)
-
-[node name="test" type="Area2D" parent="." unique_id=897980157]
-position = Vector2(890, 336)
-collision_mask = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="test" unique_id=716616904]
-position = Vector2(2, 1)
-texture = ExtResource("4_52dks")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="test" unique_id=1960658624]
-position = Vector2(-1, -79)
-scale = Vector2(8.77, 8.77)
-shape = SubResource("CircleShape2D_ubxvs")
-
-[connection signal="body_entered" from="test" to="CharacterBody2D" method="_on_test_body_entered"]
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1162838194]
+zoom = Vector2(2.33, 2.33)
+position_smoothing_enabled = true
