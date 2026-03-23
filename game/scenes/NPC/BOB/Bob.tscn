@@ -265,5 +265,5 @@ unique_name_in_owner = true
 position = Vector2(1, -75)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1162838194]
-zoom = Vector2(2.33, 2.33)
+zoom = Vector2(2.74, 2.74)
 position_smoothing_enabled = true
