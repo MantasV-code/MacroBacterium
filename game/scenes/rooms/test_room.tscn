@@ -79,6 +79,7 @@ position = Vector2(158, 51)
 scale = Vector2(0.1, 0.1)
 
 [node name="Camera2D" type="Camera2D" parent="Bob" unique_id=1601618447]
+position = Vector2(29.999996, 29.999996)
 zoom = Vector2(2.925, 2.925)
 
 [node name="02Canister" parent="." unique_id=1802849633 instance=ExtResource("4_i7p6j")]
