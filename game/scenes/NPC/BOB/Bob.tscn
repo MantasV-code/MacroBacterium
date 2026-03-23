@@ -41,6 +41,7 @@
 [ext_resource type="Texture2D" uid="uid://c7kbm8lfx0xjc" path="res://assets/sprites/Player/Bob/BobBody/BobBody00.png" id="39_l1i3t"]
 [ext_resource type="Texture2D" uid="uid://bd5mhfesg6vkr" path="res://assets/sprites/Player/Bob/BobBody/BobBody04.png" id="40_dswc0"]
 [ext_resource type="AudioStream" uid="uid://cscdum80w48pt" path="res://assets/sprites/Player/Bob/Sounds/freesound_community-gama-laser-90602.mp3" id="41_aluwh"]
+[ext_resource type="AudioStream" uid="uid://ea88ucml8dlf" path="res://assets/Music/u_3x9ga8wevj-walking-sound-effect-272246.mp3" id="42_symca"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ta5nu"]
 animations = [{
@@ -258,7 +259,8 @@ shape = SubResource("RectangleShape2D_rj586")
 [node name="Shoot" type="AudioStreamPlayer" parent="CharacterBody2D" unique_id=447064534]
 unique_name_in_owner = true
 stream = ExtResource("41_aluwh")
-pitch_scale = 3.26
+volume_db = -5.924
+pitch_scale = 1.17
 
 [node name="FaceHole" type="Marker2D" parent="CharacterBody2D" unique_id=1518704572]
 unique_name_in_owner = true
@@ -267,3 +269,9 @@ position = Vector2(1, -75)
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1162838194]
 zoom = Vector2(2.74, 2.74)
 position_smoothing_enabled = true
+
+[node name="Walking" type="AudioStreamPlayer" parent="CharacterBody2D" unique_id=1825631973]
+unique_name_in_owner = true
+stream = ExtResource("42_symca")
+volume_db = -9.216
+pitch_scale = 2.31

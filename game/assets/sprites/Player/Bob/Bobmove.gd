@@ -6,6 +6,8 @@ const FRICTION = 2800.0
 @onready var Body = %Body
 @onready var SFX1 = %Shoot
 @onready var FaceHole = %FaceHole
+@onready var SFX2 = %Walking
+
 var bullet_scene = preload("res://scenes/NPC/BOB/Bullet.tscn")
 var is_shooting = false
 func _ready() -> void:
@@ -72,6 +74,8 @@ func _update_body(direction: Vector2, is_moving: bool) -> void:
 	if !is_moving:
 		Body.play("IdleF")
 		Body.scale.x = 1
+		if SFX2.playing:
+			SFX2.stop()
 		return
 	if abs(direction.y) > abs(direction.x):
 		if direction.y < 0:
@@ -83,6 +87,9 @@ func _update_body(direction: Vector2, is_moving: bool) -> void:
 	else:
 		Body.play("WalkLR")
 		Body.scale.x = -1 if direction.x < 0 else 1
+	
+	if !SFX2.playing:
+		SFX2.play()
 		
 func _spawn_bullets(direction: Vector2) -> void:
 	var count = ProjectileManager.data.count
