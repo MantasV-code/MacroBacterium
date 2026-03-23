@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://isufcoxcxe4r"]
 
 [ext_resource type="Texture2D" uid="uid://b8u6fhjt6x6p0" path="res://assets/sprites/Enviroment/Boarder walls.png" id="1_mjm5x"]
-[ext_resource type="PackedScene" uid="uid://dad7bc4523ujr" path="res://assets/sprites/Player/Bob/Bob.tscn" id="2_fn815"]
+[ext_resource type="PackedScene" uid="uid://dad7bc4523ujr" path="res://scenes/NPC/BOB/Bob.tscn" id="2_fn815"]
 [ext_resource type="PackedScene" uid="uid://d1h7kiatxxg1r" path="res://scenes/fire.tscn" id="3_6vnwl"]
 [ext_resource type="PackedScene" uid="uid://bxtcu3muha6qw" path="res://scenes/pick-ups/02_canister.tscn" id="4_i7p6j"]
 

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://boyjonr6hdflo" path="res://assets/sprites/Enviroment/Spaceship Objects/Control Panel.png" id="2_u3a22"]
 [ext_resource type="Texture2D" uid="uid://c1xq8ebktrpos" path="res://assets/sprites/Enviroment/Spaceship Objects/Control Panel Buttons.png" id="3_u0gge"]
 [ext_resource type="Texture2D" uid="uid://cd5pq2pthib34" path="res://assets/sprites/Enviroment/Spaceship Objects/Door Front.png" id="4_tfjet"]
-[ext_resource type="PackedScene" uid="uid://dad7bc4523ujr" path="res://assets/sprites/Player/Bob/Bob.tscn" id="5_u0gge"]
+[ext_resource type="PackedScene" uid="uid://dad7bc4523ujr" path="res://scenes/NPC/BOB/Bob.tscn" id="5_u0gge"]
 [ext_resource type="Texture2D" uid="uid://yk2ldrb7ltdg" path="res://assets/sprites/Enviroment/Smoke1.png" id="5_uubay"]
 [ext_resource type="Script" uid="uid://co2frnk5otirw" path="res://scenes/rooms/smoke_grate.gd" id="6_go65c"]
 [ext_resource type="PackedScene" uid="uid://bxtcu3muha6qw" path="res://scenes/pick-ups/02_canister.tscn" id="7_vwbyx"]

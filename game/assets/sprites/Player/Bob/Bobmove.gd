@@ -6,7 +6,7 @@ const FRICTION = 2800.0
 @onready var Body = %Body
 @onready var SFX1 = %Shoot
 @onready var FaceHole = %FaceHole
-var bullet_scene = preload("res://assets/sprites/Player/Bob/Bullet.tscn")
+var bullet_scene = preload("res://scenes/NPC/BOB/Bullet.tscn")
 var is_shooting = false
 func _ready() -> void:
 	scale = Vector2(0.5, 0.5)
