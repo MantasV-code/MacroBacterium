@@ -1,7 +1,7 @@
 extends CPUParticles2D
 
 func _ready() -> void:
-	amount = 3
+	amount = 1
 	lifetime = 0.3
 	randomness = 1.0
 	explosiveness = 0
@@ -14,8 +14,8 @@ func _ready() -> void:
 	damping_min = 20.0
 	damping_max = 40.0
 	gravity = Vector2(0, 0)
-	scale_amount_min = 0.2
-	scale_amount_max = 0.7
+	scale_amount_min = 0.4
+	scale_amount_max = 0.8
 	
 	var grad = Gradient.new()
 	grad.set_color(0, Color(0.894, 0.835, 0.78, 0.573))  

@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bxtcu3muha6qw" path="res://scenes/pick-ups/02_canister.tscn" id="7_vwbyx"]
 [ext_resource type="Shader" uid="uid://b12kbqo7wt2xd" path="res://scenes/rooms/crt.gdshader" id="9_go65c"]
 [ext_resource type="AudioStream" uid="uid://bw7rckmejpux4" path="res://assets/Music/Super Metroid Music - Crateria (Zebes Planetfall).mp3" id="11_7mn8v"]
+[ext_resource type="Texture2D" uid="uid://cdw5456320o21" path="res://assets/sprites/Enviroment/Spritesheet-Spaceship2.png" id="11_lgnlx"]
 [ext_resource type="Shader" uid="uid://crhethfchgsq7" path="res://scenes/rooms/Vignette.gdshader" id="12_07p4q"]
 [ext_resource type="AudioStream" uid="uid://bn0j77dnrke8v" path="res://assets/Music/freesound_community-steam-2-36231.mp3" id="12_r105p"]
 
@@ -505,6 +506,7 @@ scale_amount_max = 2.2
 script = ExtResource("6_go65c")
 
 [node name="GrateSound" type="AudioStreamPlayer2D" parent="SubViewportContainer/SubViewport/level 1/SmokeGrate" unique_id=596353052]
+texture_filter = 1
 position = Vector2(0.25, -0.25)
 stream = ExtResource("12_r105p")
 pitch_scale = 0.43
@@ -529,6 +531,7 @@ scale_amount_max = 2.2
 script = ExtResource("6_go65c")
 
 [node name="GrateSound" type="AudioStreamPlayer2D" parent="SubViewportContainer/SubViewport/level 1/SmokeGrate2" unique_id=1191700740]
+texture_filter = 1
 position = Vector2(0.25, -0.25)
 stream = ExtResource("12_r105p")
 pitch_scale = 0.43
@@ -553,6 +556,7 @@ scale_amount_max = 2.2
 script = ExtResource("6_go65c")
 
 [node name="GrateSound" type="AudioStreamPlayer2D" parent="SubViewportContainer/SubViewport/level 1/SmokeGrate3" unique_id=1688316257]
+texture_filter = 1
 position = Vector2(0.25, -0.25)
 stream = ExtResource("12_r105p")
 pitch_scale = 0.43
@@ -577,6 +581,7 @@ scale_amount_max = 2.2
 script = ExtResource("6_go65c")
 
 [node name="GrateSound" type="AudioStreamPlayer2D" parent="SubViewportContainer/SubViewport/level 1/SmokeGrate4" unique_id=1626032327]
+texture_filter = 1
 position = Vector2(0.25, -0.25)
 stream = ExtResource("12_r105p")
 pitch_scale = 0.43
@@ -598,6 +603,15 @@ scale = Vector2(0.245, 0.245)
 
 [node name="02Canister" parent="SubViewportContainer/SubViewport" unique_id=1802849633 instance=ExtResource("7_vwbyx")]
 position = Vector2(207, 315)
+
+[node name="TextureRect" type="TextureRect" parent="SubViewportContainer/SubViewport" unique_id=100346220]
+texture_filter = 1
+offset_left = 903.25
+offset_top = 145.75
+offset_right = 1159.25
+offset_bottom = 401.75
+scale = Vector2(2, 2)
+texture = ExtResource("11_lgnlx")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=72689709]
 

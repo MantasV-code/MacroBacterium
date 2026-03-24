@@ -8,4 +8,4 @@ class_name ProjectileData
 @export var spread: float = 0.0    
 @export var color: Color = Color.SKY_BLUE
 @export var scale_multiplier: float = 5.0
-@export var lifetime: float = 200000.0
+@export var lifetime: float = 20.0
