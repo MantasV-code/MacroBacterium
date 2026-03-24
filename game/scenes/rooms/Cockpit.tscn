@@ -222,10 +222,43 @@ texture_region_size = Vector2i(32, 32)
 9:13/0 = 0
 10:13/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lgnlx"]
+texture = ExtResource("11_lgnlx")
+texture_region_size = Vector2i(32, 32)
+11:8/size_in_atlas = Vector2i(4, 3)
+11:8/0 = 0
+0:10/size_in_atlas = Vector2i(4, 3)
+0:10/0 = 0
+4:10/size_in_atlas = Vector2i(1, 2)
+4:10/0 = 0
+5:10/size_in_atlas = Vector2i(1, 2)
+5:10/0 = 0
+9:12/size_in_atlas = Vector2i(2, 2)
+9:12/0 = 0
+9:10/size_in_atlas = Vector2i(2, 2)
+9:10/0 = 0
+6:11/size_in_atlas = Vector2i(1, 2)
+6:11/0 = 0
+8:11/size_in_atlas = Vector2i(1, 2)
+8:11/0 = 0
+7:11/0 = 0
+7:12/0 = 0
+6:9/size_in_atlas = Vector2i(2, 2)
+6:9/0 = 0
+8:9/size_in_atlas = Vector2i(1, 2)
+8:9/0 = 0
+7:7/size_in_atlas = Vector2i(1, 2)
+7:7/0 = 0
+8:7/size_in_atlas = Vector2i(1, 2)
+8:7/0 = 0
+9:8/size_in_atlas = Vector2i(1, 2)
+9:8/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_uubay"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_vwbyx")
+sources/3 = SubResource("TileSetAtlasSource_lgnlx")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u3a22"]
 texture = ExtResource("2_n8hqy")
@@ -604,16 +637,8 @@ scale = Vector2(0.245, 0.245)
 [node name="02Canister" parent="SubViewportContainer/SubViewport" unique_id=1802849633 instance=ExtResource("7_vwbyx")]
 position = Vector2(207, 315)
 
-[node name="TextureRect" type="TextureRect" parent="SubViewportContainer/SubViewport" unique_id=100346220]
-texture_filter = 1
-offset_left = 903.25
-offset_top = 145.75
-offset_right = 1159.25
-offset_bottom = 401.75
-scale = Vector2(2, 2)
-texture = ExtResource("11_lgnlx")
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=72689709]
+visible = false
 
 [node name="CRT" type="ColorRect" parent="CanvasLayer" unique_id=234955619]
 material = SubResource("ShaderMaterial_y6rpo")
