@@ -42,6 +42,8 @@
 [ext_resource type="Texture2D" uid="uid://bd5mhfesg6vkr" path="res://assets/sprites/Player/Bob/BobBody/BobBody04.png" id="40_dswc0"]
 [ext_resource type="AudioStream" uid="uid://cscdum80w48pt" path="res://assets/sprites/Player/Bob/Sounds/freesound_community-gama-laser-90602.mp3" id="41_aluwh"]
 [ext_resource type="AudioStream" uid="uid://ea88ucml8dlf" path="res://assets/Music/u_3x9ga8wevj-walking-sound-effect-272246.mp3" id="42_symca"]
+[ext_resource type="Texture2D" uid="uid://yk2ldrb7ltdg" path="res://assets/sprites/Enviroment/Smoke1.png" id="43_yjivn"]
+[ext_resource type="Script" uid="uid://47fcrxacjx4j" path="res://scenes/NPC/BOB/WalkingEffects.gd" id="44_s2cy5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ta5nu"]
 animations = [{
@@ -267,7 +269,7 @@ unique_name_in_owner = true
 position = Vector2(1, -75)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1162838194]
-zoom = Vector2(2.74, 2.74)
+zoom = Vector2(3.195, 3.195)
 position_smoothing_enabled = true
 
 [node name="Walking" type="AudioStreamPlayer" parent="CharacterBody2D" unique_id=1825631973]
@@ -275,3 +277,12 @@ unique_name_in_owner = true
 stream = ExtResource("42_symca")
 volume_db = -9.216
 pitch_scale = 2.31
+
+[node name="WalkParticles" type="CPUParticles2D" parent="CharacterBody2D" unique_id=1098048023]
+unique_name_in_owner = true
+z_index = 3
+position = Vector2(-3, 148)
+texture = ExtResource("43_yjivn")
+emission_shape = 3
+emission_rect_extents = Vector2(66.055, 1)
+script = ExtResource("44_s2cy5")

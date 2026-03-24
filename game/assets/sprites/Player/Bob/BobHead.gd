@@ -13,3 +13,5 @@ func _process(delta: float) -> void:
 	time += delta
 	var stepped_time = floor(time * FPS) / FPS
 	position.y = base_y + sin(stepped_time * bob_speed * TAU) * bob_amount
+
+#This is just a basic script to aniamte bobs head
