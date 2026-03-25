@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d1h7kiatxxg1r"]
 
-[ext_resource type="Texture2D" uid="uid://grm75jnnmnmq" path="res://assets/sprites/Enviroment/fire.png" id="1_xqmqg"]
-[ext_resource type="PackedScene" uid="uid://djohpnhiega2x" path="res://scenes/damagezone.tscn" id="2_g5mbl"]
+[ext_resource type="Texture2D" uid="uid://grm75jnnmnmq" path="res://assets/sprites/Enviroment/test-room/fire.png" id="1_xqmqg"]
+[ext_resource type="PackedScene" uid="uid://djohpnhiega2x" path="res://scenes/Enemies/damagezone.tscn" id="2_g5mbl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xqmqg"]
 radius = 7.0

@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dye28ns3renqx"]
 
-[ext_resource type="Script" uid="uid://c1kuq6gonls2r" path="res://scripts/ship_crash.gd" id="1_mdo4s"]
-[ext_resource type="Texture2D" uid="uid://buxvse7g4eh8q" path="res://assests/Planet_1.png" id="2_4hpj5"]
-[ext_resource type="Texture2D" uid="uid://clga1sjejkvex" path="res://assests/exp2_0.png" id="3_5hasw"]
-[ext_resource type="Texture2D" uid="uid://q4fvxptnrwiq" path="res://assests/pitrizzo-SpaceShip-gpl3-opengameart-24x24.png" id="4_dqi1x"]
-[ext_resource type="Texture2D" uid="uid://c1sn22xgkreq5" path="res://assests/Fiyah.png" id="5_r5k87"]
+[ext_resource type="Script" uid="uid://c1kuq6gonls2r" path="res://scripts/intro/ship_crash.gd" id="1_mdo4s"]
+[ext_resource type="Texture2D" uid="uid://buxvse7g4eh8q" path="res://assets/sprites/intro/Planet_1.png" id="2_4hpj5"]
+[ext_resource type="Texture2D" uid="uid://clga1sjejkvex" path="res://assets/sprites/intro/exp2_0.png" id="3_5hasw"]
+[ext_resource type="Texture2D" uid="uid://q4fvxptnrwiq" path="res://assets/sprites/intro/pitrizzo-SpaceShip-gpl3-opengameart-24x24.png" id="4_dqi1x"]
+[ext_resource type="Texture2D" uid="uid://c1sn22xgkreq5" path="res://assets/sprites/intro/Fiyah.png" id="5_r5k87"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hijt5"]
 atlas = ExtResource("3_5hasw")
