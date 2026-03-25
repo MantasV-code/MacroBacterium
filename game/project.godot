@@ -19,10 +19,6 @@ config/icon="res://icon.svg"
 
 ProjectileManager="*uid://bv243e0t7dalp"
 
-[display]
-
-window/size/mode=3
-
 [global_group]
 
 player=""

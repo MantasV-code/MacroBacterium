@@ -1,9 +1,10 @@
 [gd_scene format=4 uid="uid://isufcoxcxe4r"]
 
-[ext_resource type="Texture2D" uid="uid://b8u6fhjt6x6p0" path="res://assets/sprites/Enviroment/Boarder walls.png" id="1_mjm5x"]
-[ext_resource type="PackedScene" uid="uid://dad7bc4523ujr" path="res://scenes/NPC/BOB/Bob.tscn" id="2_fn815"]
+[ext_resource type="Texture2D" uid="uid://b8u6fhjt6x6p0" path="res://assets/sprites/Enviroment/test-room/Boarder walls.png" id="1_mjm5x"]
+[ext_resource type="PackedScene" uid="uid://dad7bc4523ujr" path="res://scenes/BOB/Bob.tscn" id="2_fn815"]
 [ext_resource type="PackedScene" uid="uid://d1h7kiatxxg1r" path="res://scenes/fire.tscn" id="3_6vnwl"]
 [ext_resource type="PackedScene" uid="uid://bxtcu3muha6qw" path="res://scenes/pick-ups/02_canister.tscn" id="4_i7p6j"]
+[ext_resource type="PackedScene" uid="uid://c0jndyr8fp3tf" path="res://scenes/Enemies/FlyingBac.tscn" id="5_betf1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fn815"]
 texture = ExtResource("1_mjm5x")
@@ -87,3 +88,6 @@ position = Vector2(214, 62)
 
 [node name="fire" parent="." unique_id=1066398813 instance=ExtResource("3_6vnwl")]
 position = Vector2(175, -4)
+
+[node name="Node2D" parent="." unique_id=1769072605 instance=ExtResource("5_betf1")]
+position = Vector2(75, 73)

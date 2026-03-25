@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bxtcu3muha6qw"]
 
 [ext_resource type="Texture2D" uid="uid://7tyxrdvbttq4" path="res://assets/sprites/pick-ups/O2 canister.png" id="1_bhtji"]
-[ext_resource type="Script" uid="uid://cjyuybwstaiou" path="res://scripts/02_canister.gd" id="1_tpn3m"]
+[ext_resource type="Script" uid="uid://cjyuybwstaiou" path="res://scripts/pick-ups/02_canister.gd" id="1_tpn3m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tpn3m"]
 atlas = ExtResource("1_bhtji")

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://0q32rtwhatxd"]
 
-[ext_resource type="Script" uid="uid://pshp7tg2254n" path="res://scripts/start_screen.gd" id="1_acos6"]
-[ext_resource type="Shader" uid="uid://kdp7iavon3nx" path="res://assests/starfield_shader_v5.gdshader" id="2_vc6w1"]
-[ext_resource type="Texture2D" uid="uid://bj7ixgy2th0td" path="res://assests/gamelogo2.png" id="3_r4uaw"]
-[ext_resource type="Script" uid="uid://ckopcjh8vjx53" path="res://scripts/label.gd" id="4_fv056"]
+[ext_resource type="Script" uid="uid://pshp7tg2254n" path="res://scripts/intro/start_screen.gd" id="1_acos6"]
+[ext_resource type="Shader" uid="uid://kdp7iavon3nx" path="res://assets/sprites/intro/starfield_shader_v5.gdshader" id="2_vc6w1"]
+[ext_resource type="Texture2D" uid="uid://bj7ixgy2th0td" path="res://assets/sprites/intro/gamelogo2.png" id="3_r4uaw"]
+[ext_resource type="Script" uid="uid://ckopcjh8vjx53" path="res://scripts/intro/label.gd" id="4_fv056"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3pj0e"]
 shader = ExtResource("2_vc6w1")
