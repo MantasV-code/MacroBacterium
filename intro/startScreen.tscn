@@ -1,9 +1,19 @@
 [gd_scene format=3 uid="uid://0q32rtwhatxd"]
 
+<<<<<<< Updated upstream:intro/startScreen.tscn
 [ext_resource type="Script" uid="uid://pshp7tg2254n" path="res://scripts/start_screen.gd" id="1_acos6"]
 [ext_resource type="Shader" uid="uid://kdp7iavon3nx" path="res://assests/starfield_shader_v5.gdshader" id="2_vc6w1"]
 [ext_resource type="Texture2D" uid="uid://bj7ixgy2th0td" path="res://assests/gamelogo2.png" id="3_r4uaw"]
 [ext_resource type="Script" uid="uid://ckopcjh8vjx53" path="res://scripts/label.gd" id="4_fv056"]
+=======
+[ext_resource type="Script" uid="uid://pshp7tg2254n" path="res://scripts/intro/start_screen.gd" id="1_acos6"]
+[ext_resource type="Shader" uid="uid://kdp7iavon3nx" path="res://assets/sprites/intro/starfield_shader_v5.gdshader" id="2_vc6w1"]
+[ext_resource type="Texture2D" uid="uid://bj7ixgy2th0td" path="res://assets/sprites/intro/gamelogo2.png" id="3_r4uaw"]
+[ext_resource type="FontFile" uid="uid://cd2a6d43gtthe" path="res://assets/Font/Press_Start_2P/PressStart2P-Regular.ttf" id="4_xc3wd"]
+[ext_resource type="AudioStream" uid="uid://ditrh08ilojcf" path="res://assets/Music/lucadialessandro-arcade-fx-288597.mp3" id="5_bty6c"]
+[ext_resource type="AudioStream" uid="uid://bw7rckmejpux4" path="res://assets/Music/Super Metroid Music - Crateria (Zebes Planetfall).mp3" id="5_tqdaq"]
+[ext_resource type="AudioStream" uid="uid://b2d0baoblkw4y" path="res://assets/Music/notification-process-complete-slava-pogorelsky-1-00-03.mp3" id="6_ixvx8"]
+>>>>>>> Stashed changes:game/scenes/intro/startScreen.tscn
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3pj0e"]
 shader = ExtResource("2_vc6w1")
@@ -20,9 +30,13 @@ shader_parameter/base_scroll_speed = 0.05
 shader_parameter/additional_scroll_speed = 0.05
 
 [sub_resource type="SystemFont" id="SystemFont_3pj0e"]
+[sub_resource type="FontVariation" id="FontVariation_tqdaq"]
+base_font = ExtResource("4_xc3wd")
 
 [sub_resource type="FontVariation" id="FontVariation_ev681"]
 base_font = SubResource("SystemFont_3pj0e")
+[sub_resource type="FontVariation" id="FontVariation_ixvx8"]
+base_font = ExtResource("4_xc3wd")
 
 [sub_resource type="LabelSettings" id="LabelSettings_3pj0e"]
 font = SubResource("FontVariation_ev681")
@@ -31,6 +45,9 @@ outline_size = 5
 outline_color = Color(0, 0.8039216, 0.21568628, 1)
 
 [node name="startScreen" type="Node2D" unique_id=231754964]
+[node name="startScreen" type="Control" unique_id=213837474]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_acos6")
 
 [node name="Background" type="ColorRect" parent="." unique_id=443675249]
@@ -38,10 +55,16 @@ material = SubResource("ShaderMaterial_3pj0e")
 offset_left = -18.0
 offset_right = 1166.0
 offset_bottom = 662.0
+layout_mode = 0
+offset_left = -20.0
+offset_top = 1.0
+offset_right = 1159.0
+offset_bottom = 663.0
 color = Color(0, 0, 0, 1)
 
 [node name="Logo" type="Sprite2D" parent="." unique_id=1101376189]
 position = Vector2(578, 223)
+position = Vector2(587, 242)
 scale = Vector2(0.4259259, 0.42592594)
 texture = ExtResource("3_r4uaw")
 
@@ -50,6 +73,20 @@ offset_left = 359.0
 offset_top = 401.0
 offset_right = 782.0
 offset_bottom = 484.0
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1418954422]
+layout_mode = 0
+offset_left = 481.0
+offset_top = 425.0
+offset_right = 714.0
+offset_bottom = 504.0
+alignment = 1
+
+[node name="StartButton" type="Button" parent="VBoxContainer" unique_id=196232353]
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(0, 2.15389, 0.2480238, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.5529412, 0.16862746, 1)
+theme_override_fonts/font = SubResource("FontVariation_tqdaq")
+theme_override_font_sizes/font_size = 40
 text = "START"
 label_settings = SubResource("LabelSettings_3pj0e")
 horizontal_alignment = 1
@@ -61,7 +98,35 @@ offset_left = 353.0
 offset_top = 490.0
 offset_right = 776.0
 offset_bottom = 573.0
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=1842508373]
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(0, 2.15389, 0.2480238, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.5529412, 0.16862746, 1)
+theme_override_fonts/font = SubResource("FontVariation_ixvx8")
+theme_override_font_sizes/font_size = 40
 text = "QUIT"
 label_settings = SubResource("LabelSettings_3pj0e")
+
+[node name="Cursor" type="Label" parent="." unique_id=2100334886]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 415.0
+offset_right = 485.0
+offset_bottom = 471.0
+theme_override_font_sizes/font_size = 40
+text = "▶"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="CusorMoveSound" type="AudioStreamPlayer" parent="." unique_id=884864504]
+stream = ExtResource("5_bty6c")
+
+[node name="SelectOptionSound" type="AudioStreamPlayer" parent="." unique_id=1833160690]
+stream = ExtResource("6_ixvx8")
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=473712530]
+stream = ExtResource("5_tqdaq")
+volume_db = -10.947
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
