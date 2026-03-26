@@ -19,5 +19,5 @@ func fade_out():
 	var tween = create_tween()
 	tween.tween_property($Fade, "modulate:a", 1.0, 0.4)
 	await tween.finished
-	get_tree().change_scene_to_file("res://intro/ship_crash.tscn")
+	get_tree().change_scene_to_file("res://scenes/intro/ship_crash.tscn")
 	
