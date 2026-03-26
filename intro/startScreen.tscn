@@ -29,22 +29,12 @@ shader_parameter/near_stars_color = Color(1, 1, 1, 1)
 shader_parameter/base_scroll_speed = 0.05
 shader_parameter/additional_scroll_speed = 0.05
 
-[sub_resource type="SystemFont" id="SystemFont_3pj0e"]
 [sub_resource type="FontVariation" id="FontVariation_tqdaq"]
 base_font = ExtResource("4_xc3wd")
 
-[sub_resource type="FontVariation" id="FontVariation_ev681"]
-base_font = SubResource("SystemFont_3pj0e")
 [sub_resource type="FontVariation" id="FontVariation_ixvx8"]
 base_font = ExtResource("4_xc3wd")
 
-[sub_resource type="LabelSettings" id="LabelSettings_3pj0e"]
-font = SubResource("FontVariation_ev681")
-font_size = 60
-outline_size = 5
-outline_color = Color(0, 0.8039216, 0.21568628, 1)
-
-[node name="startScreen" type="Node2D" unique_id=231754964]
 [node name="startScreen" type="Control" unique_id=213837474]
 layout_mode = 3
 anchors_preset = 0
@@ -52,9 +42,6 @@ script = ExtResource("1_acos6")
 
 [node name="Background" type="ColorRect" parent="." unique_id=443675249]
 material = SubResource("ShaderMaterial_3pj0e")
-offset_left = -18.0
-offset_right = 1166.0
-offset_bottom = 662.0
 layout_mode = 0
 offset_left = -20.0
 offset_top = 1.0
@@ -63,16 +50,10 @@ offset_bottom = 663.0
 color = Color(0, 0, 0, 1)
 
 [node name="Logo" type="Sprite2D" parent="." unique_id=1101376189]
-position = Vector2(578, 223)
 position = Vector2(587, 242)
 scale = Vector2(0.4259259, 0.42592594)
 texture = ExtResource("3_r4uaw")
 
-[node name="Label" type="Label" parent="." unique_id=888308586]
-offset_left = 359.0
-offset_top = 401.0
-offset_right = 782.0
-offset_bottom = 484.0
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1418954422]
 layout_mode = 0
 offset_left = 481.0
@@ -88,16 +69,7 @@ theme_override_colors/font_pressed_color = Color(0, 0.5529412, 0.16862746, 1)
 theme_override_fonts/font = SubResource("FontVariation_tqdaq")
 theme_override_font_sizes/font_size = 40
 text = "START"
-label_settings = SubResource("LabelSettings_3pj0e")
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("4_fv056")
 
-[node name="Label2" type="Label" parent="." unique_id=1825005273]
-offset_left = 353.0
-offset_top = 490.0
-offset_right = 776.0
-offset_bottom = 573.0
 [node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=1842508373]
 layout_mode = 2
 theme_override_colors/font_focus_color = Color(0, 2.15389, 0.2480238, 1)
@@ -105,7 +77,6 @@ theme_override_colors/font_pressed_color = Color(0, 0.5529412, 0.16862746, 1)
 theme_override_fonts/font = SubResource("FontVariation_ixvx8")
 theme_override_font_sizes/font_size = 40
 text = "QUIT"
-label_settings = SubResource("LabelSettings_3pj0e")
 
 [node name="Cursor" type="Label" parent="." unique_id=2100334886]
 layout_mode = 0
