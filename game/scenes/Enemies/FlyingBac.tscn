@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://b84r0vi0x3ywa" path="res://assets/sprites/Enemies/FlyingBacChill/FlyingBacChill1.png" id="9_1ur1a"]
 [ext_resource type="Texture2D" uid="uid://b8u3rclqnvplv" path="res://assets/sprites/Enemies/FlyingBacChill/FlyingBacChill2.png" id="10_1g7an"]
 [ext_resource type="Script" uid="uid://c5i3piv623dab" path="res://scripts/enemies/FlybacPartsChill.gd" id="12_0rj3f"]
+[ext_resource type="PackedScene" uid="uid://djohpnhiega2x" path="res://scenes/Enemies/damagezone.tscn" id="13_sid75"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rn10s"]
 animations = [{
@@ -56,14 +57,19 @@ animations = [{
 "speed": 12.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_qiuye"]
-radius = 14.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sid75"]
+radius = 6.394968
+height = 25.57987
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_td3t0"]
 particle_flag_disable_z = true
 gravity = Vector3(0, 98, 0)
 
-[node name="Node2D" type="Node2D" unique_id=1769072605]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sh8iy"]
+radius = 7.760246
+height = 27.745218
+
+[node name="FlyingBac" type="Node2D" unique_id=1769072605]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=612914337]
 script = ExtResource("1_dm82u")
@@ -76,8 +82,9 @@ animation = &"Flying"
 frame_progress = 0.124492444
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1105050103]
-position = Vector2(0, -2)
-shape = SubResource("CircleShape2D_qiuye")
+position = Vector2(0, -1)
+rotation = 0.5996482
+shape = SubResource("CapsuleShape2D_sid75")
 
 [node name="Buzzing" type="AudioStreamPlayer2D" parent="CharacterBody2D" unique_id=1742217652]
 stream = ExtResource("5_a65cs")
@@ -95,3 +102,10 @@ visibility_rect = Rect2(0, 0, 107.575, 106.59)
 trail_enabled = true
 process_material = SubResource("ParticleProcessMaterial_td3t0")
 script = ExtResource("12_0rj3f")
+
+[node name="Damagezone" parent="CharacterBody2D" unique_id=1596236458 instance=ExtResource("13_sid75")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Damagezone" unique_id=1737479315]
+position = Vector2(0, -1)
+rotation = 0.5815192
+shape = SubResource("CapsuleShape2D_sh8iy")
