@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 ProjectileManager="*uid://bv243e0t7dalp"
 
+[dotnet]
+
+project/assembly_name="MacroBacterium"
+
 [global_group]
 
 player=""
