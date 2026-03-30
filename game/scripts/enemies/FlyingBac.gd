@@ -18,6 +18,9 @@ func _ready() -> void:
 	# Each fly starts with a different random phase
 	wander_change_time = randf_range(1.0, 3.0)
 
+func decrease_health(amount: int) -> void:
+	$Health.decrease_health(amount)
+
 func _physics_process(delta: float) -> void:
 	bounce_timer -= delta
 	wander_timer += delta

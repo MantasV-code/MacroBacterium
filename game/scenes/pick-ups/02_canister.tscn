@@ -57,6 +57,7 @@ animations = [{
 size = Vector2(11, 28)
 
 [node name="02Canister" type="Area2D" unique_id=1802849633]
+collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_tpn3m")
 

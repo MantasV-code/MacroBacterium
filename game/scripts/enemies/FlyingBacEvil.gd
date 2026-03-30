@@ -15,7 +15,10 @@ var wander_change_time := 0.0
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
 	sprite.play("Flying")
-	wander_change_time = randf_range(0.3, 0.8)  
+	wander_change_time = randf_range(0.3, 0.8)
+
+func decrease_health(amount: int) -> void:
+	$Health.decrease_health(amount)
 
 func _physics_process(delta: float) -> void:
 	bounce_timer -= delta

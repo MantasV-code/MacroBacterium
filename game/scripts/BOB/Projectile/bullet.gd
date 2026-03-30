@@ -4,6 +4,8 @@ var direction := Vector2.ZERO
 var data: ProjectileData
 var hit := false
 
+@export var damage: int = 1
+
 func _ready() -> void:
 	# Connect collision signals
 	body_entered.connect(_on_body_entered)
@@ -44,6 +46,8 @@ func _physics_process(delta: float) -> void:
 # Hit a wall or physics body
 func _on_body_entered(body: Node2D) -> void:
 	_on_hit()
+	if body.has_method("decrease_health"):
+		body.decrease_health(damage)
 
 # Hit an Area2D, deal damage if enemy
 func _on_area_entered(area: Node2D) -> void:

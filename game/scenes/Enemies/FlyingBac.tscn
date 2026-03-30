@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bue5l6qdq4vd2" path="res://assets/sprites/Enemies/FlyingBacChill/FlyingBacChill8.png" id="8_sok8x"]
 [ext_resource type="Texture2D" uid="uid://b84r0vi0x3ywa" path="res://assets/sprites/Enemies/FlyingBacChill/FlyingBacChill1.png" id="9_1ur1a"]
 [ext_resource type="Texture2D" uid="uid://b8u3rclqnvplv" path="res://assets/sprites/Enemies/FlyingBacChill/FlyingBacChill2.png" id="10_1g7an"]
+[ext_resource type="Script" uid="uid://b7urnf0xu15fs" path="res://scripts/enemies/Health.gd" id="11_sh8iy"]
 [ext_resource type="Script" uid="uid://c5i3piv623dab" path="res://scripts/enemies/FlybacPartsChill.gd" id="12_0rj3f"]
 [ext_resource type="PackedScene" uid="uid://djohpnhiega2x" path="res://scenes/Enemies/damagezone.tscn" id="13_sid75"]
 
@@ -71,22 +72,26 @@ height = 27.745218
 
 [node name="FlyingBac" type="Node2D" unique_id=1769072605]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=612914337]
+[node name="FlyingBac" type="CharacterBody2D" parent="." unique_id=612914337]
+collision_mask = 3
 script = ExtResource("1_dm82u")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=676161281]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="FlyingBac" unique_id=676161281]
 visibility_layer = 4
 z_index = 3
 sprite_frames = SubResource("SpriteFrames_rn10s")
 animation = &"Flying"
 frame_progress = 0.124492444
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1105050103]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FlyingBac" unique_id=1105050103]
 position = Vector2(0, -1)
 rotation = 0.5996482
 shape = SubResource("CapsuleShape2D_sid75")
 
-[node name="Buzzing" type="AudioStreamPlayer2D" parent="CharacterBody2D" unique_id=1742217652]
+[node name="Health" type="Node" parent="FlyingBac" unique_id=167018509]
+script = ExtResource("11_sh8iy")
+
+[node name="Buzzing" type="AudioStreamPlayer2D" parent="FlyingBac" unique_id=1742217652]
 stream = ExtResource("5_a65cs")
 volume_db = 7.24
 pitch_scale = 0.43
@@ -95,7 +100,7 @@ max_distance = 476.0
 attenuation = 3.4822075
 panning_strength = 3.0
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="CharacterBody2D" unique_id=1754339799]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="FlyingBac" unique_id=1754339799]
 z_index = 3
 amount = 18
 visibility_rect = Rect2(0, 0, 107.575, 106.59)
@@ -103,9 +108,10 @@ trail_enabled = true
 process_material = SubResource("ParticleProcessMaterial_td3t0")
 script = ExtResource("12_0rj3f")
 
-[node name="Damagezone" parent="CharacterBody2D" unique_id=1596236458 instance=ExtResource("13_sid75")]
+[node name="Damagezone" parent="FlyingBac" unique_id=1596236458 instance=ExtResource("13_sid75")]
+collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Damagezone" unique_id=1737479315]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FlyingBac/Damagezone" unique_id=1737479315]
 position = Vector2(0, -1)
 rotation = 0.5815192
 shape = SubResource("CapsuleShape2D_sh8iy")
