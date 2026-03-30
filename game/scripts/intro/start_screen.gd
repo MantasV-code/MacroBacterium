@@ -10,7 +10,7 @@ func _input(event):
 	if event.is_action_pressed("ui_accept"):
 		if start_btn.has_focus():
 			$SelectOptionSound.play() #if user press enter 
-			await get_tree().create_timer(1.0).timeout
+			await get_tree().create_timer(1.0).timeout #wait 1 second then switch to next scene
 			get_tree().change_scene_to_file("res://scenes/intro/space_flight.tscn")
 	
 	if Input.is_action_just_pressed("ui_up") or Input.is_action_just_pressed("ui_down"):
@@ -46,4 +46,4 @@ func _process(delta: float) -> void:
 
 
 func _on_quit_button_pressed() -> void:
-	get_tree().quit()
+	get_tree().quit() #game closes if user picks "quit"
