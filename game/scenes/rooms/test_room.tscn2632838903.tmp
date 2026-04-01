@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://isufcoxcxe4r"]
 
 [ext_resource type="Texture2D" uid="uid://b8u6fhjt6x6p0" path="res://assets/sprites/Enviroment/test-room/Boarder walls.png" id="1_mjm5x"]
-[ext_resource type="Script" uid="uid://1iimt4rkj2sh" path="res://scenes/rooms/test_room.gd" id="1_vf0v6"]
 [ext_resource type="PackedScene" uid="uid://dad7bc4523ujr" path="res://scenes/BOB/Bob.tscn" id="2_fn815"]
 [ext_resource type="PackedScene" uid="uid://d1h7kiatxxg1r" path="res://scenes/fire.tscn" id="3_6vnwl"]
 [ext_resource type="PackedScene" uid="uid://bxtcu3muha6qw" path="res://scenes/pick-ups/02_canister.tscn" id="4_i7p6j"]
@@ -72,10 +71,6 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_fn815")
 
 [node name="test_room" type="Node2D" unique_id=1350542656]
-script = ExtResource("1_vf0v6")
-
-[node name="FromTestRoom" type="Marker2D" parent="." unique_id=205126056]
-position = Vector2(118, 14)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=885724039]
 tile_map_data = PackedByteArray("AAABAP7/AQAAAAAAAAACAP7/AQABAAAAAAADAP7/AQACAAAAAAAEAP7/AQADAAAAAAAFAP7/AQAEAAEAAGAGAP7/AQAEAAMAAGABAAQAAQAAAAQAAAABAAMAAQAAAAMAAAABAAIAAQAAAAIAAAABAAEAAQACAAQAAFABAAAAAQACAAQAAFABAP//AQAAAAEAAAACAAQAAQABAAQAAAADAAQAAQACAAQAAAAEAAQAAQACAAQAAAAFAAQAAQACAAQAAAAGAAQAAQADAAQAAAAHAAQAAQAEAAIAAFAIAAQAAQAEAAQAAAAIAAMAAQAEAAIAAAAIAAIAAQACAAAAAFAIAAAAAQAEAAMAAAAIAAEAAQAEAAIAAAAIAP7/AQAFAAAAAFAHAP7/AQADAAAAAAAIAP//AQADAAAAAFACAP//AQABAAEAAAADAP//AQACAAEAAAAEAP//AQACAAEAAAAFAP//AQACAAEAAAAGAP//AQACAAEAAAAHAP//AQADAAEAAAAHAAAAAQADAAIAAAAHAAEAAQADAAIAAAAHAAIAAQADAAIAAAAHAAMAAQADAAMAAAAGAAMAAQACAAMAAAAFAAMAAQAGAAQAAAAEAAMAAQACAAMAAAADAAMAAQACAAMAAAACAAMAAQABAAMAAAACAAIAAQABAAIAAAACAAEAAQABAAIAAAACAAAAAQABAAIAAAADAAAAAQACAAIAAAADAAEAAQACAAIAAAADAAIAAQACAAIAAAAEAAIAAQACAAIAAAAFAAIAAQACAAIAAAAFAAEAAQACAAIAAAAGAAEAAQACAAIAAAAGAAAAAQACAAIAAAAFAAAAAQACAAIAAAAEAAAAAQACAAIAAAAEAAEAAQACAAIAAAAGAAIAAQAGAAQAAAA=")
@@ -96,8 +91,10 @@ position = Vector2(214, 62)
 position = Vector2(175, -4)
 
 [node name="Node2D" parent="." unique_id=1769072605 instance=ExtResource("5_betf1")]
-position = Vector2(-36, 37)
+position = Vector2(75, 73)
 
 [node name="Door" parent="." unique_id=1554866573 instance=ExtResource("6_nnide")]
-position = Vector2(-356, -273)
-spawn_target = "FromTestRoom2"
+position = Vector2(-360, -282)
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=987851345]
+position = Vector2(114, -14)
