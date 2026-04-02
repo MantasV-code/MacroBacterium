@@ -18,6 +18,11 @@ config/icon="res://icon.svg"
 [autoload]
 
 ProjectileManager="*uid://bv243e0t7dalp"
+Global="*uid://bi5qkj2o1q0ai"
+
+[dotnet]
+
+project/assembly_name="MacroBacterium"
 
 [global_group]
 

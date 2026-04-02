@@ -236,12 +236,12 @@ size = Vector2(120, 302)
 
 [node name="Bob" type="Node2D" unique_id=1335707608]
 
-[node name="Bob" type="CharacterBody2D" parent="." unique_id=1991758981 groups=["player"]]
+[node name="BOB" type="CharacterBody2D" parent="." unique_id=1991758981 groups=["player"]]
 collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_ubxvs")
 
-[node name="head" type="AnimatedSprite2D" parent="Bob" unique_id=915090588]
+[node name="head" type="AnimatedSprite2D" parent="BOB" unique_id=915090588]
 unique_name_in_owner = true
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ta5nu")
@@ -249,40 +249,40 @@ animation = &"ShootF"
 frame_progress = 0.014694675
 script = ExtResource("26_7yvu5")
 
-[node name="Body" type="AnimatedSprite2D" parent="Bob" unique_id=519979325]
+[node name="Body" type="AnimatedSprite2D" parent="BOB" unique_id=519979325]
 unique_name_in_owner = true
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_flf07")
 animation = &"IdleB"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bob" unique_id=1738192714]
+[node name="Health" type="Node" parent="BOB" unique_id=2079290914]
+script = ExtResource("41_q8c2v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BOB" unique_id=1738192714]
 position = Vector2(0, 10)
 shape = SubResource("RectangleShape2D_rj586")
 
-[node name="Health" type="Node" parent="Bob" unique_id=798808182]
-script = ExtResource("41_q8c2v")
-
-[node name="Shoot" type="AudioStreamPlayer" parent="Bob" unique_id=447064534]
+[node name="Shoot" type="AudioStreamPlayer" parent="BOB" unique_id=447064534]
 unique_name_in_owner = true
 stream = ExtResource("41_aluwh")
 volume_db = -5.924
 pitch_scale = 1.17
 
-[node name="FaceHole" type="Marker2D" parent="Bob" unique_id=1518704572]
+[node name="FaceHole" type="Marker2D" parent="BOB" unique_id=1518704572]
 unique_name_in_owner = true
 position = Vector2(1, -75)
 
-[node name="Camera2D" type="Camera2D" parent="Bob" unique_id=1162838194]
+[node name="Camera2D" type="Camera2D" parent="BOB" unique_id=1162838194]
 zoom = Vector2(3.195, 3.195)
 position_smoothing_enabled = true
 
-[node name="Walking" type="AudioStreamPlayer" parent="Bob" unique_id=1825631973]
+[node name="Walking" type="AudioStreamPlayer" parent="BOB" unique_id=1825631973]
 unique_name_in_owner = true
 stream = ExtResource("42_symca")
 volume_db = -9.216
 pitch_scale = 2.31
 
-[node name="WalkParticles" type="CPUParticles2D" parent="Bob" unique_id=1098048023]
+[node name="WalkParticles" type="CPUParticles2D" parent="BOB" unique_id=1098048023]
 unique_name_in_owner = true
 z_index = 3
 position = Vector2(-3, 148)
