@@ -18,8 +18,22 @@ func _ready() -> void:
 	# Each fly starts with a different random phase
 	wander_change_time = randf_range(1.0, 3.0)
 
+# called when damage taken
 func decrease_health(amount: int) -> void:
-	$Health.decrease_health(amount)
+	$Health.decrease_health(amount) # forward damage to the "Health" node
+
+# Plays enemy's death
+# Triggred by the health script when health is zero
+func on_death() -> void:
+	set_physics_process(false) # stop movement
+	$CollisionShape2D.disabled = true 
+	
+	sprite.play("Death") # play death animation
+	await sprite.animation_finished # wait for animation to finish
+	
+	# remove enemey
+	queue_free()
+
 
 func _physics_process(delta: float) -> void:
 	bounce_timer -= delta

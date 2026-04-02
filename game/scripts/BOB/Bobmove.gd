@@ -21,17 +21,18 @@ func _ready() -> void:
 	head.sprite_frames.set_animation_loop("ShootB", false)
 	head.sprite_frames.set_animation_loop("ShootLR", false)
 
+# called when health recieved 
 func increase_health(amount: int) -> void:
-	$Health.increase_health(amount)
-	
-func decrease_health(amount: int) -> void:
-	$Health.decrease_health(amount)
+	$Health.increase_health(amount) # forward health to the "Health" node
 
+# called when damage taken
+func decrease_health(amount: int) -> void:
+	$Health.decrease_health(amount) # forward damage to the "Health" node
+
+# Plays players death
+# Triggred by the health script when health is zero
 func on_death() -> void:
-	print("Player died")
-	
-	# basic version for now
-	queue_free()
+	queue_free() # remove player
 
 func _physics_process(delta: float) -> void:
 	# movement input
