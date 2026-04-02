@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bxtcu3muha6qw"]
 
-[ext_resource type="Texture2D" uid="uid://7tyxrdvbttq4" path="res://assets/sprites/pick-ups/O2 canister.png" id="1_bhtji"]
+[ext_resource type="Texture2D" uid="uid://xhtppx34sbkx" path="res://assets/sprites/pick-ups/O2 canister.png" id="1_bhtji"]
 [ext_resource type="Script" uid="uid://cjyuybwstaiou" path="res://scripts/pick-ups/02_canister.gd" id="1_tpn3m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tpn3m"]
@@ -49,25 +49,27 @@ animations = [{
 "texture": SubResource("AtlasTexture_udp47")
 }],
 "loop": true,
-"name": &"default",
+"name": &"new_animation",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_caw4h"]
-size = Vector2(11, 28)
+size = Vector2(10, 28)
 
 [node name="02Canister" type="Area2D" unique_id=1802849633]
+collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_tpn3m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=71766846]
 position = Vector2(1, -16)
 sprite_frames = SubResource("SpriteFrames_qi0po")
-autoplay = "default"
-frame_progress = 0.7563137
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.16543461
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1506599061]
-position = Vector2(0.5, -14)
+position = Vector2(0, -14)
 shape = SubResource("RectangleShape2D_caw4h")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

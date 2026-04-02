@@ -11,7 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://uf2rywr6hjqm" path="res://assets/sprites/Enemies/FlyingBacEvil/FlyingBackEvil1.png" id="9_t3yk5"]
 [ext_resource type="Texture2D" uid="uid://dsk813akgavcr" path="res://assets/sprites/Enemies/FlyingBacEvil/FlyingBackEvil2.png" id="10_a52rf"]
 [ext_resource type="AudioStream" uid="uid://cowscfdfo37ex" path="res://assets/sprites/Enemies/FlyingBacChill/dragon-studio-cicada-buzzing-331499.mp3" id="11_mc0ho"]
+[ext_resource type="Script" uid="uid://b7urnf0xu15fs" path="res://scripts/Health.gd" id="11_r3law"]
 [ext_resource type="Script" uid="uid://btixtp0w8da1s" path="res://scripts/enemies/EvilbacParts.gd" id="12_kfh5e"]
+[ext_resource type="PackedScene" uid="uid://djohpnhiega2x" path="res://scenes/Enemies/damagezone.tscn" id="13_0yt7f"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ddru3"]
 animations = [{
@@ -37,9 +39,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("8_7eege")
 }],
-"loop": true,
+"loop": false,
 "name": &"Death",
-"speed": 12.0
+"speed": 40.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -56,30 +58,41 @@ animations = [{
 "speed": 12.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_qiuye"]
-radius = 14.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r3law"]
+radius = 6.394968
+height = 25.57987
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_f228v"]
 particle_flag_disable_z = true
 gravity = Vector3(0, 98, 0)
 
-[node name="Node2D" type="Node2D" unique_id=1769072605]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0yt7f"]
+radius = 7.760246
+height = 27.745218
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=612914337]
+[node name="FlyingBacEvil" type="Node2D" unique_id=1769072605]
+
+[node name="FlyingBacEvil" type="CharacterBody2D" parent="." unique_id=612914337]
+collision_mask = 3
 script = ExtResource("1_f228v")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=676161281]
-visibility_layer = 4
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="FlyingBacEvil" unique_id=676161281]
+visibility_layer = 2
 z_index = 3
 sprite_frames = SubResource("SpriteFrames_ddru3")
 animation = &"Death"
-frame_progress = 0.73720044
+frame = 6
+frame_progress = 1.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1105050103]
-position = Vector2(0, -2)
-shape = SubResource("CircleShape2D_qiuye")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FlyingBacEvil" unique_id=601539986]
+position = Vector2(0, -1)
+rotation = 0.5996482
+shape = SubResource("CapsuleShape2D_r3law")
 
-[node name="Buzzing" type="AudioStreamPlayer2D" parent="CharacterBody2D" unique_id=1742217652]
+[node name="Health" type="Node" parent="FlyingBacEvil" unique_id=1271209609]
+script = ExtResource("11_r3law")
+
+[node name="Buzzing" type="AudioStreamPlayer2D" parent="FlyingBacEvil" unique_id=1742217652]
 stream = ExtResource("11_mc0ho")
 volume_db = 7.24
 pitch_scale = 0.43
@@ -88,10 +101,18 @@ max_distance = 476.0
 attenuation = 3.4822075
 panning_strength = 3.0
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="CharacterBody2D" unique_id=456602714]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="FlyingBacEvil" unique_id=456602714]
 z_index = 3
 amount = 18
 visibility_rect = Rect2(0, 0, 107.575, 106.59)
 trail_enabled = true
 process_material = SubResource("ParticleProcessMaterial_f228v")
 script = ExtResource("12_kfh5e")
+
+[node name="Damagezone" parent="FlyingBacEvil" unique_id=1596236458 instance=ExtResource("13_0yt7f")]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FlyingBacEvil/Damagezone" unique_id=1231699836]
+position = Vector2(0, -1)
+rotation = 0.5815192
+shape = SubResource("CapsuleShape2D_0yt7f")

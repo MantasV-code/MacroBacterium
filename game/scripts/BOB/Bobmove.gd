@@ -4,10 +4,6 @@ const SPEED = 200.0
 const ACCELERATION = 800.0
 const FRICTION = 2800.0
 
-@export var max_health: int = 3
-var current_health: int
-
-
 @onready var head = %head
 @onready var Body = %Body
 @onready var SFX1 = %Shoot
@@ -19,33 +15,24 @@ var bullet_scene = preload("res://scenes/BOB/Bullet.tscn")
 var is_shooting = false
 
 func _ready() -> void:
-	current_health = max_health # set bob's health
 	scale = Vector2(0.5, 0.5)
 	# Shoot animations should not loop
 	head.sprite_frames.set_animation_loop("ShootF", false)
 	head.sprite_frames.set_animation_loop("ShootB", false)
 	head.sprite_frames.set_animation_loop("ShootLR", false)
 
-#decrease bobs health	
-func decrease_health(amount: int) -> void:
-	current_health -= amount
-	print("Bob's Health: ", current_health)
-	
-	if current_health <= 0:
-		die()
-
-# increase bobs health 
+# called when health recieved 
 func increase_health(amount: int) -> void:
-	if current_health < 3:
-		current_health += amount
-		print("Bob's Health: ", current_health )
-	else:
-		print("Bob has full health")
-	
-# remove bob from the game
-func die() -> void:
-	print("Player died")
-	queue_free()
+	$Health.increase_health(amount) # forward health to the "Health" node
+
+# called when damage taken
+func decrease_health(amount: int) -> void:
+	$Health.decrease_health(amount) # forward damage to the "Health" node
+
+# Plays players death
+# Triggred by the health script when health is zero
+func on_death() -> void:
+	queue_free() # remove player
 
 func _physics_process(delta: float) -> void:
 	# movement input

@@ -17,6 +17,7 @@ rotation = 1.5707964
 texture = ExtResource("1_xqmqg")
 
 [node name="Damagezone" parent="." unique_id=1596236458 instance=ExtResource("2_g5mbl")]
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Damagezone" unique_id=1431646758]
 position = Vector2(1, -8)
