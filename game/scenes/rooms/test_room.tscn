@@ -124,5 +124,10 @@ position = Vector2(125, 369)
 [node name="FlyingBacEvil2" parent="." unique_id=1757432436 instance=ExtResource("8_dp88d")]
 position = Vector2(463, 114)
 
+<<<<<<< Updated upstream
 [node name="FlyingBac3" parent="." unique_id=479470662 instance=ExtResource("5_betf1")]
 position = Vector2(434, 0)
+=======
+[node name="PauseMenu" parent="." unique_id=1684603309 instance=ExtResource("9_vmham")]
+visible = false
+>>>>>>> Stashed changes

@@ -32,6 +32,8 @@ func decrease_health(amount: int) -> void:
 # Plays players death
 # Triggred by the health script when health is zero
 func on_death() -> void:
+	await get_tree().create_timer(0.5).timeout
+	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 	queue_free() # remove player
 
 func _physics_process(delta: float) -> void:
