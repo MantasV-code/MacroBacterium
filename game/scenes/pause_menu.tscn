@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://b2vd3b2gb67px"]
+
+[ext_resource type="Script" uid="uid://cupcpn885rwxq" path="res://scripts/pause_menu.gd" id="1_myx47"]
+[ext_resource type="FontFile" uid="uid://cd2a6d43gtthe" path="res://assets/Font/Press_Start_2P/PressStart2P-Regular.ttf" id="1_n87rw"]
+[ext_resource type="AudioStream" uid="uid://r317syt4cigb" path="res://assets/Music/8bit-whoosh-ni-sound-1-00-06.mp3" id="3_5d2l8"]
+[ext_resource type="AudioStream" uid="uid://ditrh08ilojcf" path="res://assets/Music/lucadialessandro-arcade-fx-288597.mp3" id="3_kukqi"]
+
+[sub_resource type="FontVariation" id="FontVariation_myx47"]
+base_font = ExtResource("1_n87rw")
+
+[sub_resource type="FontVariation" id="FontVariation_kukqi"]
+base_font = ExtResource("1_n87rw")
+
+[sub_resource type="FontVariation" id="FontVariation_5d2l8"]
+base_font = ExtResource("1_n87rw")
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1684603309]
+process_mode = 3
+script = ExtResource("1_myx47")
+
+[node name="Panel" type="Panel" parent="." unique_id=226263975]
+offset_right = 1155.0
+offset_bottom = 648.0
+
+[node name="PAUSED" type="Label" parent="Panel" unique_id=195832213]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 112.0
+offset_right = 856.0
+offset_bottom = 212.0
+theme_override_colors/font_color = Color(1, 0.050980393, 0.07058824, 1)
+theme_override_colors/font_shadow_color = Color(0.23137255, 1, 0.28235295, 1)
+theme_override_colors/font_outline_color = Color(8.134097e-06, 0.51662517, 0.07610386, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_myx47")
+theme_override_font_sizes/font_size = 100
+text = "PAUSED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Resume_btn" type="Button" parent="Panel" unique_id=1876628634]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 336.0
+offset_right = 704.0
+offset_bottom = 400.0
+theme_override_colors/font_focus_color = Color(0.23137255, 1, 0.28235295, 1)
+theme_override_colors/font_pressed_color = Color(8.134097e-06, 0.51662517, 0.07610386, 1)
+theme_override_fonts/font = SubResource("FontVariation_kukqi")
+theme_override_font_sizes/font_size = 32
+text = "RESUME"
+
+[node name="Quit_btn" type="Button" parent="Panel" unique_id=1390225617]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 424.0
+offset_right = 704.0
+offset_bottom = 488.0
+theme_override_fonts/font = SubResource("FontVariation_5d2l8")
+theme_override_font_sizes/font_size = 32
+text = "QUIT"
+
+[node name="Cursor" type="Label" parent="." unique_id=2092819110]
+offset_left = 280.0
+offset_top = 336.0
+offset_right = 368.0
+offset_bottom = 392.0
+theme_override_font_sizes/font_size = 40
+text = "▶"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SelectOptionSound" type="AudioStreamPlayer" parent="." unique_id=105342468]
+stream = ExtResource("3_5d2l8")
+
+[node name="CusorMoveSound" type="AudioStreamPlayer" parent="." unique_id=903129499]
+stream = ExtResource("3_kukqi")
+
+[connection signal="pressed" from="Panel/Resume_btn" to="." method="_on_resume_btn_pressed"]
+[connection signal="pressed" from="Panel/Quit_btn" to="." method="_on_quit_btn_pressed"]

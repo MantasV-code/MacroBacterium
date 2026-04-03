@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://ckvmidl4ittkp"]
 
-[ext_resource type="Script" uid="uid://jtqppiqaxrra" path="res://scenes/rooms/test_room_2.gd" id="1_10j0o"]
+[ext_resource type="Script" uid="uid://jtqppiqaxrra" path="res://scripts/test_room_2.gd" id="1_10j0o"]
 [ext_resource type="Texture2D" uid="uid://cdw5456320o21" path="res://assets/sprites/Enviroment/Spritesheet-Spaceship2.png" id="1_wk688"]
 [ext_resource type="PackedScene" uid="uid://bbi71da74mjdb" path="res://scenes/Objects/door.tscn" id="2_wk688"]
 [ext_resource type="PackedScene" uid="uid://dad7bc4523ujr" path="res://scenes/BOB/Bob.tscn" id="4_kpspm"]
