@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://b2vd3b2gb67px"]
+[gd_scene format=3 uid="uid://tgsbdc5ipb8v"]
 
-[ext_resource type="Script" uid="uid://cupcpn885rwxq" path="res://scripts/pause_menu.gd" id="1_myx47"]
+[ext_resource type="Script" path="res://scripts/pause_menu.gd" id="1_myx47"]
 [ext_resource type="FontFile" uid="uid://cd2a6d43gtthe" path="res://assets/Font/Press_Start_2P/PressStart2P-Regular.ttf" id="1_n87rw"]
 [ext_resource type="AudioStream" uid="uid://r317syt4cigb" path="res://assets/Music/8bit-whoosh-ni-sound-1-00-06.mp3" id="3_5d2l8"]
 [ext_resource type="AudioStream" uid="uid://ditrh08ilojcf" path="res://assets/Music/lucadialessandro-arcade-fx-288597.mp3" id="3_kukqi"]
