@@ -1,13 +1,14 @@
 [gd_scene format=4 uid="uid://isufcoxcxe4r"]
 
 [ext_resource type="Texture2D" uid="uid://b8u6fhjt6x6p0" path="res://assets/sprites/Enviroment/test-room/Boarder walls.png" id="1_mjm5x"]
-[ext_resource type="Script" uid="uid://1iimt4rkj2sh" path="res://scenes/rooms/test_room.gd" id="1_vf0v6"]
+[ext_resource type="Script" uid="uid://1iimt4rkj2sh" path="res://scripts/test_room.gd" id="1_vf0v6"]
 [ext_resource type="PackedScene" uid="uid://dad7bc4523ujr" path="res://scenes/BOB/Bob.tscn" id="2_fn815"]
 [ext_resource type="PackedScene" uid="uid://d1h7kiatxxg1r" path="res://scenes/fire.tscn" id="3_6vnwl"]
 [ext_resource type="PackedScene" uid="uid://bxtcu3muha6qw" path="res://scenes/pick-ups/02_canister.tscn" id="4_i7p6j"]
 [ext_resource type="PackedScene" uid="uid://c0jndyr8fp3tf" path="res://scenes/Enemies/FlyingBac.tscn" id="5_betf1"]
 [ext_resource type="PackedScene" uid="uid://bbi71da74mjdb" path="res://scenes/Objects/door.tscn" id="6_nnide"]
 [ext_resource type="PackedScene" uid="uid://dv51qno6kgfef" path="res://scenes/Enemies/FlyingBacEvil.tscn" id="8_dp88d"]
+[ext_resource type="PackedScene" uid="uid://b2vd3b2gb67px" path="res://scenes/pause_menu.tscn" id="9_vmham"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fn815"]
 texture = ExtResource("1_mjm5x")
@@ -73,6 +74,7 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_fn815")
 
 [node name="test_room" type="Node2D" unique_id=1350542656]
+position = Vector2(4, 6)
 script = ExtResource("1_vf0v6")
 
 [node name="FromTestRoom" type="Marker2D" parent="." unique_id=205126056]
@@ -126,3 +128,6 @@ position = Vector2(463, 114)
 
 [node name="FlyingBac3" parent="." unique_id=479470662 instance=ExtResource("5_betf1")]
 position = Vector2(434, 0)
+
+[node name="PauseMenu" parent="." unique_id=1684603309 instance=ExtResource("9_vmham")]
+visible = false
