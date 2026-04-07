@@ -1,9 +1,9 @@
 extends Area2D
 
 @export_group("Settings")
-@export var upgrade_name: String = "HealthUp"
-@export var display_name: String = "Max health up!!"
-@export var item_color: Color = Color.GOLD
+@export var upgrade_name: String = ""
+@export var display_name: String = ""
+@export var item_color: Color = Color.WHITE
 @onready var ItemSprite = %ItemSprite
 
 @onready var sprite = $AnimatedSprite2D
@@ -19,7 +19,7 @@ func _ready() -> void:
 	
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Bob" or body.is_in_group("player"):
-		BobStats.apply_upgrade("health_up")
+		BobStats.apply_upgrade(upgrade_name)
 		_collect_effect()
 		
 func _collect_effect() -> void:

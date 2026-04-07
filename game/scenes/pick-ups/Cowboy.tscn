@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://cb4k5ekmbogkx"]
+
+[ext_resource type="Texture2D" uid="uid://co1p6dd07sh0s" path="res://assets/Items/CBHat0.png" id="2_dcx34"]
+
+[sub_resource type="GDScript" id="GDScript_waf5p"]
+script/source = "extends Area2D
+
+@export_group(\"Settings\")
+@export var upgrade_name: String = \"CowboyHat\"
+@export var display_name: String = \"Yeehaw\"
+@export var item_color: Color = Color.SADDLE_BROWN
+@onready var ItemSprite = %ItemSprite
+
+@onready var sprite = $AnimatedSprite2D
+@onready var label = $Label 
+
+func _ready() -> void:
+	body_entered.connect(_on_body_entered)
+	label.hide()
+	label.text = display_name
+	label.modulate = item_color
+	ItemSprite.play(\"default\")
+	
+func _on_body_entered(body: Node2D) -> void:
+	if body.name == \"Bob\" or body.is_in_group(\"player\"):
+		BobStats.apply_upgrade(\"piercing\")
+		_collect_effect()
+		
+func _collect_effect() -> void:
+	monitoring = false
+	if has_node(\"AnimationPlayer\"):
+		$AnimationPlayer.stop()
+		
+	var tween = create_tween().set_parallel(true)
+	label.show()
+
+	tween.tween_property(label, \"position:y\", label.position.y - 60, 1.5)\\
+		.set_trans(Tween.TRANS_SINE)\\
+		.set_ease(Tween.EASE_OUT)
+		
+	tween.chain().tween_property(label, \"modulate:a\", 0.0, 0.8)
+
+	# --- ITEM VISUALS ---
+	tween.tween_property(ItemSprite, \"modulate:a\", 0.0, 0.3)
+	tween.tween_property(ItemSprite, \"scale\", Vector2(1.5, 1.5), 0.3)
+	
+	tween.chain().tween_callback(queue_free)
+"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ujmw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dcx34")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nxbvv"]
+size = Vector2(20, 26)
+
+[node name="Item" type="Area2D" unique_id=895744004]
+collision_layer = 2
+collision_mask = 2
+script = SubResource("GDScript_waf5p")
+
+[node name="ItemSprite" type="AnimatedSprite2D" parent="." unique_id=1389787839]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_8ujmw")
+frame_progress = 0.87401503
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1345347159]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_nxbvv")
+
+[node name="Label" type="Label" parent="." unique_id=1348467245]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

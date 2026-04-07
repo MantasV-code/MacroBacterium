@@ -7,6 +7,8 @@ extends Node
 @export var FRICTION = 2800.0
 @export var SIZE = 0.5
 @export var health = 3
+@export var Max_health = 3
+
 
 # --- Projectile Stats ---
 @export_group("Projectiles")
@@ -22,22 +24,23 @@ extends Node
 func apply_upgrade(upgrade_name: String) -> void:
 	match upgrade_name:
 		"health_up":
-			health += 1 # Update the global 'Master' variable
+			Max_health += 1 # Update the global 'Master' variable
 			var player = get_tree().get_first_node_in_group("player")
 			if player:
 				player.increase_health(1) 
 				print("Bob's health increased. Global health is now: ", health)
 		"double_shot":
-			count = 2
-			spread = 15.0
+			count += 1
+			spread += 15.0
 		"triple_shot":
 			count = 3
 			spread = 20.0
 		"piercing":
 			piercing = true
-		"red":
+			color = Color.YELLOW
+		"Power":
 			color = Color.RED
-			damage = 20
+			damage += 1
 		"fast":
 			speed = 1400.0
 			SPEED = 350.0

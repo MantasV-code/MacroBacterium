@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://dv6wf7iy3fe2o"]
+
+[ext_resource type="Script" uid="uid://bq6vq0p77bj6i" path="res://scenes/pick-ups/BaseItem.gd" id="1_4coef"]
+[ext_resource type="Texture2D" uid="uid://c1nlpm84ktpew" path="res://assets/Items/golden_o2/max_health.png" id="2_hud7v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pechl"]
+atlas = ExtResource("2_hud7v")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dm82n"]
+atlas = ExtResource("2_hud7v")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gh4ln"]
+atlas = ExtResource("2_hud7v")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k83ml"]
+atlas = ExtResource("2_hud7v")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2iwv"]
+atlas = ExtResource("2_hud7v")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6guqj"]
+atlas = ExtResource("2_hud7v")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ujmw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pechl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dm82n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gh4ln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k83ml")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o2iwv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6guqj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nxbvv"]
+size = Vector2(20, 26)
+
+[node name="Item" type="Area2D" unique_id=895744004]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_4coef")
+
+[node name="ItemSprite" type="AnimatedSprite2D" parent="." unique_id=1389787839]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_8ujmw")
+frame_progress = 0.82935107
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1345347159]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_nxbvv")
+
+[node name="Label" type="Label" parent="." unique_id=1348467245]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

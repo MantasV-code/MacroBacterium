@@ -282,16 +282,15 @@ script = ExtResource("1_ubxvs")
 unique_name_in_owner = true
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ta5nu")
-animation = &"ShootF"
-frame_progress = 0.014694675
+animation = &"IdleB"
 script = ExtResource("26_7yvu5")
 
 [node name="Body" type="AnimatedSprite2D" parent="BOB" unique_id=519979325]
 unique_name_in_owner = true
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_flf07")
-animation = &"Death"
-frame_progress = 0.92356396
+animation = &"IdleLR"
+frame_progress = 0.29678193
 
 [node name="Health" type="Node" parent="BOB" unique_id=2079290914]
 script = ExtResource("41_q8c2v")
