@@ -98,12 +98,8 @@ func shoot(direction: Vector2) -> void:
 	SFX1.play()
 	
 	var anim = _get_shoot_anim(direction)
-	# Start the animation using the speed multiplier from BobStats
 	head.play(anim, BobStats.shoot_speed) 
-	
 	_spawn_bullets(direction)
-	
-	# This 'await' will now happen faster because the animation is faster
 	await head.animation_finished
 	is_shooting = false
 
