@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 ProjectileManager="*uid://bv243e0t7dalp"
 Global="*uid://bi5qkj2o1q0ai"
+BobStats="*uid://8myg3rwpym43"
 
 [dotnet]
 

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bhfsvxaamdty"]
+
+[ext_resource type="Script" uid="uid://bq6vq0p77bj6i" path="res://BaseItem.gd" id="1_kois5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ujmw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nxbvv"]
+size = Vector2(20, 26)
+
+[node name="Item" type="Area2D" unique_id=895744004]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_kois5")
+
+[node name="ItemSprite" type="AnimatedSprite2D" parent="." unique_id=1389787839]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_8ujmw")
+frame_progress = 0.87401503
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1345347159]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_nxbvv")
+
+[node name="Label" type="Label" parent="." unique_id=1348467245]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

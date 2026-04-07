@@ -8,7 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://c0jndyr8fp3tf" path="res://scenes/Enemies/FlyingBac.tscn" id="5_betf1"]
 [ext_resource type="PackedScene" uid="uid://bbi71da74mjdb" path="res://scenes/Objects/door.tscn" id="6_nnide"]
 [ext_resource type="PackedScene" uid="uid://dv51qno6kgfef" path="res://scenes/Enemies/FlyingBacEvil.tscn" id="8_dp88d"]
-[ext_resource type="PackedScene" uid="uid://b2vd3b2gb67px" path="res://scenes/pause_menu.tscn" id="9_vmham"]
+[ext_resource type="PackedScene" uid="uid://tgsbdc5ipb8v" path="res://scenes/pause_menu.tscn" id="9_vmham"]
+[ext_resource type="PackedScene" uid="uid://bhfsvxaamdty" path="res://scenes/pick-ups/Baseitem.tscn" id="10_suhbj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fn815"]
 texture = ExtResource("1_mjm5x")
@@ -131,3 +132,6 @@ position = Vector2(434, 0)
 
 [node name="PauseMenu" parent="." unique_id=1684603309 instance=ExtResource("9_vmham")]
 visible = false
+
+[node name="Area2D" parent="." unique_id=895744004 instance=ExtResource("10_suhbj")]
+position = Vector2(287, 290)

@@ -16,6 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://bn0j77dnrke8v" path="res://assets/Music/freesound_community-steam-2-36231.mp3" id="12_r105p"]
 [ext_resource type="PackedScene" uid="uid://c0jndyr8fp3tf" path="res://scenes/Enemies/FlyingBac.tscn" id="15_pyxte"]
 [ext_resource type="PackedScene" uid="uid://dv51qno6kgfef" path="res://scenes/Enemies/FlyingBacEvil.tscn" id="16_o2jpi"]
+[ext_resource type="PackedScene" uid="uid://dlochpdt6uibc" path="res://scenes/pick-ups/Goldeno2.tscn" id="17_o2jpi"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7mn8v"]
 shader = ExtResource("1_y6rpo")
@@ -602,6 +603,15 @@ tile_set = SubResource("TileSet_u0gge")
 z_index = 1
 position = Vector2(495.25, 329.75)
 scale = Vector2(0.245, 0.245)
+
+[node name="02Canister2" parent="SubViewportContainer/SubViewport" unique_id=710912012 instance=ExtResource("7_vwbyx")]
+position = Vector2(380.25, 317.75)
+
+[node name="Item" parent="SubViewportContainer/SubViewport" unique_id=895744004 instance=ExtResource("17_o2jpi")]
+position = Vector2(644.25, 378.75)
+
+[node name="Item2" parent="SubViewportContainer/SubViewport" unique_id=1205519522 instance=ExtResource("17_o2jpi")]
+position = Vector2(614.25, 337.75)
 
 [node name="02Canister" parent="SubViewportContainer/SubViewport" unique_id=1802849633 instance=ExtResource("7_vwbyx")]
 position = Vector2(207, 315)
