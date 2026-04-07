@@ -19,7 +19,7 @@ func _ready() -> void:
 	
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Bob" or body.is_in_group("player"):
-		BobStats.apply_upgrade(upgrade_name)
+		BobStats.apply_effect(upgrade_name)
 		_collect_effect()
 		
 func _collect_effect() -> void:

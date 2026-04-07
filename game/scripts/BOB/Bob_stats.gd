@@ -20,11 +20,18 @@ extends Node
 @export var color: Color = Color.SKY_BLUE
 @export var scale_multiplier: float = 5.0
 @export var lifetime: float = 20.0
+@export var shoot_speed: float = 1
 
-func apply_upgrade(upgrade_name: String) -> void:
+func apply_effect(upgrade_name: String) -> void:
 	match upgrade_name:
-		"health_up":
+		"Max_health_up":
 			Max_health += 1 # Update the global 'Master' variable
+			var player = get_tree().get_first_node_in_group("player")
+			if player:
+				player.increase_health(1) 
+				print("Bob's health increased. Global health is now: ", health)				
+		"health_up":
+			health += 1 # Update the global 'Master' variable
 			var player = get_tree().get_first_node_in_group("player")
 			if player:
 				player.increase_health(1) 
@@ -32,9 +39,10 @@ func apply_upgrade(upgrade_name: String) -> void:
 		"double_shot":
 			count += 1
 			spread += 15.0
+			shoot_speed += 2
 		"triple_shot":
-			count = 3
-			spread = 20.0
+			count += 2
+			spread += 20.0
 		"piercing":
 			piercing = true
 			color = Color.YELLOW

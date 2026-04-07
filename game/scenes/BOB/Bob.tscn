@@ -290,7 +290,7 @@ unique_name_in_owner = true
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_flf07")
 animation = &"IdleLR"
-frame_progress = 0.29678193
+frame_progress = 0.55697155
 
 [node name="Health" type="Node" parent="BOB" unique_id=2079290914]
 script = ExtResource("41_q8c2v")

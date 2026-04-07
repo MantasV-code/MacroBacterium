@@ -76,7 +76,7 @@ func _update_shoot_head(direction: Vector2) -> void:
 	if head.animation != target_anim:
 		var current_frame = head.frame
 		head.sprite_frames.set_animation_loop(target_anim, false)
-		head.play(target_anim)
+		head.play(target_anim, BobStats.shoot_speed)
 		head.frame = current_frame
 	if target_anim == "ShootLR":
 		head.scale.x = -1 if direction.x < 0 else 1
@@ -96,9 +96,14 @@ func _update_idle_head(direction: Vector2) -> void:
 func shoot(direction: Vector2) -> void:
 	is_shooting = true
 	SFX1.play()
+	
 	var anim = _get_shoot_anim(direction)
-	head.play(anim)
+	# Start the animation using the speed multiplier from BobStats
+	head.play(anim, BobStats.shoot_speed) 
+	
 	_spawn_bullets(direction)
+	
+	# This 'await' will now happen faster because the animation is faster
 	await head.animation_finished
 	is_shooting = false
 
