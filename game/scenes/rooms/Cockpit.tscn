@@ -8,8 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://dad7bc4523ujr" path="res://scenes/BOB/Bob.tscn" id="5_u0gge"]
 [ext_resource type="Texture2D" uid="uid://yk2ldrb7ltdg" path="res://assets/sprites/Enviroment/Smoke1.png" id="5_uubay"]
 [ext_resource type="Script" uid="uid://co2frnk5otirw" path="res://scenes/rooms/smoke_grate.gd" id="6_go65c"]
-[ext_resource type="PackedScene" uid="uid://bxtcu3muha6qw" path="res://scenes/pick-ups/02_canister.tscn" id="7_vwbyx"]
 [ext_resource type="Shader" uid="uid://b12kbqo7wt2xd" path="res://scenes/rooms/crt.gdshader" id="9_go65c"]
+[ext_resource type="PackedScene" uid="uid://bj35b3tmg4jvw" path="res://scenes/pick-ups/DoubleShot.tscn" id="9_o2jpi"]
+[ext_resource type="PackedScene" uid="uid://dv6wf7iy3fe2o" path="res://scenes/pick-ups/Golden-02.tscn" id="10_pyxte"]
 [ext_resource type="AudioStream" uid="uid://bw7rckmejpux4" path="res://assets/Music/Super Metroid Music - Crateria (Zebes Planetfall).mp3" id="11_7mn8v"]
 [ext_resource type="Texture2D" uid="uid://cdw5456320o21" path="res://assets/sprites/Enviroment/Spritesheet-Spaceship2.png" id="11_lgnlx"]
 [ext_resource type="Shader" uid="uid://crhethfchgsq7" path="res://scenes/rooms/Vignette.gdshader" id="12_07p4q"]
@@ -598,13 +599,25 @@ position = Vector2(-1, 0)
 tile_map_data = PackedByteArray("AAANAAUAAAAEAAEAAAAOAAUAAAAEAAEAAAAPAAUAAAAEAAEAAAAQAAUAAAAEAAEAAAARAAUAAAAEAAEAAAASAAUAAAAEAAEAAAATAAUAAAAEAAEAAAAUAAUAAAAEAAEAAAALAAQAAAAPAAQAAAAWAAQAAAAPAAQAAAAIAAQAAAAPAAIAAAAYAAQAAAAPAAIAAAAHAAQAAAAMAAIAAAAZAAQAAAAMAAIAAAAQAAYAAAAGAAAAAAARAAYAAAAGAAAAAAARAAcAAAAGAAAAAAAQAAcAAAAGAAAAAAAQAAgAAAAGAAAAAAARAAgAAAAGAAAAAAARAAkAAAAGAAAAAAAQAAkAAAAGAAAAAAAQAAoAAAAGAAAAAAARAAoAAAAGAAAAAAARAAsAAAAGAAAAAAAQAAsAAAAGAAAAAAAQAAwAAAAGAAAAAAARAAwAAAAGAAAAAAARAA0AAAAGAAAAAAAQAA0AAAAGAAAAAAAQAA4AAAAGAAAAAAARAA4AAAAGAAAAAAAQAA8AAAAGAAAAAAARAA8AAAAGAAAAAAA=")
 tile_set = SubResource("TileSet_u0gge")
 
+[node name="DoubleShot3" parent="SubViewportContainer/SubViewport" unique_id=895744004 instance=ExtResource("9_o2jpi")]
+position = Vector2(439.25, 227.75)
+
+[node name="DoubleShot2" parent="SubViewportContainer/SubViewport" unique_id=1554832706 instance=ExtResource("9_o2jpi")]
+position = Vector2(326.25, 275.75)
+
+[node name="DoubleShot" parent="SubViewportContainer/SubViewport" unique_id=1040894618 instance=ExtResource("9_o2jpi")]
+position = Vector2(329.25, 441.75)
+
 [node name="Bob" parent="SubViewportContainer/SubViewport" unique_id=1335707608 instance=ExtResource("5_u0gge")]
 z_index = 1
 position = Vector2(495.25, 329.75)
 scale = Vector2(0.245, 0.245)
 
-[node name="02Canister" parent="SubViewportContainer/SubViewport" unique_id=1802849633 instance=ExtResource("7_vwbyx")]
-position = Vector2(207, 315)
+[node name="GoldenO2" parent="SubViewportContainer/SubViewport" unique_id=1152025209 instance=ExtResource("10_pyxte")]
+position = Vector2(592.25, 365.75)
+upgrade_name = "health_up"
+display_name = "Health up"
+item_color = Color(1, 1, 0.09019608, 1)
 
 [node name="TextureRect" type="TextureRect" parent="SubViewportContainer/SubViewport" unique_id=100346220]
 texture_filter = 1

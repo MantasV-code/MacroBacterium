@@ -27,12 +27,20 @@
 [ext_resource type="Texture2D" uid="uid://ga1bo7mw87c5" path="res://assets/Bob/BobHead/Bobs_head01.png" id="25_i16yk"]
 [ext_resource type="Script" uid="uid://dphhi0s4topwv" path="res://scripts/BOB/BobHead.gd" id="26_7yvu5"]
 [ext_resource type="Texture2D" uid="uid://bfxs7irqrdv17" path="res://assets/Bob/BobBody/BobBody11.png" id="27_biub2"]
+[ext_resource type="Texture2D" uid="uid://d0wbsu4hx3pfl" path="res://assets/Bob/Bob_death/Bob_Death0.png" id="27_csya5"]
 [ext_resource type="Texture2D" uid="uid://d65v75mh306r" path="res://assets/Bob/BobBody/BobBody08.png" id="28_2p24n"]
+[ext_resource type="Texture2D" uid="uid://bky0y5su6ooy" path="res://assets/Bob/Bob_death/Bob_Death1.png" id="28_c87kr"]
+[ext_resource type="Texture2D" uid="uid://6jxewihjbe0l" path="res://assets/Bob/Bob_death/Bob_Death2.png" id="29_q6k22"]
 [ext_resource type="Texture2D" uid="uid://bmt2eeg8aown0" path="res://assets/Bob/BobBody/BobBody14.png" id="29_ws3qw"]
 [ext_resource type="Texture2D" uid="uid://dwypbgyj36lag" path="res://assets/Bob/BobBody/BobBody12.png" id="30_tvp6t"]
+[ext_resource type="Texture2D" uid="uid://dy57dnbgvosvq" path="res://assets/Bob/Bob_death/Bob_Death3.png" id="30_uc3v6"]
+[ext_resource type="Texture2D" uid="uid://b23g768s4cj3p" path="res://assets/Bob/Bob_death/Bob_Death4.png" id="31_fnxmp"]
 [ext_resource type="Texture2D" uid="uid://tullaupoxlw3" path="res://assets/Bob/BobBody/BobBody15.png" id="31_gvifp"]
 [ext_resource type="Texture2D" uid="uid://cyi3hfc4tbk8l" path="res://assets/Bob/BobBody/BobBody09.png" id="32_ajxgh"]
+[ext_resource type="Texture2D" uid="uid://c82r4xn3hsno2" path="res://assets/Bob/Bob_death/Bob_Death5.png" id="32_c3kg2"]
+[ext_resource type="Texture2D" uid="uid://bug3fui2p03kx" path="res://assets/Bob/Bob_death/Bob_Death6.png" id="33_6hres"]
 [ext_resource type="Texture2D" uid="uid://4sqt7ck3hyu1" path="res://assets/Bob/BobBody/BobBody06.png" id="33_s368v"]
+[ext_resource type="Texture2D" uid="uid://p4xyidsmsc3r" path="res://assets/Bob/Bob_death/Bob_Death7.png" id="34_3vsra"]
 [ext_resource type="Texture2D" uid="uid://ds6rnn5tcqr0d" path="res://assets/Bob/BobBody/BobBody07.png" id="34_dosy6"]
 [ext_resource type="Texture2D" uid="uid://c8dwp2pbmuabt" path="res://assets/Bob/BobBody/BobBody05.png" id="35_abd5a"]
 [ext_resource type="Texture2D" uid="uid://dwyenv8kphp0n" path="res://assets/Bob/BobBody/sprite_06.png" id="36_bs6ip"]
@@ -157,6 +165,35 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("27_csya5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_c87kr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_q6k22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_uc3v6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_fnxmp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_c3kg2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_6hres")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_3vsra")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("27_biub2")
 }],
 "loop": true,
@@ -245,15 +282,15 @@ script = ExtResource("1_ubxvs")
 unique_name_in_owner = true
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ta5nu")
-animation = &"ShootF"
-frame_progress = 0.014694675
+animation = &"IdleB"
 script = ExtResource("26_7yvu5")
 
 [node name="Body" type="AnimatedSprite2D" parent="BOB" unique_id=519979325]
 unique_name_in_owner = true
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_flf07")
-animation = &"IdleB"
+animation = &"IdleLR"
+frame_progress = 0.55697155
 
 [node name="Health" type="Node" parent="BOB" unique_id=2079290914]
 script = ExtResource("41_q8c2v")
