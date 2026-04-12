@@ -16,12 +16,6 @@ func _ready():
 		else:
 			print("Spawn NOT found")
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-	
-	
 func _input(event):
 	if event.is_action_pressed("pause"):
 		toggle_pause()

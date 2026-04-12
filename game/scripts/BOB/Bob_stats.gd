@@ -2,12 +2,11 @@ extends Node
 
 # --- Bob's Physical Stats ---
 @export_group("Movement")
-@export var SPEED = 200.0
+@export var movement_speed = 200.0
 @export var ACCELERATION = 800.0
 @export var FRICTION = 2800.0
 @export var SIZE = 0.5
-@export var health = 3
-@export var Max_health = 3
+
 
 
 # --- Projectile Stats ---
@@ -22,20 +21,20 @@ extends Node
 @export var lifetime: float = 20.0
 @export var shoot_speed: float = 1
 
-func apply_effect(upgrade_name: String) -> void:
-	match upgrade_name:
-		"Max_health_up":
-			Max_health += 1 # Update the global 'Master' variable
+func modify_health(item_effect: String, value: int) -> void:
+	match item_effect:
+		"increase_health":
 			var player = get_tree().get_first_node_in_group("player")
 			if player:
-				player.increase_health(1) 
-				print("Bob's health increased. Global health is now: ", health)				
-		"health_up":
-			health += 1 # Update the global 'Master' variable
+				player.increase_health(value)
+		"increase_max_health":
 			var player = get_tree().get_first_node_in_group("player")
 			if player:
-				player.increase_health(1) 
-				print("Bob's health increased. Global health is now: ", health)
+				player.increase_max_health(value)
+
+
+func apply_effect(item_effect: String) -> void:
+	match item_effect:
 		"double_shot":
 			count += 1
 			spread += 15.0
@@ -51,7 +50,7 @@ func apply_effect(upgrade_name: String) -> void:
 			damage += 1
 		"fast":
 			speed = 1400.0
-			SPEED = 350.0
+			movement_speed = 350.0
 		"big":
 			scale_multiplier = 10.0
 			SIZE = 0.8

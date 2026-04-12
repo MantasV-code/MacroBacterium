@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0r5jsnfxqcgx"
-path="res://.godot/imported/Beard0.png-b5b5e5344a14631a69b962587f3c5457.ctex"
+uid="uid://coqv3bjdpbel3"
+path="res://.godot/imported/Mono0.png-89a3be6af1f897de1487ce1098b6745a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Items/Beard0.png"
-dest_files=["res://.godot/imported/Beard0.png-b5b5e5344a14631a69b962587f3c5457.ctex"]
+source_file="res://assets/sprites/pick-ups/Mono0.png"
+dest_files=["res://.godot/imported/Mono0.png-89a3be6af1f897de1487ce1098b6745a.ctex"]
 
 [params]
 

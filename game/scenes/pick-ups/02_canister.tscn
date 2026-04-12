@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://bxtcu3muha6qw"]
+
+[ext_resource type="Script" uid="uid://bq6vq0p77bj6i" path="res://scripts/pick-ups/item_pickup.gd" id="1_tpn3m"]
+[ext_resource type="Texture2D" uid="uid://xhtppx34sbkx" path="res://assets/sprites/pick-ups/O2 canister.png" id="2_5wbvu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwwjc"]
+atlas = ExtResource("2_5wbvu")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdld8"]
+atlas = ExtResource("2_5wbvu")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pofe0"]
+atlas = ExtResource("2_5wbvu")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_udp47"]
+atlas = ExtResource("2_5wbvu")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qi0po"]
+atlas = ExtResource("2_5wbvu")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_caw4h"]
+atlas = ExtResource("2_5wbvu")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lg0pw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jwwjc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xdld8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pofe0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_udp47")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qi0po")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_caw4h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wfyqo"]
+size = Vector2(10, 27)
+
+[node name="02_canister" type="Area2D" unique_id=961115757]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_tpn3m")
+item_type = "health"
+item_effect = "increase_health"
+display_name = "Health Up"
+value = 1
+item_color = Color(0, 1, 0, 1)
+
+[node name="ItemSprite" type="AnimatedSprite2D" parent="." unique_id=148412793]
+unique_name_in_owner = true
+position = Vector2(1, -16)
+sprite_frames = SubResource("SpriteFrames_lg0pw")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2118298525]
+position = Vector2(0, -13.5)
+shape = SubResource("RectangleShape2D_wfyqo")
+
+[node name="Label" type="Label" parent="." unique_id=778418778]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

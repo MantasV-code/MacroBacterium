@@ -14,6 +14,10 @@ func increase_health(amount: int) -> void:
 	else:
 		print("Bob has full health")
 
+func increase_max_health(amount: int) -> void:
+	max_health += amount
+	print("Bob's Max Health: ", max_health)
+
 # decrease health
 func decrease_health(amount: int) -> void:
 	current_health -= amount

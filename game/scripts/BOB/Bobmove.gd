@@ -15,16 +15,20 @@ func _ready() -> void:
 	# Use PlayerData.SIZE for the scale
 	scale = Vector2(BobStats.SIZE, BobStats.SIZE)
 	
-	# Initialize health from PlayerData
-	$Health.max_health = BobStats.health
-	$Health.current_health = BobStats.health
+	## Initialize health from PlayerData
+	#$Health.max_health = BobStats.health
+	#$Health.current_health = BobStats.health
 	
 	head.sprite_frames.set_animation_loop("ShootF", false)
 	head.sprite_frames.set_animation_loop("ShootB", false)
 	head.sprite_frames.set_animation_loop("ShootLR", false)
 
+# Modify Bob's Health
 func increase_health(amount: int) -> void:
 	$Health.increase_health(amount)
+
+func increase_max_health(amount: int) -> void:
+	$Health.increase_max_health(amount)
 
 func decrease_health(amount: int) -> void:
 	$Health.decrease_health(amount)
@@ -50,7 +54,7 @@ func _physics_process(delta: float) -> void:
 
 
 	if move_direction != Vector2.ZERO:
-		velocity = velocity.move_toward(move_direction * BobStats.SPEED, BobStats.ACCELERATION * delta)
+		velocity = velocity.move_toward(move_direction * BobStats.movement_speed, BobStats.ACCELERATION * delta)
 		_update_body(move_direction, true)
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, BobStats.FRICTION * delta)
