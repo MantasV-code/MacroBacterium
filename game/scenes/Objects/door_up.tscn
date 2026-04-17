@@ -1,26 +1,23 @@
 [gd_scene format=3 uid="uid://bbi71da74mjdb"]
 
-[ext_resource type="Texture2D" uid="uid://cd5pq2pthib34" path="res://assets/sprites/Enviroment/Spaceship Objects/Door Front.png" id="1_ba8gm"]
-[ext_resource type="Script" uid="uid://dksmvsycer8pj" path="res://scripts/door.gd" id="1_v6xrn"]
+[ext_resource type="Script" uid="uid://dksmvsycer8pj" path="res://scripts/door.gd" id="1_n0brc"]
+[ext_resource type="Texture2D" uid="uid://cd5pq2pthib34" path="res://assets/sprites/Enviroment/Spaceship Objects/Door Front.png" id="2_t5y6w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ogei6"]
-size = Vector2(52.5, 57.75)
+size = Vector2(52.5, 65.875)
 
-[node name="Door" type="Node2D" unique_id=1554866573 groups=["player"]]
-script = ExtResource("1_v6xrn")
-next_scene = "res://scenes/rooms/test_room_2.tscn"
-spawn_target = "FromTestRoom"
+[node name="Door_Up" type="Node2D" unique_id=1554866573]
+script = ExtResource("1_n0brc")
+spawn_target = "Spawn_Down"
 
 [node name="DoorFront" type="Sprite2D" parent="." unique_id=1003567271]
-position = Vector2(476, 246)
-texture = ExtResource("1_ba8gm")
+texture = ExtResource("2_t5y6w")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=722571541]
 collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=123876268]
-position = Vector2(476, 241)
 shape = SubResource("RectangleShape2D_ogei6")
 debug_color = Color(0.9446405, 0.13609484, 0.48841858, 0.41960785)
 

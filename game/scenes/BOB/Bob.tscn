@@ -296,7 +296,7 @@ frame_progress = 0.55697155
 script = ExtResource("41_q8c2v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BOB" unique_id=1738192714]
-position = Vector2(0, 10)
+position = Vector2(1, 4)
 shape = SubResource("RectangleShape2D_rj586")
 
 [node name="Shoot" type="AudioStreamPlayer" parent="BOB" unique_id=447064534]
@@ -309,10 +309,6 @@ pitch_scale = 1.17
 unique_name_in_owner = true
 position = Vector2(1, -75)
 
-[node name="Camera2D" type="Camera2D" parent="BOB" unique_id=1162838194]
-zoom = Vector2(3.195, 3.195)
-position_smoothing_enabled = true
-
 [node name="Walking" type="AudioStreamPlayer" parent="BOB" unique_id=1825631973]
 unique_name_in_owner = true
 stream = ExtResource("42_symca")
@@ -321,9 +317,15 @@ pitch_scale = 2.31
 
 [node name="WalkParticles" type="CPUParticles2D" parent="BOB" unique_id=1098048023]
 unique_name_in_owner = true
+visible = false
 z_index = 3
 position = Vector2(-3, 148)
 texture = ExtResource("43_yjivn")
 emission_shape = 3
 emission_rect_extents = Vector2(66.055, 1)
 script = ExtResource("44_s2cy5")
+
+[node name="Camera2D" type="Camera2D" parent="BOB" unique_id=1162838194]
+position = Vector2(4, -4)
+zoom = Vector2(3.195, 3.195)
+position_smoothing_enabled = true
