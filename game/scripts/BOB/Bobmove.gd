@@ -1,9 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 200.0
-const ACCELERATION = 800.0
-const FRICTION = 2800.0
-
+# All stats now come from the Autoload 'PlayerData'
 @onready var head = %head
 @onready var Body = %Body
 @onready var SFX1 = %Shoot
@@ -15,53 +12,50 @@ var bullet_scene = preload("res://scenes/BOB/Bullet.tscn")
 var is_shooting = false
 
 func _ready() -> void:
-	scale = Vector2(0.5, 0.5)
-	# Shoot animations should not loop
+	# Use PlayerData.SIZE for the scale
+	scale = Vector2(BobStats.SIZE, BobStats.SIZE)
+	
+	# Initialize health from PlayerData
+	$Health.max_health = BobStats.health
+	$Health.current_health = BobStats.health
+	
 	head.sprite_frames.set_animation_loop("ShootF", false)
 	head.sprite_frames.set_animation_loop("ShootB", false)
 	head.sprite_frames.set_animation_loop("ShootLR", false)
 
-# called when health recieved 
 func increase_health(amount: int) -> void:
-	$Health.increase_health(amount) # forward health to the "Health" node
+	$Health.increase_health(amount)
 
-# called when damage taken
 func decrease_health(amount: int) -> void:
-	$Health.decrease_health(amount) # forward damage to the "Health" node
+	$Health.decrease_health(amount)
 
-# Plays players death
-# Triggred by the health script when health is zero
 func on_death() -> void:
 	await get_tree().create_timer(0.5).timeout
 	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
-	queue_free() # remove player
+	queue_free()
 
 func _physics_process(delta: float) -> void:
-	# movement input
 	var move_direction := Vector2(
 		Input.get_axis("move_left", "move_right"),
 		Input.get_axis("move_up", "move_down")
 	).normalized()
 	
-	# aim input
 	var aim_direction := Vector2(
 		Input.get_axis("aim_left", "aim_right"),
 		Input.get_axis("aim_up", "aim_down")
 	).normalized()
 
-	# Shoot if aiming and not already shooting
 	if aim_direction != Vector2.ZERO and !is_shooting:
 		shoot(aim_direction)
 
-	# Apply movement or friction
+
 	if move_direction != Vector2.ZERO:
-		velocity = velocity.move_toward(move_direction * SPEED, ACCELERATION * delta)
+		velocity = velocity.move_toward(move_direction * BobStats.SPEED, BobStats.ACCELERATION * delta)
 		_update_body(move_direction, true)
 	else:
-		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
+		velocity = velocity.move_toward(Vector2.ZERO, BobStats.FRICTION * delta)
 		_update_body(Vector2.ZERO, false)
 
-	# Update head animation based on shoot or move state
 	if is_shooting and aim_direction != Vector2.ZERO:
 		_update_shoot_head(aim_direction)
 	elif !is_shooting:
@@ -82,7 +76,7 @@ func _update_shoot_head(direction: Vector2) -> void:
 	if head.animation != target_anim:
 		var current_frame = head.frame
 		head.sprite_frames.set_animation_loop(target_anim, false)
-		head.play(target_anim)
+		head.play(target_anim, BobStats.shoot_speed)
 		head.frame = current_frame
 	if target_anim == "ShootLR":
 		head.scale.x = -1 if direction.x < 0 else 1
@@ -102,9 +96,9 @@ func _update_idle_head(direction: Vector2) -> void:
 func shoot(direction: Vector2) -> void:
 	is_shooting = true
 	SFX1.play()
+	
 	var anim = _get_shoot_anim(direction)
-	head.sprite_frames.set_animation_loop(anim, false)
-	head.play(anim)
+	head.play(anim, BobStats.shoot_speed) 
 	_spawn_bullets(direction)
 	await head.animation_finished
 	is_shooting = false
@@ -137,19 +131,21 @@ func _update_body(direction: Vector2, is_moving: bool) -> void:
 	if !SFX2.playing:
 		SFX2.play()
 
-# Spawns bullets with spread based on ProjectileManager data
 func _spawn_bullets(direction: Vector2) -> void:
-	var count = ProjectileManager.data.count
-	var spread = deg_to_rad(ProjectileManager.data.spread)
+	var p_count = BobStats.count
+	var p_spread = deg_to_rad(BobStats.spread)
 
-	for i in count:
+	for i in p_count:
 		var angle_offset = 0.0
-		if count > 1:
-			angle_offset = lerp(-spread / 2.0, spread / 2.0, float(i) / float(count - 1))
+		if p_count > 1:
+			angle_offset = lerp(-p_spread / 2.0, p_spread / 2.0, float(i) / float(p_count - 1))
 
 		var bullet_dir = direction.rotated(angle_offset)
 		var bullet = bullet_scene.instantiate()
+		
+		# ADD TO SCENE FIRST
 		get_parent().add_child(bullet)
 		bullet.global_position = FaceHole.global_position
-		# Pass player velocity to add momentum to bullet
-		bullet.setup(bullet_dir, ProjectileManager.data, velocity * 1.4)
+		
+		# SETUP SECOND (Pass BobStats itself)
+		bullet.setup(bullet_dir, BobStats, velocity * 1.4)
