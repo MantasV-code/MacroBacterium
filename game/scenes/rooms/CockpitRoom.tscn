@@ -1,37 +1,16 @@
-[gd_scene format=4 uid="uid://btuta6js2x2y1"]
+[gd_scene format=4 uid="uid://qn2avl0fwj6e"]
 
-[ext_resource type="Shader" uid="uid://kdp7iavon3nx" path="res://assets/sprites/intro/starfield_shader_v5.gdshader" id="1_y6rpo"]
-[ext_resource type="Texture2D" uid="uid://c612wtbr2iaov" path="res://assets/sprites/Enviroment/Spritesheet-Spaceship.png" id="2_n8hqy"]
-[ext_resource type="Texture2D" uid="uid://boyjonr6hdflo" path="res://assets/sprites/Enviroment/Spaceship Objects/Control Panel.png" id="2_u3a22"]
-[ext_resource type="Texture2D" uid="uid://c1xq8ebktrpos" path="res://assets/sprites/Enviroment/Spaceship Objects/Control Panel Buttons.png" id="3_u0gge"]
-[ext_resource type="Texture2D" uid="uid://yk2ldrb7ltdg" path="res://assets/sprites/Enviroment/Smoke1.png" id="5_uubay"]
-[ext_resource type="Script" uid="uid://co2frnk5otirw" path="res://scenes/rooms/smoke_grate.gd" id="6_go65c"]
-[ext_resource type="PackedScene" uid="uid://bxtcu3muha6qw" path="res://scenes/pick-ups/02_canister.tscn" id="7_vwbyx"]
-[ext_resource type="PackedScene" uid="uid://bbi71da74mjdb" path="res://scenes/Objects/door_up.tscn" id="8_pyxte"]
-[ext_resource type="Shader" uid="uid://b12kbqo7wt2xd" path="res://scenes/rooms/crt.gdshader" id="9_go65c"]
-[ext_resource type="AudioStream" uid="uid://bw7rckmejpux4" path="res://assets/Music/Super Metroid Music - Crateria (Zebes Planetfall).mp3" id="11_7mn8v"]
-[ext_resource type="Texture2D" uid="uid://cdw5456320o21" path="res://assets/sprites/Enviroment/Spritesheet-Spaceship2.png" id="11_lgnlx"]
-[ext_resource type="Shader" uid="uid://crhethfchgsq7" path="res://scenes/rooms/Vignette.gdshader" id="12_07p4q"]
-[ext_resource type="AudioStream" uid="uid://bn0j77dnrke8v" path="res://assets/Music/freesound_community-steam-2-36231.mp3" id="12_r105p"]
-[ext_resource type="PackedScene" uid="uid://c0jndyr8fp3tf" path="res://scenes/Enemies/FlyingBac.tscn" id="15_pyxte"]
-[ext_resource type="PackedScene" uid="uid://dv51qno6kgfef" path="res://scenes/Enemies/FlyingBacEvil.tscn" id="16_o2jpi"]
+[ext_resource type="Texture2D" uid="uid://c612wtbr2iaov" path="res://assets/sprites/Enviroment/Spritesheet-Spaceship.png" id="1_wbsnh"]
+[ext_resource type="Texture2D" uid="uid://boyjonr6hdflo" path="res://assets/sprites/Enviroment/Spaceship Objects/Control Panel.png" id="2_gcb1v"]
+[ext_resource type="Texture2D" uid="uid://c1xq8ebktrpos" path="res://assets/sprites/Enviroment/Spaceship Objects/Control Panel Buttons.png" id="3_cbbi4"]
+[ext_resource type="Texture2D" uid="uid://yk2ldrb7ltdg" path="res://assets/sprites/Enviroment/Smoke1.png" id="4_3gcpo"]
+[ext_resource type="Script" uid="uid://co2frnk5otirw" path="res://scenes/rooms/smoke_grate.gd" id="5_c5ga1"]
+[ext_resource type="AudioStream" uid="uid://bn0j77dnrke8v" path="res://assets/Music/freesound_community-steam-2-36231.mp3" id="6_c6pth"]
+[ext_resource type="PackedScene" uid="uid://bn8rkmhj7e8yb" path="res://scenes/Objects/door_down.tscn" id="7_wbsnh"]
+[ext_resource type="PackedScene" uid="uid://bxtcu3muha6qw" path="res://scenes/pick-ups/02_canister.tscn" id="8_vaab5"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_7mn8v"]
-shader = ExtResource("1_y6rpo")
-shader_parameter/dimensions = Vector2(1024, 600)
-shader_parameter/small_stars = 61.41
-shader_parameter/small_stars_far_size = 0.10000000149012
-shader_parameter/small_stars_near_size = 0.5000000074506
-shader_parameter/large_stars = 18.745
-shader_parameter/large_stars_far_size = 0.10000000149012
-shader_parameter/large_stars_near_size = 0.70000001043084
-shader_parameter/far_stars_color = Color(0.5, 0, 1, 1)
-shader_parameter/near_stars_color = Color(1, 1, 1, 1)
-shader_parameter/base_scroll_speed = 0.0499999988824
-shader_parameter/additional_scroll_speed = 0.00999999977648
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vmdvn"]
-texture = ExtResource("2_n8hqy")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t7lg8"]
+texture = ExtResource("1_wbsnh")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -223,13 +202,13 @@ texture_region_size = Vector2i(32, 32)
 9:13/0 = 0
 10:13/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_uubay"]
+[sub_resource type="TileSet" id="TileSet_vcfm7"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_vmdvn")
+sources/0 = SubResource("TileSetAtlasSource_t7lg8")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pyxte"]
-texture = ExtResource("2_n8hqy")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8gvuy"]
+texture = ExtResource("1_wbsnh")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -420,76 +399,30 @@ texture_region_size = Vector2i(32, 32)
 9:13/0 = 0
 10:13/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_u0gge"]
+[sub_resource type="TileSet" id="TileSet_v4iau"]
 tile_size = Vector2i(32, 32)
-sources/0 = SubResource("TileSetAtlasSource_pyxte")
+sources/0 = SubResource("TileSetAtlasSource_8gvuy")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_go65c"]
-viewport_path = NodePath("SubViewportContainer/SubViewport")
+[node name="CockpitRoom" type="Node2D" unique_id=1370299544]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_y6rpo"]
-resource_local_to_scene = true
-shader = ExtResource("9_go65c")
-shader_parameter/tex = SubResource("ViewportTexture_go65c")
-shader_parameter/mask_type = 3
-shader_parameter/curve = 0.0370000017575
-shader_parameter/sharpness = 0.5
-shader_parameter/color_offset = 0.5
-shader_parameter/mask_brightness = 1.0
-shader_parameter/scanline_brightness = 1.0
-shader_parameter/min_scanline_thickness = 0.72200002242
-shader_parameter/aspect = 0.5
-shader_parameter/wobble_strength = 1.0
+[node name="OriginRoom" type="Node2D" parent="." unique_id=430943630]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_lgnlx"]
-shader = ExtResource("12_07p4q")
-shader_parameter/alpha = 0.33
-shader_parameter/inner_radius = 0.0
-shader_parameter/outer_radius = 0.45
-
-[node name="Cockpit" type="Node2D" unique_id=1479715777]
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=360577510]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -9.5
-offset_top = -5.5
-offset_right = 241.0
-offset_bottom = 168.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=944953544]
-handle_input_locally = false
-audio_listener_enable_2d = true
-size = Vector2i(1920, 1080)
-render_target_update_mode = 4
-
-[node name="ColorRect" type="ColorRect" parent="SubViewportContainer/SubViewport" unique_id=147025537]
-material = SubResource("ShaderMaterial_7mn8v")
-offset_left = -232.0
-offset_top = -162.0
-offset_right = 1479.0
-offset_bottom = 941.0
-color = Color(0, 0, 0, 1)
-
-[node name="level 1" type="TileMapLayer" parent="SubViewportContainer/SubViewport" unique_id=1287138321]
+[node name="level 1" type="TileMapLayer" parent="OriginRoom" unique_id=1746961756]
 tile_map_data = PackedByteArray("AAAKAAcAAAAIAAIAAAAKAAgAAAAIAAIAAAALAAgAAAAIAAIAAAALAAkAAAAIAAIAAAALAAoAAAAIAAIAAAALAAsAAAAIAAIAAAAMAAsAAAAIAAIAAAANAAsAAAAIAAIAAAAOAAoAAAAIAAIAAAAPAAoAAAAIAAIAAAAPAAkAAAAIAAIAAAAPAAYAAAAIAAIAAAARAAUAAAAIAAIAAAASAAUAAAAIAAIAAAAGABEAAAAHAAoAAAAHAAcAAAAIAAIAAAAHAAgAAAAIAAIAAAAHAAkAAAAIAAIAAAAHAAoAAAAIAAIAAAAHAAsAAAAIAAIAAAAHAAwAAAAIAAIAAAAHAA0AAAAIAAIAAAAHAA4AAAAIAAIAAAAHAA8AAAAIAAIAAAAHABAAAAAGAAkAAAAHABEAAAAGAAoAAAAIAAcAAAAIAAIAAAAIAAgAAAAIAAIAAAAIAAkAAAAIAAIAAAAIAAoAAAAIAAIAAAAIAAsAAAAIAAIAAAAIAAwAAAAIAAIAAAAIAA0AAAAGAAIAAAAIAA4AAAAIAAIAAAAIAA8AAAAIAAIAAAAIABAAAAAHAAkAAAAIABEAAAAHAAoAAAAJAAgAAAAIAAIAAAAJAAkAAAAIAAIAAAAJAAoAAAAFAAEAAAAJAAsAAAAIAAIAAAAJAA8AAAAIAAIAAAAJABAAAAAGAAkAAAAJABEAAAAGAAoAAAAKAAkAAAAIAAIAAAAKAAoAAAAIAAIAAAAKAAsAAAAIAAIAAAAKAAwAAAABAAAAAGAKAA0AAAAIAAIAAAAKAA4AAAAIAAIAAAAKAA8AAAAIAAIAAAAKABAAAAAHAAkAAAAKABEAAAAHAAoAAAALAAcAAAAIAAIAAAALAAwAAAAIAAIAAAALAA0AAAAIAAIAAAALAA4AAAAIAAIAAAALAA8AAAAIAAIAAAALABAAAAAGAAkAAAALABEAAAAGAAoAAAAMAAcAAAAIAAIAAAAMAAgAAAAIAAIAAAAMAAkAAAAIAAIAAAAMAAoAAAAGAAIAAAAMAAwAAAAIAAIAAAAMAA0AAAAIAAIAAAAMAA4AAAAIAAIAAAAMAA8AAAAIAAIAAAAMABAAAAAHAAkAAAAMABEAAAAHAAoAAAANAAcAAAAIAAIAAAANAAgAAAAFAAEAAAANAAkAAAAIAAIAAAANAAoAAAAIAAIAAAANAAwAAAAIAAIAAAANAA0AAAAFAAEAAAANAA4AAAAIAAIAAAANAA8AAAAIAAIAAAANABAAAAAGAAkAAAANABEAAAAGAAoAAAAOAAcAAAAIAAIAAAAOAAkAAAAIAAIAAAAOAAsAAAAIAAIAAAAOAAwAAAAIAAIAAAAOAA0AAAAIAAIAAAAOAA4AAAAIAAIAAAAOAA8AAAAIAAIAAAAOABAAAAAHAAkAAAAOABEAAAAHAAoAAAAPAAsAAAAIAAIAAAAPAA4AAAAIAAIAAAAPAA8AAAAIAAIAAAAPABAAAAAGAAkAAAAPABEAAAAGAAoAAAAQAAcAAAAIAAIAAAAQAAgAAAAIAAIAAAAQAAkAAAAIAAIAAAAQAAoAAAAFAAEAAAAQAAsAAAAIAAIAAAAQAA4AAAAIAAIAAAAQAA8AAAAIAAIAAAAQABAAAAAHAAkAAAAQABEAAAAHAAoAAAARAAgAAAAIAAIAAAARAAkAAAAIAAIAAAARAAoAAAAIAAIAAAARAAsAAAAIAAIAAAARAA4AAAAIAAIAAAARAA8AAAAIAAIAAAARABAAAAAGAAkAAAARABEAAAAGAAoAAAASAAcAAAAIAAIAAAASAAgAAAAIAAIAAAASAAkAAAAIAAIAAAASAAoAAAAIAAIAAAASAAsAAAAIAAIAAAASAA4AAAAIAAIAAAASAA8AAAAIAAIAAAASABAAAAAHAAkAAAASABEAAAAHAAoAAAATAAcAAAAIAAIAAAATAAgAAAAIAAIAAAATAAkAAAABAAAAAFATAAoAAAAIAAIAAAATAAsAAAAIAAIAAAATAA4AAAAIAAIAAAATAA8AAAAIAAIAAAATABAAAAAGAAkAAAATABEAAAAGAAoAAAAUAAcAAAAIAAIAAAAUAAgAAAAIAAIAAAAUAAkAAAAIAAIAAAAUAAoAAAAIAAIAAAAUAAsAAAAIAAIAAAAUAA4AAAAIAAIAAAAUAA8AAAAIAAIAAAAUABAAAAAHAAkAAAAUABEAAAAHAAoAAAAVAAoAAAAFAAEAAAAVAAsAAAAIAAIAAAAVAA4AAAAIAAIAAAAVABAAAAAGAAkAAAAVABEAAAAGAAoAAAAWAAgAAAAIAAIAAAAWAAkAAAAIAAIAAAAWAAoAAAAIAAIAAAAWAAsAAAAIAAIAAAAWAA4AAAAIAAIAAAAWAA8AAAAIAAIAAAAWABAAAAAHAAkAAAAWABEAAAAHAAoAAAAXAAcAAAAIAAIAAAAXAAgAAAAAAAAAAAAXAAkAAAAIAAIAAAAXAAoAAAAIAAIAAAAXAAsAAAAIAAIAAAAXAA4AAAAIAAIAAAAXAA8AAAAIAAIAAAAXABAAAAAGAAkAAAAXABEAAAAGAAoAAAAYAAcAAAAIAAIAAAAYAAgAAAAIAAIAAAAYAAkAAAAIAAIAAAAYAAoAAAAIAAIAAAAYAAsAAAAIAAIAAAAYAAwAAAAIAAIAAAAYAA0AAAAIAAIAAAAYAA4AAAAIAAIAAAAYAA8AAAAIAAIAAAAYABAAAAAHAAkAAAAYABEAAAAHAAoAAAAZAAcAAAAIAAIAAAAZAAgAAAAIAAIAAAAZAAkAAAAIAAIAAAAZAAoAAAAIAAIAAAAZAAsAAAAIAAIAAAAZAAwAAAAIAAIAAAAZAA0AAAAIAAIAAAAZAA4AAAAIAAIAAAAZAA8AAAAIAAIAAAAZABAAAAAGAAkAAAAZABEAAAAGAAoAAAAaAAgAAAADAAcAAAAaAAkAAAADAAcAAAAaAAoAAAADAAcAAAAaAAsAAAADAAcAAAAaAAwAAAADAAcAAAAaAA0AAAADAAcAAAAaAA4AAAADAAcAAAAaAA8AAAADAAcAAAAaABAAAAAHAAkAAAAaABEAAAAHAAoAAAAGAAQAAAAFAAYAAAAGAAUAAAADAAcAADAGAAYAAAADAAcAADAKAAYAAAAIAAIAAAALAAYAAAAIAAIAAAAMAAYAAAAIAAIAAAANAAUAAAAIAAIAAAANAAYAAAAIAAIAAAAOAAUAAAAIAAIAAAAOAAYAAAAIAAIAAAASAAYAAAAIAAIAAAATAAUAAAAIAAIAAAATAAYAAAAIAAIAAAAUAAYAAAAIAAIAAAAVAAYAAAAIAAIAAAAXAAYAAAAIAAIAAAAYAAYAAAAIAAIAAAAZAAYAAAAIAAIAAAAVAA8AAAAIAAIAAAAPAAwAAAAIAAIAAAAPAA0AAAAIAAIAAAAQAAwAAAAIAAIAAAAQAA0AAAAIAAIAAAARAAwAAAAIAAIAAAARAA0AAAAIAAIAAAASAAwAAAAIAAIAAAASAA0AAAAIAAIAAAATAAwAAAAIAAIAAAATAA0AAAAGAAIAAAAUAAwAAAAIAAIAAAAUAA0AAAAIAAIAAAAVAAwAAAAIAAIAAAAVAA0AAAAIAAIAAAAWAAwAAAAIAAIAAAAWAA0AAAABAAAAAFAXAAwAAAAIAAIAAAAXAA0AAAAIAAIAAAANAAIAAAALAAgAAAANAAMAAAALAAkAAAANAAQAAAALAAoAAAAOAAIAAAAMAAgAAAAOAAMAAAAMAAkAAAAOAAQAAAAMAAoAAAAPAAIAAAANAAgAAAAPAAMAAAANAAkAAAAQAAIAAAAOAAgAAAARAAIAAAALAAgAAAASAAIAAAAMAAgAAAASAAMAAAAMAAkAAAASAAQAAAAMAAoAAAATAAIAAAANAAgAAAATAAMAAAANAAkAAAATAAQAAAANAAoAAAAUAAIAAAAOAAgAAAAUAAMAAAAOAAkAAAAUAAQAAAAOAAoAAAAQAAMAAAAOAAkAAAARAAMAAAALAAkAAAAPAAQAAAANAAoAAAAPAAUAAAAIAAIAAAAQAAUAAAAIAAIAAAARAAQAAAALAAoAAAAQAAQAAAAOAAoAAAAVAAkAAAAIAAIAAAAVAAgAAAAIAAIAAAAVAAcAAAAFAAEAAAAWAAcAAAAIAAIAAAAWAAYAAAAIAAIAAAAaAAUAAAADAAcAAAAaAAYAAAADAAcAAAAaAAcAAAADAAcAAAAJAAcAAAABAAAAAAAHAAYAAAAFAAEAAAAIAAYAAAAAAAAAAAAMAAMAAAAGAAMAAAARAAYAAAAIAAIAAAAQAAYAAAAIAAIAAAAPAAcAAAAFAAEAAAAPAAgAAAAIAAIAAAAOAAgAAAAIAAIAAAAVAAMAAAAGAAMAAAAGABAAAAAGAAkAAAALAAMAAAAGAAMAAAAKAAMAAAAGAAMAAAAJAAMAAAAGAAMAAAAIAAMAAAAGAAMAAAAHAAMAAAAGAAMAAAAaAAQAAAAGAAYAAAALAAQAAAAGAAQAAAAKAAQAAAAGAAQAAAAJAAQAAAAGAAQAAAAIAAQAAAAGAAQAAAAHAAQAAAAGAAQAAAAMAAQAAAAGAAQAAAAVAAQAAAAGAAQAAAAWAAMAAAAGAAMAAAAWAAQAAAAGAAQAAAAXAAMAAAAGAAMAAAAXAAQAAAAGAAQAAAAYAAMAAAAGAAMAAAAYAAQAAAAGAAQAAAAZAAMAAAAGAAMAAAAZAAQAAAAGAAQAAAAGAAMAAAAGAAUAABAaAAMAAAAGAAUAAAAHAAUAAAAIAAIAAAAIAAUAAAAIAAIAAAAJAAUAAAAIAAIAAAAKAAUAAAAIAAIAAAALAAUAAAAIAAIAAAAMAAUAAAAIAAIAAAAJAAYAAAAIAAIAAAAUAAUAAAAIAAIAAAAVAAUAAAAIAAIAAAAWAAUAAAAIAAIAAAAXAAUAAAAIAAIAAAAYAAUAAAAIAAIAAAAZAAUAAAAIAAIAAAAEAAcAAAAFAAUAAAAFAAcAAAAGAAMAAAAGAAgAAAADAAkAAAAGAAcAAAADAAgAAAAFAAgAAAAGAAQAAAAEAAgAAAAFAAYAAAAEAAkAAAADAAcAADAEAAoAAAADAAcAADAEAAsAAAACAAcAAAAEAAwAAAAGAAkAAAAEAA0AAAAGAAoAAAAFAA0AAAAGAAoAAAAJAA4AAAAIAAIAAAAJAA0AAAAIAAIAAAAJAAwAAAAIAAIAAAAFAAwAAAAGAAkAAAAGAAwAAAACAAcAAAAGAA4AAAACAAcAAAAGAA8AAAACAAcAAAAGAA0AAAACAAcAAAAGAAsAAAACAAYAAAAFAAsAAAACAAYAAAAFAAkAAAACAAYAACAGAAkAAAACAAYAACAGAAoAAAABAAgAAAAFAAoAAAABAAgAABARAAcAAAAIAAIAAAA=")
-tile_set = SubResource("TileSet_uubay")
+tile_set = SubResource("TileSet_vcfm7")
 
-[node name="ControlPanel" type="Sprite2D" parent="SubViewportContainer/SubViewport/level 1" unique_id=198221653]
+[node name="ControlPanel" type="Sprite2D" parent="OriginRoom/level 1" unique_id=2099188004]
 position = Vector2(545, 142)
-texture = ExtResource("2_u3a22")
+texture = ExtResource("2_gcb1v")
 
-[node name="ControlPanelButtons" type="Sprite2D" parent="SubViewportContainer/SubViewport/level 1/ControlPanel" unique_id=948753776]
+[node name="ControlPanelButtons" type="Sprite2D" parent="OriginRoom/level 1/ControlPanel" unique_id=1772444405]
 position = Vector2(1, 0)
-texture = ExtResource("3_u0gge")
+texture = ExtResource("3_cbbi4")
 
-[node name="SmokeGrate" type="CPUParticles2D" parent="SubViewportContainer/SubViewport/level 1" unique_id=115243524]
+[node name="SmokeGrate" type="CPUParticles2D" parent="OriginRoom/level 1" unique_id=897384913]
 position = Vector2(305, 239)
 amount = 7
-texture = ExtResource("5_uubay")
+texture = ExtResource("4_3gcpo")
 lifetime = 1.48
 explosiveness = 0.25
 randomness = 0.34
@@ -499,22 +432,22 @@ gravity = Vector2(0, -98)
 angular_velocity_min = -100.41
 angular_velocity_max = 108.14
 scale_amount_max = 2.2
-script = ExtResource("6_go65c")
+script = ExtResource("5_c5ga1")
 
-[node name="GrateSound" type="AudioStreamPlayer2D" parent="SubViewportContainer/SubViewport/level 1/SmokeGrate" unique_id=596353052]
+[node name="GrateSound" type="AudioStreamPlayer2D" parent="OriginRoom/level 1/SmokeGrate" unique_id=2045197629]
 texture_filter = 1
 position = Vector2(0.25, -0.25)
-stream = ExtResource("12_r105p")
+stream = ExtResource("6_c6pth")
 pitch_scale = 0.43
 autoplay = true
 max_distance = 136.0
 attenuation = 2.4623082
 panning_strength = 3.0
 
-[node name="SmokeGrate2" type="CPUParticles2D" parent="SubViewportContainer/SubViewport/level 1" unique_id=1049560946]
+[node name="SmokeGrate2" type="CPUParticles2D" parent="OriginRoom/level 1" unique_id=1067868808]
 position = Vector2(333, 400)
 amount = 7
-texture = ExtResource("5_uubay")
+texture = ExtResource("4_3gcpo")
 lifetime = 1.48
 explosiveness = 0.25
 randomness = 0.34
@@ -524,22 +457,22 @@ gravity = Vector2(0, -98)
 angular_velocity_min = -100.41
 angular_velocity_max = 108.14
 scale_amount_max = 2.2
-script = ExtResource("6_go65c")
+script = ExtResource("5_c5ga1")
 
-[node name="GrateSound" type="AudioStreamPlayer2D" parent="SubViewportContainer/SubViewport/level 1/SmokeGrate2" unique_id=1191700740]
+[node name="GrateSound" type="AudioStreamPlayer2D" parent="OriginRoom/level 1/SmokeGrate2" unique_id=568322587]
 texture_filter = 1
 position = Vector2(0.25, -0.25)
-stream = ExtResource("12_r105p")
+stream = ExtResource("6_c6pth")
 pitch_scale = 0.43
 autoplay = true
 max_distance = 136.0
 attenuation = 2.4623082
 panning_strength = 3.0
 
-[node name="SmokeGrate3" type="CPUParticles2D" parent="SubViewportContainer/SubViewport/level 1" unique_id=1704678101]
+[node name="SmokeGrate3" type="CPUParticles2D" parent="OriginRoom/level 1" unique_id=515662855]
 position = Vector2(721, 432)
 amount = 7
-texture = ExtResource("5_uubay")
+texture = ExtResource("4_3gcpo")
 lifetime = 1.48
 explosiveness = 0.25
 randomness = 0.34
@@ -549,22 +482,22 @@ gravity = Vector2(0, -98)
 angular_velocity_min = -100.41
 angular_velocity_max = 108.14
 scale_amount_max = 2.2
-script = ExtResource("6_go65c")
+script = ExtResource("5_c5ga1")
 
-[node name="GrateSound" type="AudioStreamPlayer2D" parent="SubViewportContainer/SubViewport/level 1/SmokeGrate3" unique_id=1688316257]
+[node name="GrateSound" type="AudioStreamPlayer2D" parent="OriginRoom/level 1/SmokeGrate3" unique_id=1731298492]
 texture_filter = 1
 position = Vector2(0.25, -0.25)
-stream = ExtResource("12_r105p")
+stream = ExtResource("6_c6pth")
 pitch_scale = 0.43
 autoplay = true
 max_distance = 136.0
 attenuation = 2.4623082
 panning_strength = 3.0
 
-[node name="SmokeGrate4" type="CPUParticles2D" parent="SubViewportContainer/SubViewport/level 1" unique_id=1823277391]
+[node name="SmokeGrate4" type="CPUParticles2D" parent="OriginRoom/level 1" unique_id=723257848]
 position = Vector2(625, 304)
 amount = 7
-texture = ExtResource("5_uubay")
+texture = ExtResource("4_3gcpo")
 lifetime = 1.48
 explosiveness = 0.25
 randomness = 0.34
@@ -574,66 +507,32 @@ gravity = Vector2(0, -98)
 angular_velocity_min = -100.41
 angular_velocity_max = 108.14
 scale_amount_max = 2.2
-script = ExtResource("6_go65c")
+script = ExtResource("5_c5ga1")
 
-[node name="GrateSound" type="AudioStreamPlayer2D" parent="SubViewportContainer/SubViewport/level 1/SmokeGrate4" unique_id=1626032327]
+[node name="GrateSound" type="AudioStreamPlayer2D" parent="OriginRoom/level 1/SmokeGrate4" unique_id=30442382]
 texture_filter = 1
 position = Vector2(0.25, -0.25)
-stream = ExtResource("12_r105p")
+stream = ExtResource("6_c6pth")
 pitch_scale = 0.43
 autoplay = true
 max_distance = 136.0
 attenuation = 2.4623082
 panning_strength = 3.0
 
-[node name="level 2" type="TileMapLayer" parent="SubViewportContainer/SubViewport" unique_id=1412084471]
+[node name="level 2" type="TileMapLayer" parent="OriginRoom" unique_id=417260363]
 z_index = 1
 position = Vector2(-1, 0)
 tile_map_data = PackedByteArray("AAANAAUAAAAEAAEAAAAOAAUAAAAEAAEAAAAPAAUAAAAEAAEAAAAQAAUAAAAEAAEAAAARAAUAAAAEAAEAAAASAAUAAAAEAAEAAAATAAUAAAAEAAEAAAAUAAUAAAAEAAEAAAALAAQAAAAPAAQAAAAWAAQAAAAPAAQAAAAIAAQAAAAPAAIAAAAYAAQAAAAPAAIAAAAHAAQAAAAMAAIAAAAZAAQAAAAMAAIAAAAQAAYAAAAGAAAAAAARAAYAAAAGAAAAAAARAAcAAAAGAAAAAAAQAAcAAAAGAAAAAAAQAAgAAAAGAAAAAAARAAgAAAAGAAAAAAARAAkAAAAGAAAAAAAQAAkAAAAGAAAAAAAQAAoAAAAGAAAAAAARAAoAAAAGAAAAAAARAAsAAAAGAAAAAAAQAAsAAAAGAAAAAAAQAAwAAAAGAAAAAAARAAwAAAAGAAAAAAARAA0AAAAGAAAAAAAQAA0AAAAGAAAAAAAQAA4AAAAGAAAAAAARAA4AAAAGAAAAAAAQAA8AAAAGAAAAAAARAA8AAAAGAAAAAAA=")
-tile_set = SubResource("TileSet_u0gge")
+tile_set = SubResource("TileSet_v4iau")
 
-[node name="Door_Down" parent="SubViewportContainer/SubViewport" unique_id=1554866573 instance=ExtResource("8_pyxte")]
+[node name="Door_Down" parent="OriginRoom" unique_id=1715415514 instance=ExtResource("7_wbsnh")]
 z_index = 1
-position = Vector2(-26.75, 244.75)
+position = Vector2(544, 531)
 scale = Vector2(1.2, 1.2)
-spawn_target = "Spawn_Up"
 
-[node name="02Canister" parent="SubViewportContainer/SubViewport" unique_id=1802849633 instance=ExtResource("7_vwbyx")]
+[node name="Start_Spawn" type="Marker2D" parent="OriginRoom" unique_id=1539266836]
+position = Vector2(535, 315)
+scale = Vector2(1.2, 1.2)
+
+[node name="02Canister" parent="." unique_id=1802849633 instance=ExtResource("8_vaab5")]
 position = Vector2(207, 315)
-
-[node name="TextureRect" type="TextureRect" parent="SubViewportContainer/SubViewport" unique_id=100346220]
-texture_filter = 1
-offset_left = 903.25
-offset_top = 145.75
-offset_right = 1159.25
-offset_bottom = 401.75
-scale = Vector2(2, 2)
-texture = ExtResource("11_lgnlx")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=72689709]
-
-[node name="CRT" type="ColorRect" parent="CanvasLayer" unique_id=234955619]
-material = SubResource("ShaderMaterial_y6rpo")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Vignette" type="ColorRect" parent="CanvasLayer" unique_id=641182661]
-material = SubResource("ShaderMaterial_lgnlx")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1861408961]
-stream = ExtResource("11_7mn8v")
-autoplay = true
-
-[node name="FlyingBac" parent="." unique_id=1769072605 instance=ExtResource("15_pyxte")]
-position = Vector2(222, 212)
-
-[node name="FlyingBacEvil" parent="." unique_id=841717271 instance=ExtResource("16_o2jpi")]
-position = Vector2(261, 178)

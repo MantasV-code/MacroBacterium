@@ -6,9 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://d1h7kiatxxg1r" path="res://scenes/fire.tscn" id="3_6vnwl"]
 [ext_resource type="PackedScene" uid="uid://bxtcu3muha6qw" path="res://scenes/pick-ups/02_canister.tscn" id="4_i7p6j"]
 [ext_resource type="PackedScene" uid="uid://c0jndyr8fp3tf" path="res://scenes/Enemies/FlyingBac.tscn" id="5_betf1"]
-[ext_resource type="PackedScene" uid="uid://bbi71da74mjdb" path="res://scenes/Objects/door.tscn" id="6_nnide"]
+[ext_resource type="PackedScene" uid="uid://bbi71da74mjdb" path="res://scenes/Objects/door_up.tscn" id="6_nnide"]
 [ext_resource type="PackedScene" uid="uid://dv51qno6kgfef" path="res://scenes/Enemies/FlyingBacEvil.tscn" id="8_dp88d"]
-[ext_resource type="PackedScene" uid="uid://b2vd3b2gb67px" path="res://scenes/pause_menu.tscn" id="9_vmham"]
+[ext_resource type="PackedScene" uid="uid://tgsbdc5ipb8v" path="res://scenes/pause_menu.tscn" id="9_vmham"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fn815"]
 texture = ExtResource("1_mjm5x")
@@ -77,7 +77,7 @@ sources/1 = SubResource("TileSetAtlasSource_fn815")
 position = Vector2(4, 6)
 script = ExtResource("1_vf0v6")
 
-[node name="FromTestRoom" type="Marker2D" parent="." unique_id=205126056]
+[node name="Spawn_Down" type="Marker2D" parent="." unique_id=205126056]
 position = Vector2(118, 14)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=885724039]
@@ -100,7 +100,7 @@ position = Vector2(175, -4)
 
 [node name="Door" parent="." unique_id=1554866573 instance=ExtResource("6_nnide")]
 position = Vector2(-356, -273)
-spawn_target = "FromTestRoom2"
+spawn_target = "Spawn_Down"
 
 [node name="02Canister2" parent="." unique_id=1044347921 instance=ExtResource("4_i7p6j")]
 position = Vector2(97, 361)
