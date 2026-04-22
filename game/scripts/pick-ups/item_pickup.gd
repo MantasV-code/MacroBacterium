@@ -19,7 +19,6 @@ func _ready() -> void:
 	
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Bob" or body.is_in_group("player"):
-		#$CollisionShape2D.set_deferred("disabled", true) # disable the collision so you cant dupliacte the effect
 		
 		if item_type == "power_up":
 			BobStats.apply_effect(item_effect)

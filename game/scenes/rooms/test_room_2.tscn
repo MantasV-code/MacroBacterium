@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://jtqppiqaxrra" path="res://scripts/test_room_2.gd" id="1_10j0o"]
 [ext_resource type="Texture2D" uid="uid://cdw5456320o21" path="res://assets/sprites/Enviroment/Spritesheet-Spaceship2.png" id="1_wk688"]
+[ext_resource type="PackedScene" uid="uid://1v8e1uxk2s2a" path="res://UI/hud.tscn" id="2_u8mh5"]
 [ext_resource type="PackedScene" uid="uid://bbi71da74mjdb" path="res://scenes/Objects/door.tscn" id="2_wk688"]
 [ext_resource type="PackedScene" uid="uid://dad7bc4523ujr" path="res://scenes/BOB/Bob.tscn" id="4_kpspm"]
 
@@ -203,6 +204,11 @@ sources/0 = SubResource("TileSetAtlasSource_mfg25")
 
 [node name="testRoom2" type="Node2D" unique_id=963241323]
 script = ExtResource("1_10j0o")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=467162091]
+
+[node name="HUD" parent="CanvasLayer" unique_id=241693573 instance=ExtResource("2_u8mh5")]
+metadata/_edit_use_anchors_ = true
 
 [node name="FromTestRoom2" type="Marker2D" parent="." unique_id=1784606850]
 position = Vector2(637, 170)

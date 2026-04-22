@@ -49,10 +49,10 @@
 [ext_resource type="Texture2D" uid="uid://c7kbm8lfx0xjc" path="res://assets/Bob/BobBody/BobBody00.png" id="39_l1i3t"]
 [ext_resource type="Texture2D" uid="uid://bd5mhfesg6vkr" path="res://assets/Bob/BobBody/BobBody04.png" id="40_dswc0"]
 [ext_resource type="AudioStream" uid="uid://cscdum80w48pt" path="res://assets/Bob/Sounds/freesound_community-gama-laser-90602.mp3" id="41_aluwh"]
-[ext_resource type="Script" uid="uid://b7urnf0xu15fs" path="res://scripts/Health.gd" id="41_q8c2v"]
 [ext_resource type="AudioStream" uid="uid://ea88ucml8dlf" path="res://assets/Music/u_3x9ga8wevj-walking-sound-effect-272246.mp3" id="42_symca"]
 [ext_resource type="Texture2D" uid="uid://yk2ldrb7ltdg" path="res://assets/sprites/Enviroment/Smoke1.png" id="43_yjivn"]
 [ext_resource type="Script" uid="uid://47fcrxacjx4j" path="res://scripts/BOB/WalkingEffects.gd" id="44_s2cy5"]
+[ext_resource type="Script" uid="uid://dt4sl4gisl5js" path="res://scripts/BOB/playerHealth.gd" id="49_csya5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ta5nu"]
 animations = [{
@@ -289,11 +289,10 @@ script = ExtResource("26_7yvu5")
 unique_name_in_owner = true
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_flf07")
-animation = &"IdleLR"
-frame_progress = 0.55697155
+animation = &"Death"
 
 [node name="Health" type="Node" parent="BOB" unique_id=2079290914]
-script = ExtResource("41_q8c2v")
+script = ExtResource("49_csya5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BOB" unique_id=1738192714]
 position = Vector2(0, 10)

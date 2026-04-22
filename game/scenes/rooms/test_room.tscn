@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b8u6fhjt6x6p0" path="res://assets/sprites/Enviroment/test-room/Boarder walls.png" id="1_mjm5x"]
 [ext_resource type="Script" uid="uid://1iimt4rkj2sh" path="res://scripts/test_room.gd" id="1_vf0v6"]
 [ext_resource type="PackedScene" uid="uid://dad7bc4523ujr" path="res://scenes/BOB/Bob.tscn" id="2_fn815"]
+[ext_resource type="PackedScene" uid="uid://1v8e1uxk2s2a" path="res://UI/hud.tscn" id="2_sdgtb"]
 [ext_resource type="PackedScene" uid="uid://d1h7kiatxxg1r" path="res://scenes/fire.tscn" id="3_6vnwl"]
 [ext_resource type="PackedScene" uid="uid://bxtcu3muha6qw" path="res://scenes/pick-ups/02_canister.tscn" id="4_i7p6j"]
 [ext_resource type="PackedScene" uid="uid://bbi71da74mjdb" path="res://scenes/Objects/door.tscn" id="6_nnide"]
@@ -79,6 +80,11 @@ sources/1 = SubResource("TileSetAtlasSource_fn815")
 position = Vector2(4, 6)
 script = ExtResource("1_vf0v6")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1874051196]
+
+[node name="HUD" parent="CanvasLayer" unique_id=241693573 instance=ExtResource("2_sdgtb")]
+metadata/_edit_use_anchors_ = true
+
 [node name="FromTestRoom" type="Marker2D" parent="." unique_id=205126056]
 position = Vector2(118, 14)
 
@@ -108,13 +114,13 @@ visible = false
 position = Vector2(145, 149)
 
 [node name="02_canister" parent="." unique_id=961115757 instance=ExtResource("4_i7p6j")]
-position = Vector2(189, 46)
+position = Vector2(189, 56)
 
 [node name="Max_Health" parent="." unique_id=1172585285 instance=ExtResource("11_lumvt")]
 position = Vector2(112, 74)
 
 [node name="02_canister2" parent="." unique_id=902686349 instance=ExtResource("4_i7p6j")]
-position = Vector2(140, 127)
+position = Vector2(189, 135)
 
 [node name="02_canister3" parent="." unique_id=1690612455 instance=ExtResource("4_i7p6j")]
 position = Vector2(364, 12)
@@ -130,3 +136,9 @@ position = Vector2(240, 82)
 
 [node name="FlyingBacEvil" parent="." unique_id=1716349900 instance=ExtResource("11_7pvdv")]
 position = Vector2(270, 48)
+
+[node name="02_canister5" parent="." unique_id=617835785 instance=ExtResource("4_i7p6j")]
+position = Vector2(150, 228)
+
+[node name="02_canister4" parent="." unique_id=653640874 instance=ExtResource("4_i7p6j")]
+position = Vector2(102, 177)

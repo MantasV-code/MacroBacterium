@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://b5y5xe1iifi4d"]
+
+[ext_resource type="FontFile" uid="uid://cd2a6d43gtthe" path="res://assets/Font/Press_Start_2P/PressStart2P-Regular.ttf" id="1_cijht"]
+
+[resource]
+font = ExtResource("1_cijht")
+font_size = 28
