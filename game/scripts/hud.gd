@@ -15,5 +15,7 @@ func update_current_health_label(number : int):
 func update_health_icon(current_health : int, max_health: int):
 	if current_health >= max_health:
 		health_texture.texture = full_texture
+		health_label.label_settings.font_color = Color.GOLD
 	else:
 		health_texture.texture = normal_texture
+		health_label.label_settings.font_color = Color.WHITE

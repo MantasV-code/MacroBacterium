@@ -1,12 +1,11 @@
 extends Node
 
 @export var max_health: int = 3
-var current_health: int = 3
+@export var current_health: int = 3
 
 
 func _ready() -> void:
 	update_hud()
-
 
 # increase health 
 func increase_health(amount: int) -> void:
@@ -21,6 +20,7 @@ func increase_health(amount: int) -> void:
 func increase_max_health(amount: int) -> void:
 	max_health += amount
 	print("Bob's Max Health: ", max_health)
+	update_hud()
 
 # decrease health
 func decrease_health(amount: int) -> void:

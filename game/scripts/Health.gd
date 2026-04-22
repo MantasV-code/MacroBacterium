@@ -7,19 +7,6 @@ var current_health: int
 func _ready() -> void:
 	current_health = max_health
 
-
-# increase health 
-func increase_health(amount: int) -> void:
-	if current_health < max_health:
-		current_health += amount
-		print("Bob's Health: ", current_health )
-	else:
-		print("Bob has full health")
-
-func increase_max_health(amount: int) -> void:
-	max_health += amount
-	print("Bob's Max Health: ", max_health)
-
 # decrease health
 func decrease_health(amount: int) -> void:
 	current_health -= amount
