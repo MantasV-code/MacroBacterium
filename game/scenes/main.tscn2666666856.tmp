@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dw3f1nqc5xasr" path="res://scenes/rooms/maps/map8.tscn" id="9_cegan"]
 [ext_resource type="PackedScene" uid="uid://bxg6d8a3u7cu0" path="res://scenes/rooms/maps/map9.tscn" id="10_82xsv"]
 [ext_resource type="PackedScene" uid="uid://cvabld60g5csq" path="res://scenes/rooms/boss_room.tscn" id="12_ycdy4"]
+[ext_resource type="PackedScene" uid="uid://tgsbdc5ipb8v" path="res://scenes/pause_menu.tscn" id="14_a8y0u"]
 
 [node name="Main" type="Node2D" unique_id=801401041]
 script = ExtResource("1_efxa6")
@@ -23,3 +24,5 @@ boss_room = ExtResource("12_ycdy4")
 [node name="Bob" parent="." unique_id=1335707608 groups=["player"] instance=ExtResource("1_ig7tw")]
 z_index = 10
 scale = Vector2(0.2, 0.2)
+
+[node name="PauseMenu" parent="." unique_id=1684603309 instance=ExtResource("14_a8y0u")]

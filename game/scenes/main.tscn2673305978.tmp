@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cmpr7vmeb4s7h"]
+
+[ext_resource type="Script" uid="uid://bh2lfxmgi56o5" path="res://main.gd" id="1_efxa6"]
+[ext_resource type="PackedScene" uid="uid://dad7bc4523ujr" path="res://scenes/BOB/Bob.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://dourefk4ke05y" path="res://scenes/rooms/maps/map1.tscn" id="2_dg77c"]
+[ext_resource type="PackedScene" uid="uid://qn2avl0fwj6e" path="res://scenes/rooms/CockpitRoom.tscn" id="2_ycdy4"]
+[ext_resource type="PackedScene" uid="uid://c0dqi73mrmnlr" path="res://scenes/rooms/maps/map2.tscn" id="3_ycdy4"]
+[ext_resource type="PackedScene" uid="uid://bdp7vy0trxqsg" path="res://scenes/rooms/maps/map3.tscn" id="4_w48qg"]
+[ext_resource type="PackedScene" uid="uid://cvnkflg37wa75" path="res://scenes/rooms/maps/map4.tscn" id="5_vivmo"]
+[ext_resource type="PackedScene" uid="uid://rd37ri1mm27m" path="res://scenes/rooms/maps/map5.tscn" id="6_2cqfq"]
+[ext_resource type="PackedScene" uid="uid://n3e3o5pbo2wt" path="res://scenes/rooms/maps/map6.tscn" id="7_yaehf"]
+[ext_resource type="PackedScene" uid="uid://br678sfeed2fd" path="res://scenes/rooms/maps/map7.tscn" id="8_074og"]
+[ext_resource type="PackedScene" uid="uid://dw3f1nqc5xasr" path="res://scenes/rooms/maps/map8.tscn" id="9_cegan"]
+[ext_resource type="PackedScene" uid="uid://bxg6d8a3u7cu0" path="res://scenes/rooms/maps/map9.tscn" id="10_82xsv"]
+[ext_resource type="PackedScene" uid="uid://cvabld60g5csq" path="res://scenes/rooms/boss_room.tscn" id="12_ycdy4"]
+[ext_resource type="PackedScene" uid="uid://tgsbdc5ipb8v" path="res://scenes/pause_menu.tscn" id="14_a8y0u"]
+
+[node name="Main" type="Node2D" unique_id=801401041]
+script = ExtResource("1_efxa6")
+cockpit_scene = ExtResource("2_ycdy4")
+room_arr = Array[PackedScene]([ExtResource("2_dg77c"), ExtResource("3_ycdy4"), ExtResource("4_w48qg"), ExtResource("5_vivmo"), ExtResource("6_2cqfq"), ExtResource("7_yaehf"), ExtResource("8_074og"), ExtResource("10_82xsv"), ExtResource("9_cegan")])
+boss_room = ExtResource("12_ycdy4")
+
+[node name="Bob" parent="." unique_id=1335707608 groups=["player"] instance=ExtResource("1_ig7tw")]
+z_index = 10
+scale = Vector2(0.2, 0.2)
+
+[node name="PauseMenu" parent="." unique_id=1684603309 instance=ExtResource("14_a8y0u")]

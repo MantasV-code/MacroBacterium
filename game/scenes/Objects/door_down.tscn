@@ -4,11 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://cd5pq2pthib34" path="res://assets/sprites/Enviroment/Spaceship Objects/Door Front.png" id="2_4jdgl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cy4av"]
-size = Vector2(52.5, 60)
+size = Vector2(52.5, 37)
 
 [node name="Door_Down" type="Node2D" unique_id=1715415514]
 script = ExtResource("1_n2r2p")
-spawn_target = "Spawn_Up"
 
 [node name="DoorFront" type="Sprite2D" parent="." unique_id=1214135284]
 texture = ExtResource("2_4jdgl")
@@ -18,7 +17,7 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=913924146]
-position = Vector2(0, -10)
+position = Vector2(0, -6.5)
 shape = SubResource("RectangleShape2D_cy4av")
 debug_color = Color(0.9446405, 0.13609484, 0.48841858, 0.41960785)
 
