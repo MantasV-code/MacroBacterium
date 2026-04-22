@@ -188,7 +188,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("34_3vsra")
 }],
-"loop": true,
+"loop": false,
 "name": &"Death",
 "speed": 5.0
 }, {
@@ -289,8 +289,7 @@ script = ExtResource("26_7yvu5")
 unique_name_in_owner = true
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_flf07")
-animation = &"IdleLR"
-frame_progress = 0.55697155
+animation = &"Death"
 
 [node name="Health" type="Node" parent="BOB" unique_id=2079290914]
 script = ExtResource("41_q8c2v")

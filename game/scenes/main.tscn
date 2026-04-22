@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bdp7vy0trxqsg" path="res://scenes/rooms/maps/map3.tscn" id="12_a8y0u"]
 [ext_resource type="PackedScene" uid="uid://cvabld60g5csq" path="res://scenes/rooms/boss_room.tscn" id="12_ycdy4"]
 [ext_resource type="PackedScene" uid="uid://tgsbdc5ipb8v" path="res://scenes/pause_menu.tscn" id="14_a8y0u"]
+[ext_resource type="PackedScene" uid="uid://c0jndyr8fp3tf" path="res://scenes/Enemies/FlyingBac.tscn" id="15_jkv2x"]
 
 [node name="Main" type="Node2D" unique_id=801401041]
 script = ExtResource("1_efxa6")
@@ -185,6 +186,15 @@ target_spawn = NodePath("../../Map6/Spawn_Right")
 
 [node name="Spawn_Left" parent="Boss_Room" index="3" unique_id=74460558]
 position = Vector2(90, 332)
+
+[node name="FlyingBac" parent="." unique_id=1769072605 instance=ExtResource("15_jkv2x")]
+position = Vector2(481, 427)
+
+[node name="FlyingBac2" parent="." unique_id=1670074093 instance=ExtResource("15_jkv2x")]
+position = Vector2(490, 356)
+
+[node name="FlyingBac3" parent="." unique_id=1677375298 instance=ExtResource("15_jkv2x")]
+position = Vector2(462, 317)
 
 [editable path="CockpitRoom"]
 [editable path="Map1"]

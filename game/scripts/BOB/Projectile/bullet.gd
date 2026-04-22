@@ -54,6 +54,8 @@ func _on_hit() -> void:
 	if hit: return
 	hit = true
 	velocity_vec = Vector2.ZERO
+	$CollisionShape2D.disabled = true
 	var sprite = $AnimatedSprite2D
-	sprite.play("Hit")
+	sprite.play("Hit", 3.0)
 	sprite.animation_finished.connect(queue_free)
+	$CollisionShape2D.disabled = false
