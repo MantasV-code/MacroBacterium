@@ -31,6 +31,8 @@ base_font = ExtResource("4_xc3wd")
 [node name="startScreen" type="Control" unique_id=1377091692]
 layout_mode = 3
 anchors_preset = 0
+offset_top = 6.0
+offset_bottom = 6.0
 script = ExtResource("1_acos6")
 
 [node name="Background" type="ColorRect" parent="." unique_id=443675249]

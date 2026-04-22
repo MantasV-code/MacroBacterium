@@ -296,7 +296,6 @@ frame_progress = 0.55697155
 script = ExtResource("41_q8c2v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BOB" unique_id=1738192714]
-position = Vector2(1, 4)
 shape = SubResource("RectangleShape2D_rj586")
 
 [node name="Shoot" type="AudioStreamPlayer" parent="BOB" unique_id=447064534]
