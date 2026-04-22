@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://1v8e1uxk2s2a" path="res://UI/hud.tscn" id="2_sdgtb"]
 [ext_resource type="PackedScene" uid="uid://d1h7kiatxxg1r" path="res://scenes/fire.tscn" id="3_6vnwl"]
 [ext_resource type="PackedScene" uid="uid://bxtcu3muha6qw" path="res://scenes/pick-ups/02_canister.tscn" id="4_i7p6j"]
-[ext_resource type="PackedScene" uid="uid://bbi71da74mjdb" path="res://scenes/Objects/door.tscn" id="6_nnide"]
+[ext_resource type="PackedScene" uid="uid://bbi71da74mjdb" path="res://scenes/Objects/door_up.tscn" id="6_nnide"]
 [ext_resource type="PackedScene" uid="uid://tgsbdc5ipb8v" path="res://scenes/pause_menu.tscn" id="9_vmham"]
 [ext_resource type="PackedScene" uid="uid://c0jndyr8fp3tf" path="res://scenes/Enemies/FlyingBac.tscn" id="10_suhbj"]
 [ext_resource type="PackedScene" uid="uid://dv51qno6kgfef" path="res://scenes/Enemies/FlyingBacEvil.tscn" id="11_7pvdv"]
@@ -105,7 +105,6 @@ position = Vector2(175, -4)
 
 [node name="Door" parent="." unique_id=1554866573 instance=ExtResource("6_nnide")]
 position = Vector2(-356, -273)
-spawn_target = "FromTestRoom2"
 
 [node name="PauseMenu" parent="." unique_id=1684603309 instance=ExtResource("9_vmham")]
 visible = false

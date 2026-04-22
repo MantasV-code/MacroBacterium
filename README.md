@@ -40,14 +40,6 @@ Please read the <code>CONTRIBUTING.md</code> for more guidelines on getting star
 
 Project structure may change during development!
 
-## Project Phases
-### Phase 1 - set up
-- Repository Structure
-- Contribution Guidelines
-- Bug template
-
-**Next phases to come**
-
 # License
 MIT License - Please see the <code>License.md</code>
 

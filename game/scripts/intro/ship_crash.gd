@@ -8,8 +8,12 @@ func _ready() -> void:
 	await get_tree().create_timer(8).timeout #at 8 second show explosion
 	$Explosion.visible = true
 	$Explosion.play()
-	$Ship.visible = false #hide ship at 8 seconds
 	shake_camera()
+	$Ship.visible = false #hide ship at 8 seconds
+	
+	
+	await get_tree().create_timer(1.5).timeout
+	get_tree().change_scene_to_file("res://scenes/main.tscn")
 	
 func shake_camera(): #function camera shake
 	var camera = $Shake_camera
