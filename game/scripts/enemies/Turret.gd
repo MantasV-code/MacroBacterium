@@ -8,8 +8,6 @@ const SMOOTHING = 0.7  # Higher = more responsive
 @onready var hurtbox = %Hurtbox
 @onready var hurtbox2 = %Hurtbox2
 
-
-
 var player: Node2D
 var bounce_timer := 0.0
 var orbit_angle := 0.0  # Track orbit position
@@ -52,7 +50,7 @@ func _physics_process(delta: float) -> void:
 	var MAX_DISTANCE = TARGET_DISTANCE + 40
 	
 	if distance > MAX_DISTANCE:
-		# Too far → move toward player
+		# move toward player
 		desired_velocity = direction * SPEED
 		orbit_angle += delta * 2.0  # Update orbit angle while approaching
 		
