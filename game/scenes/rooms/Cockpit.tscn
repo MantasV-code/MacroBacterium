@@ -495,9 +495,9 @@ texture = ExtResource("4_tfjet")
 
 [node name="SmokeGrate" type="CPUParticles2D" parent="SubViewportContainer/SubViewport/level 1" unique_id=115243524]
 position = Vector2(305, 239)
-amount = 7
+amount = 3
 texture = ExtResource("5_uubay")
-lifetime = 1.48
+lifetime = 1.61
 explosiveness = 0.25
 randomness = 0.34
 emission_shape = 3

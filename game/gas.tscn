@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bo2mecvsa5s3q"]
+
+[ext_resource type="Texture2D" uid="uid://yk2ldrb7ltdg" path="res://assets/sprites/Enviroment/Smoke1.png" id="1_c8tse"]
+[ext_resource type="Script" uid="uid://c8q6y3853g56c" path="res://gas.gd" id="1_yjcoj"]
+[ext_resource type="PackedScene" uid="uid://djohpnhiega2x" path="res://scenes/Enemies/damagezone.tscn" id="2_f70ue"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yjcoj"]
+size = Vector2(20, 36.321323)
+
+[node name="Gas" type="Node2D" unique_id=25988489]
+script = ExtResource("1_yjcoj")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1367270929]
+amount = 3
+texture = ExtResource("1_c8tse")
+lifetime = 0.75
+explosiveness = 0.25
+randomness = 0.07
+emission_shape = 3
+emission_rect_extents = Vector2(24, 1)
+gravity = Vector2(0, -80)
+angular_velocity_min = -10.0
+angular_velocity_max = 10.0
+scale_amount_min = 0.5
+scale_amount_max = 1.2
+color = Color(0.43095568, 0.9445763, 1.5016794e-05, 1)
+
+[node name="Damagezone" parent="." unique_id=1596236458 instance=ExtResource("2_f70ue")]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Damagezone" unique_id=95947080]
+rotation = -1.5760323
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_yjcoj")

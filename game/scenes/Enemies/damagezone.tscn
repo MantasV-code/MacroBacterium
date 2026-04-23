@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://wui36fkgydvo" path="res://scripts/damagezone.gd" id="1_rg5yr"]
 
 [node name="Damagezone" type="Area2D" unique_id=1596236458]
+position = Vector2(-1, 1)
 script = ExtResource("1_rg5yr")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
