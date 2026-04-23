@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://1v8e1uxk2s2a"]
+
+[ext_resource type="Script" uid="uid://ba4m545grblum" path="res://scripts/hud.gd" id="1_2o5uh"]
+[ext_resource type="Texture2D" uid="uid://c5mcb7yfbfsxw" path="res://assets/sprites/pick-ups/HUD_O2 canister.png" id="1_ne75i"]
+[ext_resource type="LabelSettings" uid="uid://b5y5xe1iifi4d" path="res://UI settings/new_label_settings.tres" id="3_b1lf8"]
+
+[node name="HUD" type="Control" unique_id=241693573 node_paths=PackedStringArray("health_label") groups=["hud"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2o5uh")
+health_label = NodePath("HealthTexture/HealthLabel")
+
+[node name="HealthTexture" type="TextureRect" parent="." unique_id=292780607]
+layout_mode = 1
+offset_top = 128.0
+offset_right = 96.0
+offset_bottom = 224.0
+texture = ExtResource("1_ne75i")
+
+[node name="HealthLabel" type="Label" parent="HealthTexture" unique_id=2093932686]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 68.0
+offset_top = 4.0
+offset_right = 164.0
+offset_bottom = 28.0
+grow_vertical = 2
+text = "x0"
+label_settings = ExtResource("3_b1lf8")

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bh2lfxmgi56o5" path="res://scripts/main.gd" id="1_efxa6"]
 [ext_resource type="PackedScene" uid="uid://dad7bc4523ujr" path="res://scenes/BOB/Bob.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://dourefk4ke05y" path="res://scenes/rooms/maps/map1.tscn" id="2_dg77c"]
+[ext_resource type="PackedScene" uid="uid://1v8e1uxk2s2a" path="res://UI/hud.tscn" id="2_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://qn2avl0fwj6e" path="res://scenes/rooms/CockpitRoom.tscn" id="2_ycdy4"]
 [ext_resource type="PackedScene" uid="uid://c0dqi73mrmnlr" path="res://scenes/rooms/maps/map2.tscn" id="3_ycdy4"]
 [ext_resource type="PackedScene" uid="uid://cvnkflg37wa75" path="res://scenes/rooms/maps/map4.tscn" id="5_vivmo"]
@@ -17,6 +18,11 @@
 
 [node name="Main" type="Node2D" unique_id=801401041]
 script = ExtResource("1_efxa6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=103373971]
+
+[node name="HUD" parent="CanvasLayer" unique_id=241693573 instance=ExtResource("2_jkv2x")]
+metadata/_edit_use_anchors_ = true
 
 [node name="Bob" parent="." unique_id=1335707608 instance=ExtResource("1_ig7tw")]
 position = Vector2(504, 317)

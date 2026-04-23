@@ -13,8 +13,3 @@ func _ready():
 			$Bob.global_position = spawn.global_position
 		else:
 			print("Spawn NOT found")
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

@@ -1,12 +1,12 @@
 extends Area2D
 
 @export_group("Settings")
-@export var upgrade_name: String = ""
+@export var item_type: String = "" # health or power_up
+@export var item_effect: String = ""
 @export var display_name: String = ""
+@export var value: int = 0
 @export var item_color: Color = Color.WHITE
 @onready var ItemSprite = %ItemSprite
-
-@onready var sprite = $AnimatedSprite2D
 @onready var label = $Label 
 
 
@@ -15,15 +15,19 @@ func _ready() -> void:
 	label.hide()
 	label.text = display_name
 	label.modulate = item_color
-	ItemSprite.play("default")
+
 	
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Bob" or body.is_in_group("player"):
-		BobStats.apply_effect(upgrade_name)
+		
+		if item_type == "power_up":
+			BobStats.apply_effect(item_effect)
+		if item_type == "health":
+			BobStats.modify_health(item_effect, value)
 		_collect_effect()
 		
 func _collect_effect() -> void:
-	monitoring = false
+	set_deferred("monitoring", false) # stop detecting player so item can't be picked up again
 	if has_node("AnimationPlayer"):
 		$AnimationPlayer.stop()
 		

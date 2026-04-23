@@ -5,7 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://c1xq8ebktrpos" path="res://assets/sprites/Enviroment/Spaceship Objects/Control Panel Buttons.png" id="3_cbbi4"]
 [ext_resource type="PackedScene" uid="uid://c3o5wxbss70fi" path="res://smoke.tscn" id="4_vl84v"]
 [ext_resource type="AudioStream" uid="uid://bn0j77dnrke8v" path="res://assets/Music/freesound_community-steam-2-36231.mp3" id="6_c6pth"]
+[ext_resource type="PackedScene" uid="uid://bxtcu3muha6qw" path="res://scenes/pick-ups/02_canister.tscn" id="7_1qr8y"]
 [ext_resource type="PackedScene" uid="uid://bn8rkmhj7e8yb" path="res://scenes/Objects/door_down.tscn" id="7_wbsnh"]
+[ext_resource type="PackedScene" uid="uid://dv6wf7iy3fe2o" path="res://scenes/pick-ups/Golden-02.tscn" id="8_lgee6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t7lg8"]
 texture = ExtResource("1_wbsnh")
@@ -508,3 +510,9 @@ scale = Vector2(1.2, 1.2)
 [node name="Start_Spawn" type="Marker2D" parent="." unique_id=1539266836]
 position = Vector2(545, 211.99997)
 scale = Vector2(1.2, 1.2)
+
+[node name="02_canister" parent="." unique_id=961115757 instance=ExtResource("7_1qr8y")]
+position = Vector2(416, 424)
+
+[node name="Max_Health" parent="." unique_id=895744004 instance=ExtResource("8_lgee6")]
+position = Vector2(465, 416)

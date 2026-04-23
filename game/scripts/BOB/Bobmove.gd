@@ -32,6 +32,9 @@ func _ready() -> void:
 
 func increase_health(amount: int) -> void:
 	$Health.increase_health(amount)
+	
+func increase_max_health(amount: int) -> void:
+	$Health.increase_max_health(amount)
 
 func decrease_health(amount: int) -> void:
 	$Health.decrease_health(amount)
@@ -40,6 +43,7 @@ func on_death() -> void:
 	# prevent running death sequence multiple times
 	if is_dead:
 		return
+	$CollisionShape2D.set_deferred("disabled", true) # disable detection and collision to prevent interactions
 	is_dead = true
 	head.visible = false	
 	Body.play("Death")

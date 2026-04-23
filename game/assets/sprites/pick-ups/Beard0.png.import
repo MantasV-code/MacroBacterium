@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7wxhwt40cfnq"
-path="res://.godot/imported/EvilEye0.png-126004fe894424a76018fa6bd2c74ecc.ctex"
+uid="uid://da02hqua1h62d"
+path="res://.godot/imported/Beard0.png-ae6df97d26be17bb2eb58f94784a34b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Items/EvilEye0.png"
-dest_files=["res://.godot/imported/EvilEye0.png-126004fe894424a76018fa6bd2c74ecc.ctex"]
+source_file="res://assets/sprites/pick-ups/Beard0.png"
+dest_files=["res://.godot/imported/Beard0.png-ae6df97d26be17bb2eb58f94784a34b2.ctex"]
 
 [params]
 
