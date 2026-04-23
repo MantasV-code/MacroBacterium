@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dv6wf7iy3fe2o"]
 
-[ext_resource type="Script" uid="uid://bq6vq0p77bj6i" path="res://scenes/pick-ups/BaseItem.gd" id="1_4coef"]
+[ext_resource type="Script" uid="uid://bq6vq0p77bj6i" path="res://scripts/pick-ups/BaseItem.gd" id="1_4coef"]
 [ext_resource type="Texture2D" uid="uid://c1nlpm84ktpew" path="res://assets/Items/golden_o2/max_health.png" id="2_hud7v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pechl"]

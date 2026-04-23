@@ -54,7 +54,7 @@
 [ext_resource type="Texture2D" uid="uid://yk2ldrb7ltdg" path="res://assets/sprites/Enviroment/Smoke1.png" id="43_yjivn"]
 [ext_resource type="Script" uid="uid://47fcrxacjx4j" path="res://scripts/BOB/WalkingEffects.gd" id="44_s2cy5"]
 [ext_resource type="AudioStream" uid="uid://cj7umwyt5at6c" path="res://assets/Music/universfield-animated-cartoon-explosion-impact-352744.mp3" id="54_c87kr"]
-[ext_resource type="Script" uid="uid://ck21qcfnvsclv" path="res://scenes/BOB/camera_shaders.gd" id="54_q6k22"]
+[ext_resource type="Script" uid="uid://ck21qcfnvsclv" path="res://scripts/BOB/camera_shaders.gd" id="54_q6k22"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ta5nu"]
 animations = [{
