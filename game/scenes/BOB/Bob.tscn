@@ -53,6 +53,7 @@
 [ext_resource type="AudioStream" uid="uid://ea88ucml8dlf" path="res://assets/Music/u_3x9ga8wevj-walking-sound-effect-272246.mp3" id="42_symca"]
 [ext_resource type="Texture2D" uid="uid://yk2ldrb7ltdg" path="res://assets/sprites/Enviroment/Smoke1.png" id="43_yjivn"]
 [ext_resource type="Script" uid="uid://47fcrxacjx4j" path="res://scripts/BOB/WalkingEffects.gd" id="44_s2cy5"]
+[ext_resource type="AudioStream" uid="uid://cj7umwyt5at6c" path="res://assets/Music/universfield-animated-cartoon-explosion-impact-352744.mp3" id="54_c87kr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ta5nu"]
 animations = [{
@@ -190,7 +191,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Death",
-"speed": 5.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -327,3 +328,12 @@ script = ExtResource("44_s2cy5")
 position = Vector2(4, -4)
 zoom = Vector2(3.195, 3.195)
 position_smoothing_enabled = true
+
+[node name="Death" type="AudioStreamPlayer2D" parent="BOB" unique_id=1653916978]
+unique_name_in_owner = true
+stream = ExtResource("54_c87kr")
+volume_db = 9.123
+pitch_scale = 2.01
+max_distance = 476.0
+attenuation = 3.4822075
+panning_strength = 3.0

@@ -15,8 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://cdw5456320o21" path="res://assets/sprites/Enviroment/Spritesheet-Spaceship2.png" id="11_lgnlx"]
 [ext_resource type="Shader" uid="uid://crhethfchgsq7" path="res://scenes/rooms/Vignette.gdshader" id="12_07p4q"]
 [ext_resource type="AudioStream" uid="uid://bn0j77dnrke8v" path="res://assets/Music/freesound_community-steam-2-36231.mp3" id="12_r105p"]
-[ext_resource type="PackedScene" uid="uid://c0jndyr8fp3tf" path="res://scenes/Enemies/FlyingBac.tscn" id="15_pyxte"]
-[ext_resource type="PackedScene" uid="uid://dv51qno6kgfef" path="res://scenes/Enemies/FlyingBacEvil.tscn" id="16_o2jpi"]
+[ext_resource type="PackedScene" uid="uid://7oxobf8klaua" path="res://scenes/Enemies/Turret.tscn" id="18_8etja"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7mn8v"]
 shader = ExtResource("1_y6rpo")
@@ -613,6 +612,9 @@ z_index = 1
 position = Vector2(495.25, 329.75)
 scale = Vector2(0.245, 0.245)
 
+[node name="Turret" parent="SubViewportContainer/SubViewport" unique_id=1913985624 instance=ExtResource("18_8etja")]
+position = Vector2(-231, -34)
+
 [node name="GoldenO2" parent="SubViewportContainer/SubViewport" unique_id=1152025209 instance=ExtResource("10_pyxte")]
 position = Vector2(592.25, 365.75)
 upgrade_name = "health_up"
@@ -649,9 +651,3 @@ grow_vertical = 2
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=1861408961]
 stream = ExtResource("11_7mn8v")
 autoplay = true
-
-[node name="FlyingBac" parent="." unique_id=1769072605 instance=ExtResource("15_pyxte")]
-position = Vector2(222, 212)
-
-[node name="FlyingBacEvil" parent="." unique_id=841717271 instance=ExtResource("16_o2jpi")]
-position = Vector2(261, 178)

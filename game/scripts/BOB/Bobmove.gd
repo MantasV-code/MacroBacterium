@@ -6,6 +6,7 @@ extends CharacterBody2D
 @onready var SFX1 = %Shoot
 @onready var FaceHole = %FaceHole
 @onready var SFX2 = %Walking
+@onready var Deathsound = %Death
 @onready var walk_particles = %WalkParticles
 var is_dead
 
@@ -36,6 +37,7 @@ func on_death() -> void:
 	is_dead = true
 	head.visible = false	
 	Body.play("Death")
+	Deathsound.play()
 	await Body.animation_finished
 	await get_tree().create_timer(0.5).timeout
 	head.visible = false	
@@ -160,4 +162,4 @@ func _spawn_bullets(direction: Vector2) -> void:
 		bullet.global_position = FaceHole.global_position
 		
 		# SETUP SECOND (Pass BobStats itself)
-		bullet.setup(bullet_dir, BobStats, velocity * 1.4)
+		bullet.setup(bullet_dir, BobStats, velocity * 1.4, false)
