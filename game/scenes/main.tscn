@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://bh2lfxmgi56o5" path="res://main.gd" id="1_efxa6"]
 [ext_resource type="PackedScene" uid="uid://dad7bc4523ujr" path="res://scenes/BOB/Bob.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://dourefk4ke05y" path="res://scenes/rooms/maps/map1.tscn" id="2_dg77c"]
-[ext_resource type="PackedScene" uid="uid://dv51qno6kgfef" path="res://scenes/Enemies/FlyingBacEvil.tscn" id="2_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://qn2avl0fwj6e" path="res://scenes/rooms/CockpitRoom.tscn" id="2_ycdy4"]
 [ext_resource type="PackedScene" uid="uid://c0dqi73mrmnlr" path="res://scenes/rooms/maps/map2.tscn" id="3_ycdy4"]
 [ext_resource type="PackedScene" uid="uid://cvnkflg37wa75" path="res://scenes/rooms/maps/map4.tscn" id="5_vivmo"]
@@ -27,9 +26,6 @@ scale = Vector2(0.2, 0.2)
 
 [node name="Turret" parent="." unique_id=698863661 instance=ExtResource("15_jkv2x")]
 position = Vector2(470, 354)
-
-[node name="FlyingBacEvil" parent="." unique_id=1769072605 instance=ExtResource("2_jbj1t")]
-position = Vector2(443, 300)
 
 [node name="PauseMenu" parent="." unique_id=1684603309 instance=ExtResource("14_a8y0u")]
 visible = false

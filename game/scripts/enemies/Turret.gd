@@ -5,6 +5,10 @@ const TARGET_DISTANCE = 30.0
 const HOVER_STRENGTH = 20.0
 const SMOOTHING = 0.7  # Higher = more responsive
 @onready var deathsound = %Death
+@onready var hurtbox = %Hurtbox
+@onready var hurtbox2 = %Hurtbox2
+
+
 
 var player: Node2D
 var bounce_timer := 0.0
@@ -24,7 +28,8 @@ func decrease_health(amount: int) -> void:
 
 func on_death() -> void:
 	set_physics_process(false)
-	$CollisionShape2D.disabled = true 
+	hurtbox.disabled = true
+	hurtbox2.disabled = true
 	deathsound.play()
 	sprite.play("Death")
 	await sprite.animation_finished
@@ -52,12 +57,12 @@ func _physics_process(delta: float) -> void:
 		orbit_angle += delta * 2.0  # Update orbit angle while approaching
 		
 	elif distance < MIN_DISTANCE:
-		# Too close → move away
+		# move away
 		desired_velocity = -direction * SPEED * 0.7
 		orbit_angle += delta * 2.0
 		
 	else:
-		# In range → orbit around the player's CURRENT position
+		# orbit around the player's CURRENT position
 		orbit_angle += delta * 1.5  # Rotate around player
 		
 		# Calculate ideal orbit position relative to player
@@ -68,7 +73,7 @@ func _physics_process(delta: float) -> void:
 		var to_target = target_pos - global_position
 		desired_velocity = to_target.normalized() * SPEED
 	
-	# Smooth movement with higher responsiveness
+	# Smooth movement
 	velocity = velocity.lerp(desired_velocity, SMOOTHING)
 	
 	# Move + collision
