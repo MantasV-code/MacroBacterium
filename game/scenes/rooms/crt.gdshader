@@ -10,7 +10,7 @@ shader_type canvas_item;
 	(for instance 240 on a 1080 monitor or 480 on a 4k monitor)
 	Else The scanlines won't properly resolve and you're get moiré patters.
 	*/
-uniform sampler2D tex: filter_linear;
+uniform sampler2D tex: filter_linear, hint_screen_texture;
 
 
 /**
@@ -61,13 +61,13 @@ uniform float mask_brightness : hint_range(0, 1) = 1.0;
 	Reduce to preserve scanline details in highlights at the cost of
 	overall brightness. This should usually be kept at or near 1
 	*/
-uniform float scanline_brightness : hint_range(0.5, 1.0) = 1.0;
+uniform float scanline_brightness : hint_range(0.5, 1.0) = 0.5;
 
 /**
 	Raising this value can help reduce Moiré patterns.
 	A value of 1 will eliminate scanlines entirely.
 	*/
-uniform float min_scanline_thickness : hint_range(0.25, 1.0) = 0.5;
+uniform float min_scanline_thickness : hint_range(0.25, 1.0) = 1.0;
 
 /**
 	This should be the input texture's height divided by width.
@@ -322,7 +322,7 @@ vec3 mask(vec3 linear_color, vec2 fragcoord)
 void fragment()
 {
 	// Warp UV coordinates
-	vec2 warped_coords = warp(UV, aspect, curve);
+	vec2 warped_coords = warp(SCREEN_UV, aspect, curve);
 	
 	// Add wobble
 	warped_coords.x += wobble;
