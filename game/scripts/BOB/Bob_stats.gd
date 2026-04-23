@@ -28,7 +28,7 @@ func apply_effect(upgrade_name: String) -> void:
 			var player = get_tree().get_first_node_in_group("player")
 			if player:
 				player.increase_health(1) 
-				print("Bob's health increased. Global health is now: ", health)				
+				print("Bob's health increased. Global health is now: ", health)	
 		"health_up":
 			health += 1 # Update the global 'Master' variable
 			var player = get_tree().get_first_node_in_group("player")
