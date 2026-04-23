@@ -36,10 +36,3 @@ func _toggle_loop() -> void:
 		
 		#time gas is on
 		await get_tree().create_timer(randf_range(0.5, 1.0)).timeout
-		
-		
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://g8itdb840kyg"]
+
+[ext_resource type="Script" uid="uid://bq6vq0p77bj6i" path="res://scripts/pick-ups/item_pickup.gd" id="1_w2lxd"]
+[ext_resource type="Texture2D" uid="uid://dwdrlkg6owtne" path="res://assets/sprites/pick-ups/piercing_bullet.png" id="2_sferk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_casvy"]
+atlas = ExtResource("2_sferk")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6sfdt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_casvy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_15qwv"]
+size = Vector2(11, 8)
+
+[node name="Piercing" type="Area2D" unique_id=174777786]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_w2lxd")
+item_type = "power_up"
+item_effect = "piercing"
+display_name = "Piercing"
+item_color = Color(1, 0, 0, 1)
+
+[node name="ItemSprite" type="AnimatedSprite2D" parent="." unique_id=1247793237]
+unique_name_in_owner = true
+position = Vector2(0, 4)
+sprite_frames = SubResource("SpriteFrames_6sfdt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1284570647]
+position = Vector2(1.5, -4)
+shape = SubResource("RectangleShape2D_15qwv")
+
+[node name="Label" type="Label" parent="." unique_id=1295181197]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
