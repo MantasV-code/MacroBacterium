@@ -1,0 +1,229 @@
+[gd_scene format=3 uid="uid://qnn45oug1dvb"]
+
+[ext_resource type="Script" uid="uid://dpyett7phhvs8" path="res://scripts/enemies/Turret.gd" id="1_snyvc"]
+[ext_resource type="Texture2D" uid="uid://ccujp0py5yaof" path="res://assets/sprites/Enemies/EyeTurret/EyeTurretDeath0.png" id="2_jmt5u"]
+[ext_resource type="Texture2D" uid="uid://cee53q1jjxtgf" path="res://assets/sprites/Enemies/EyeTurret/EyeTurret7.png" id="2_me0fg"]
+[ext_resource type="Texture2D" uid="uid://deh2vh1ilww1r" path="res://assets/sprites/Enemies/EyeTurret/EyeTurret0.png" id="3_khp0c"]
+[ext_resource type="Texture2D" uid="uid://6qy5erldv7ye" path="res://assets/sprites/Enemies/EyeTurret/EyeTurretDeath1.png" id="3_u6kc1"]
+[ext_resource type="Texture2D" uid="uid://c802a1vf3y3q7" path="res://assets/sprites/Enemies/EyeTurret/EyeTurret6.png" id="4_be0ps"]
+[ext_resource type="Texture2D" uid="uid://vbv5cejt1ujf" path="res://assets/sprites/Enemies/EyeTurret/EyeTurretDeath2.png" id="4_swek6"]
+[ext_resource type="Texture2D" uid="uid://bfhw1freq74pm" path="res://assets/sprites/Enemies/EyeTurret/EyeTurret3.png" id="5_60vm8"]
+[ext_resource type="Texture2D" uid="uid://dg476d2gc6858" path="res://assets/sprites/Enemies/EyeTurret/EyeTurretDeath3.png" id="5_pljgv"]
+[ext_resource type="Texture2D" uid="uid://b5ciys818cd0l" path="res://assets/sprites/Enemies/EyeTurret/EyeTurretDeath4.png" id="6_7anhy"]
+[ext_resource type="Texture2D" uid="uid://dyr60qwyqsmfd" path="res://assets/sprites/Enemies/EyeTurret/EyeTurret2.png" id="6_snyvc"]
+[ext_resource type="Texture2D" uid="uid://ctvwiq2ott5m4" path="res://assets/sprites/Enemies/EyeTurret/EyeTurretDeath5.png" id="7_8e5en"]
+[ext_resource type="Texture2D" uid="uid://c424edq6yc6ec" path="res://assets/sprites/Enemies/EyeTurret/EyeTurret4.png" id="7_pi2nh"]
+[ext_resource type="Texture2D" uid="uid://cxso2y4qnlx80" path="res://assets/sprites/Enemies/EyeTurret/EyeTurret1.png" id="8_jmt5u"]
+[ext_resource type="Texture2D" uid="uid://bw3gh5tngpqbl" path="res://assets/sprites/Enemies/EyeTurret/EyeTurret5.png" id="9_u6kc1"]
+[ext_resource type="Script" uid="uid://b7urnf0xu15fs" path="res://scripts/Health.gd" id="14_r1eg5"]
+[ext_resource type="PackedScene" uid="uid://djohpnhiega2x" path="res://scenes/Enemies/damagezone.tscn" id="17_gwmef"]
+[ext_resource type="AudioStream" uid="uid://b0q8wud5q0lrg" path="res://assets/Bob/Sounds/freesound_community-squelch-40286.mp3" id="17_jmt5u"]
+[ext_resource type="AudioStream" uid="uid://bp7cbcb4gy6qn" path="res://assets/Bob/Sounds/freesound_community-water-squelch-36744.mp3" id="18_jmt5u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rn10s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jmt5u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u6kc1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_swek6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pljgv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7anhy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8e5en")
+}],
+"loop": false,
+"name": &"Death",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_me0fg")
+}],
+"loop": true,
+"name": &"LookB",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_khp0c")
+}],
+"loop": true,
+"name": &"LookBL",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_be0ps")
+}],
+"loop": true,
+"name": &"LookBR",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_60vm8")
+}],
+"loop": true,
+"name": &"LookF",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_snyvc")
+}],
+"loop": true,
+"name": &"LookFL",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_pi2nh")
+}],
+"loop": true,
+"name": &"LookFR",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_jmt5u")
+}],
+"loop": true,
+"name": &"LookL",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_u6kc1")
+}],
+"loop": true,
+"name": &"LookR",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_khp0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jmt5u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_snyvc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_60vm8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pi2nh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_u6kc1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_be0ps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_me0fg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_khp0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jmt5u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_snyvc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_60vm8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pi2nh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_u6kc1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_be0ps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_me0fg")
+}],
+"loop": false,
+"name": &"Spin",
+"speed": 24.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rnwy1"]
+radius = 17.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rnwy1"]
+radius = 10.816429
+height = 24.402706
+
+[node name="EyeTurret" type="Node2D" unique_id=1769072605]
+
+[node name="EyeTurret" type="CharacterBody2D" parent="." unique_id=612914337 groups=["enemy"]]
+z_as_relative = false
+collision_mask = 3
+script = ExtResource("1_snyvc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="EyeTurret" unique_id=676161281]
+visibility_layer = 2
+z_index = 3
+sprite_frames = SubResource("SpriteFrames_rn10s")
+animation = &"Death"
+frame = 5
+frame_progress = 1.0
+
+[node name="Hurtbox" type="CollisionShape2D" parent="EyeTurret" unique_id=1105050103]
+unique_name_in_owner = true
+position = Vector2(0, -1)
+rotation = 0.5996482
+shape = SubResource("CircleShape2D_rnwy1")
+
+[node name="Health" type="Node" parent="EyeTurret" unique_id=167018509]
+script = ExtResource("14_r1eg5")
+
+[node name="Turn" type="AudioStreamPlayer2D" parent="EyeTurret" unique_id=1742217652]
+unique_name_in_owner = true
+stream = ExtResource("17_jmt5u")
+volume_db = 24.0
+pitch_scale = 6.85
+autoplay = true
+max_distance = 476.0
+attenuation = 3.4822075
+panning_strength = 0.0
+
+[node name="Death" type="AudioStreamPlayer2D" parent="EyeTurret" unique_id=492807155]
+unique_name_in_owner = true
+stream = ExtResource("18_jmt5u")
+volume_db = 24.0
+pitch_scale = 2.0
+max_distance = 476.0
+attenuation = 3.4822075
+panning_strength = 3.0
+
+[node name="Damagezone" parent="EyeTurret" unique_id=1596236458 instance=ExtResource("17_gwmef")]
+collision_mask = 2
+
+[node name="Hurtbox2" type="CollisionShape2D" parent="EyeTurret/Damagezone" unique_id=1737479315]
+unique_name_in_owner = true
+position = Vector2(-2.9802322e-08, -4)
+rotation = 0.58151925
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("CapsuleShape2D_rnwy1")
+
+[node name="ShootTimer" type="Timer" parent="EyeTurret" unique_id=787769806]
+unique_name_in_owner = true
+wait_time = 0.4
+autostart = true

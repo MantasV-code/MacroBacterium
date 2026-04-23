@@ -21,21 +21,20 @@ Before getting started, the game was developed using Godot game engine (from ste
 
 - <code>scenes/</code> - Game scenes and levels
 - <code>scripts/</code> - GDScript files
-- <code>assests/</code> - Sprites, audio, and visual
-- <code>ui/</code> - User interface elements
+- <code>assests/</code> - Sprites, audio, visual and objects
 
 ⚠️Please keep files organised and tidy within the folder structure.
 
 
 ## ✨ CODING STRUCTURE
 
-Please follow the coding standards to ensure consistency and maintainability
-End of the day we aren't animals 🐖
+Please follow the coding standards to ensure consistency and maintainability.
 
 - Use clear and descriptive variable names.
 - Follow consistent indentation and formatting. We want everyone to able to read the code cleanly.
 - Comment important logic. Again we want everyone to understand the code.
 - Avoid commenting test files.
+- Test rooms have been created to test a new feature before implying it into the main game.
 
 ## 🎨 ASSEST CONTRIBUTIONS
 

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c3o5wxbss70fi"]
+
+[ext_resource type="Texture2D" uid="uid://yk2ldrb7ltdg" path="res://assets/sprites/Enviroment/Smoke1.png" id="1_niign"]
+
+[node name="Smoke" type="Node2D" unique_id=2067158989]
+
+[node name="smokeGrate" type="CPUParticles2D" parent="." unique_id=1646453328]
+rotation = -3.080506
+scale = Vector2(4, 4)
+amount = 5
+texture = ExtResource("1_niign")
+lifetime = 0.8
+explosiveness = 0.23
+randomness = 0.51
+emission_shape = 3
+emission_rect_extents = Vector2(4, 4)
+direction = Vector2(0, 1)
+gravity = Vector2(0, -10)
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
+angular_velocity_min = -10.0
+angular_velocity_max = -10.0
+scale_amount_min = 0.5
+scale_amount_max = 1.41
