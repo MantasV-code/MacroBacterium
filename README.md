@@ -1,6 +1,6 @@
 # MacroBacterium
 ## Overview
-This projects aim is to develop an open-source rogue-like adventure game inspired by other titles such as "The Binding Of Issac", while keeping the old school acrade feel to it. The game will focus on replayability, using random seeds, the map, eneimes and chests will be random everytime. 
+This projects aim is to develop an open-source rogue-like adventure game inspired by other titles such as "The Binding Of Issac", while keeping the old school acrade feel to it. The game will focus on replayability. We encourage contribuitions to build on the world or even create a new world after what happens. It's your story.
 
 The game will simple open source top view 2D game using the Godot Game Engine and will allow for a community to contribute with possible new maps, sprites and difficulty. 
 
@@ -15,17 +15,13 @@ The game will simple open source top view 2D game using the Godot Game Engine an
 - External Editor: Visual Studio Code
 - Version Control: GitHub
 
-## Current Status 
-Core development has yet to start.<br>
-Currently in project planning and repository setup phase.
-
 ## Planned Features
 
 The planned features for the game follows:
  - Player movement
  - Combat system
  - Various enemy enemies types
- - Random map layout each time.
+ - Backtrack and explore
  - Community-added assests and maps
 
 ## Contributing
@@ -33,10 +29,9 @@ We welcome everyone! Developers, game designers, gaming enthusiasts, artists.<br
 Please read the <code>CONTRIBUTING.md</code> for more guidelines on getting started and submitting.
 
 ## Project Structure
-<code>/scenes<br>
-/scripts<br>
-/assests<br>
-/ui<br></code>
+<code>/assets
+/scenes<br>
+/scripts<br></code>
 
 Project structure may change during development!
 
