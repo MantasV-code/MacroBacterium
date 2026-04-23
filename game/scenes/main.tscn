@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://cmpr7vmeb4s7h"]
 
-[ext_resource type="Script" uid="uid://bh2lfxmgi56o5" path="res://main.gd" id="1_efxa6"]
+[ext_resource type="Script" uid="uid://bh2lfxmgi56o5" path="res://scripts/main.gd" id="1_efxa6"]
 [ext_resource type="PackedScene" uid="uid://dad7bc4523ujr" path="res://scenes/BOB/Bob.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://dourefk4ke05y" path="res://scenes/rooms/maps/map1.tscn" id="2_dg77c"]
 [ext_resource type="PackedScene" uid="uid://qn2avl0fwj6e" path="res://scenes/rooms/CockpitRoom.tscn" id="2_ycdy4"]
@@ -19,13 +19,11 @@
 [node name="Main" type="Node2D" unique_id=801401041]
 script = ExtResource("1_efxa6")
 
-[node name="Bob" parent="." unique_id=1335707608 groups=["player"] instance=ExtResource("1_ig7tw")]
-z_index = 10
-position = Vector2(3, 2.0000153)
-scale = Vector2(0.2, 0.2)
-
 [node name="Turret" parent="." unique_id=698863661 instance=ExtResource("15_jkv2x")]
 position = Vector2(470, 354)
+
+[node name="Bob" parent="." unique_id=1335707608 instance=ExtResource("1_ig7tw")]
+position = Vector2(504, 317)
 
 [node name="PauseMenu" parent="." unique_id=1684603309 instance=ExtResource("14_a8y0u")]
 visible = false

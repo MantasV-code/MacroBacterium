@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bhfsvxaamdty"]
 
-[ext_resource type="Script" uid="uid://bq6vq0p77bj6i" path="res://scenes/pick-ups/BaseItem.gd" id="1_kois5"]
+[ext_resource type="Script" uid="uid://bq6vq0p77bj6i" path="res://scripts/pick-ups/BaseItem.gd" id="1_kois5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8ujmw"]
 
