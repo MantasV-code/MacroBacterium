@@ -39,7 +39,6 @@ func apply_effect(upgrade_name: String) -> void:
 		"double_shot":
 			count += 1
 			spread += 15.0
-			shoot_speed += 2
 		"triple_shot":
 			count += 2
 			spread += 20.0
@@ -48,7 +47,7 @@ func apply_effect(upgrade_name: String) -> void:
 			color = Color.YELLOW
 		"Power":
 			color = Color.RED
-			damage += 1
+			damage += 0.5
 		"fast":
 			speed = 1400.0
 			SPEED = 350.0

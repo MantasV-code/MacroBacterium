@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bo8gu1s2semwm" path="res://assets/Bob/Bobs Projectiles/Projectile04.png" id="7_7gbgb"]
 [ext_resource type="Texture2D" uid="uid://bybif1cb6eumm" path="res://assets/Bob/Bobs Projectiles/Projectile10.png" id="7_60wpv"]
 [ext_resource type="Texture2D" uid="uid://c5sk4suvdl60q" path="res://assets/Bob/Bobs Projectiles/Projectile05.png" id="8_0f6np"]
+[ext_resource type="AudioStream" uid="uid://cykncr8wx8i1u" path="res://assets/Music/dragon-studio-pop-402324.mp3" id="14_6ied8"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_u8st5"]
 shader = ExtResource("2_7281b")
@@ -71,6 +72,7 @@ script = ExtResource("1_4s4u5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1434378629]
 unique_name_in_owner = true
+z_index = 10
 texture_filter = 3
 material = SubResource("ShaderMaterial_u8st5")
 position = Vector2(0.6374984, 9.403118)
@@ -80,3 +82,9 @@ animation = &"Hit"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1911245224]
 shape = SubResource("CircleShape2D_7281b")
+
+[node name="Hitsound" type="AudioStreamPlayer2D" parent="." unique_id=1907078268]
+unique_name_in_owner = true
+stream = ExtResource("14_6ied8")
+volume_db = 8.21
+pitch_scale = 3.26

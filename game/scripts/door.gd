@@ -8,8 +8,6 @@ var is_triggered := false
 func _ready() -> void:
 	is_triggered = false
 	
-
-
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and body is CharacterBody2D and not is_triggered:
 		if locked:
