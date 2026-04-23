@@ -3,11 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://c612wtbr2iaov" path="res://assets/sprites/Enviroment/Spritesheet-Spaceship.png" id="1_wbsnh"]
 [ext_resource type="Texture2D" uid="uid://boyjonr6hdflo" path="res://assets/sprites/Enviroment/Spaceship Objects/Control Panel.png" id="2_gcb1v"]
 [ext_resource type="Texture2D" uid="uid://c1xq8ebktrpos" path="res://assets/sprites/Enviroment/Spaceship Objects/Control Panel Buttons.png" id="3_cbbi4"]
-[ext_resource type="Texture2D" uid="uid://yk2ldrb7ltdg" path="res://assets/sprites/Enviroment/Smoke1.png" id="4_3gcpo"]
-[ext_resource type="Script" uid="uid://co2frnk5otirw" path="res://scenes/rooms/smoke_grate.gd" id="5_c5ga1"]
+[ext_resource type="PackedScene" uid="uid://c3o5wxbss70fi" path="res://smoke.tscn" id="4_vl84v"]
 [ext_resource type="AudioStream" uid="uid://bn0j77dnrke8v" path="res://assets/Music/freesound_community-steam-2-36231.mp3" id="6_c6pth"]
 [ext_resource type="PackedScene" uid="uid://bn8rkmhj7e8yb" path="res://scenes/Objects/door_down.tscn" id="7_wbsnh"]
-[ext_resource type="PackedScene" uid="uid://dourefk4ke05y" path="res://scenes/rooms/maps/map1.tscn" id="8_1qr8y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t7lg8"]
 texture = ExtResource("1_wbsnh")
@@ -67,7 +65,9 @@ texture_region_size = Vector2i(32, 32)
 4:3/0 = 0
 5:3/0 = 0
 6:3/0 = 0
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 7:3/0 = 0
+7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 8:3/0 = 0
 9:3/0 = 0
 10:3/0 = 0
@@ -82,7 +82,9 @@ texture_region_size = Vector2i(32, 32)
 3:4/0 = 0
 4:4/0 = 0
 6:4/0 = 0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 7:4/0 = 0
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 8:4/0 = 0
 9:4/0 = 0
 10:4/0 = 0
@@ -97,7 +99,9 @@ texture_region_size = Vector2i(32, 32)
 3:5/0 = 0
 4:5/0 = 0
 5:5/0 = 0
+5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 6:5/0 = 0
+6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 7:5/0 = 0
 8:5/0 = 0
 9:5/0 = 0
@@ -113,7 +117,9 @@ texture_region_size = Vector2i(32, 32)
 3:6/0 = 0
 4:6/0 = 0
 5:6/0 = 0
+5:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 6:6/0 = 0
+6:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 7:6/0 = 0
 8:6/0 = 0
 9:6/0 = 0
@@ -126,6 +132,7 @@ texture_region_size = Vector2i(32, 32)
 2:7/0 = 0
 2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 3:7/0 = 0
+3:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 4:7/0 = 0
 5:7/0 = 0
 6:7/0 = 0
@@ -137,7 +144,9 @@ texture_region_size = Vector2i(32, 32)
 0:8/0 = 0
 1:8/0 = 0
 2:8/0 = 0
+2:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 3:8/0 = 0
+3:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 4:8/0 = 0
 5:8/0 = 0
 6:8/0 = 0
@@ -146,24 +155,36 @@ texture_region_size = Vector2i(32, 32)
 9:8/0 = 0
 10:8/0 = 0
 11:8/0 = 0
+11:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.79657745, -0.31863022, 16, -16, 16, 16, -16, 16)
 12:8/0 = 0
+12:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 13:8/0 = 0
+13:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 14:8/0 = 0
+14:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -1.1152077, -1.593153, 16, 16, -16, 16)
 0:9/0 = 0
 1:9/0 = 0
 2:9/0 = 0
+2:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 3:9/0 = 0
+3:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 4:9/0 = 0
 5:9/0 = 0
 6:9/0 = 0
+6:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 7:9/0 = 0
+7:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 8:9/0 = 0
 9:9/0 = 0
 10:9/0 = 0
 11:9/0 = 0
+11:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 12:9/0 = 0
+12:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 13:9/0 = 0
+13:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 14:9/0 = 0
+14:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 0:10/0 = 0
 1:10/0 = 0
 2:10/0 = 0
@@ -171,14 +192,18 @@ texture_region_size = Vector2i(32, 32)
 4:10/0 = 0
 5:10/0 = 0
 6:10/0 = 0
+6:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 7:10/0 = 0
+7:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 8:10/0 = 0
 9:10/0 = 0
 10:10/0 = 0
 11:10/0 = 0
+11:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, -16, 16)
 12:10/0 = 0
 13:10/0 = 0
 14:10/0 = 0
+14:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, 0.79657745, 1.9117851)
 0:11/0 = 0
 1:11/0 = 0
 2:11/0 = 0
@@ -405,34 +430,22 @@ sources/0 = SubResource("TileSetAtlasSource_8gvuy")
 
 [node name="CockpitRoom" type="Node2D" unique_id=1370299544]
 
-[node name="level 1" type="TileMapLayer" parent="." unique_id=1746961756]
+[node name="walls" type="TileMapLayer" parent="." unique_id=1746961756]
 tile_map_data = PackedByteArray("AAAKAAcAAAAIAAIAAAAKAAgAAAAIAAIAAAALAAgAAAAIAAIAAAALAAkAAAAIAAIAAAALAAoAAAAIAAIAAAALAAsAAAAIAAIAAAAMAAsAAAAIAAIAAAANAAsAAAAIAAIAAAAOAAoAAAAIAAIAAAAPAAoAAAAIAAIAAAAPAAkAAAAIAAIAAAAPAAYAAAAIAAIAAAARAAUAAAAIAAIAAAASAAUAAAAIAAIAAAAGABEAAAAHAAoAAAAHAAcAAAAIAAIAAAAHAAgAAAAIAAIAAAAHAAkAAAAIAAIAAAAHAAoAAAAIAAIAAAAHAAsAAAAIAAIAAAAHAAwAAAAIAAIAAAAHAA0AAAAIAAIAAAAHAA4AAAAIAAIAAAAHAA8AAAAIAAIAAAAHABAAAAAGAAkAAAAHABEAAAAGAAoAAAAIAAcAAAAIAAIAAAAIAAgAAAAIAAIAAAAIAAkAAAAIAAIAAAAIAAoAAAAIAAIAAAAIAAsAAAAIAAIAAAAIAAwAAAAIAAIAAAAIAA0AAAAGAAIAAAAIAA4AAAAIAAIAAAAIAA8AAAAIAAIAAAAIABAAAAAHAAkAAAAIABEAAAAHAAoAAAAJAAgAAAAIAAIAAAAJAAkAAAAIAAIAAAAJAAoAAAAFAAEAAAAJAAsAAAAIAAIAAAAJAA8AAAAIAAIAAAAJABAAAAAGAAkAAAAJABEAAAAGAAoAAAAKAAkAAAAIAAIAAAAKAAoAAAAIAAIAAAAKAAsAAAAIAAIAAAAKAAwAAAABAAAAAGAKAA0AAAAIAAIAAAAKAA4AAAAIAAIAAAAKAA8AAAAIAAIAAAAKABAAAAAHAAkAAAAKABEAAAAHAAoAAAALAAcAAAAIAAIAAAALAAwAAAAIAAIAAAALAA0AAAAIAAIAAAALAA4AAAAIAAIAAAALAA8AAAAIAAIAAAALABAAAAAGAAkAAAALABEAAAAGAAoAAAAMAAcAAAAIAAIAAAAMAAgAAAAIAAIAAAAMAAkAAAAIAAIAAAAMAAoAAAAGAAIAAAAMAAwAAAAIAAIAAAAMAA0AAAAIAAIAAAAMAA4AAAAIAAIAAAAMAA8AAAAIAAIAAAAMABAAAAAHAAkAAAAMABEAAAAHAAoAAAANAAcAAAAIAAIAAAANAAgAAAAFAAEAAAANAAkAAAAIAAIAAAANAAoAAAAIAAIAAAANAAwAAAAIAAIAAAANAA0AAAAFAAEAAAANAA4AAAAIAAIAAAANAA8AAAAIAAIAAAANABAAAAAGAAkAAAANABEAAAAGAAoAAAAOAAcAAAAIAAIAAAAOAAkAAAAIAAIAAAAOAAsAAAAIAAIAAAAOAAwAAAAIAAIAAAAOAA0AAAAIAAIAAAAOAA4AAAAIAAIAAAAOAA8AAAAIAAIAAAAOABAAAAAHAAkAAAAOABEAAAAHAAoAAAAPAAsAAAAIAAIAAAAPAA4AAAAIAAIAAAAPAA8AAAAIAAIAAAAPABAAAAAGAAkAAAAPABEAAAAGAAoAAAAQAAcAAAAIAAIAAAAQAAgAAAAIAAIAAAAQAAkAAAAIAAIAAAAQAAoAAAAFAAEAAAAQAAsAAAAIAAIAAAAQAA4AAAAIAAIAAAAQAA8AAAAIAAIAAAARAAgAAAAIAAIAAAARAAkAAAAIAAIAAAARAAoAAAAIAAIAAAARAAsAAAAIAAIAAAARAA4AAAAIAAIAAAARAA8AAAAIAAIAAAASAAcAAAAIAAIAAAASAAgAAAAIAAIAAAASAAkAAAAIAAIAAAASAAoAAAAIAAIAAAASAAsAAAAIAAIAAAASAA4AAAAIAAIAAAASAA8AAAAIAAIAAAASABAAAAAHAAkAAAASABEAAAAHAAoAAAATAAcAAAAIAAIAAAATAAgAAAAIAAIAAAATAAkAAAABAAAAAFATAAoAAAAIAAIAAAATAAsAAAAIAAIAAAATAA4AAAAIAAIAAAATAA8AAAAIAAIAAAATABAAAAAGAAkAAAATABEAAAAGAAoAAAAUAAcAAAAIAAIAAAAUAAgAAAAIAAIAAAAUAAkAAAAIAAIAAAAUAAoAAAAIAAIAAAAUAAsAAAAIAAIAAAAUAA4AAAAIAAIAAAAUAA8AAAAIAAIAAAAUABAAAAAHAAkAAAAUABEAAAAHAAoAAAAVAAoAAAAFAAEAAAAVAAsAAAAIAAIAAAAVAA4AAAAIAAIAAAAVABAAAAAGAAkAAAAVABEAAAAGAAoAAAAWAAgAAAAIAAIAAAAWAAkAAAAIAAIAAAAWAAoAAAAIAAIAAAAWAAsAAAAIAAIAAAAWAA4AAAAIAAIAAAAWAA8AAAAIAAIAAAAWABAAAAAHAAkAAAAWABEAAAAHAAoAAAAXAAcAAAAIAAIAAAAXAAgAAAAAAAAAAAAXAAkAAAAIAAIAAAAXAAoAAAAIAAIAAAAXAAsAAAAIAAIAAAAXAA4AAAAIAAIAAAAXAA8AAAAIAAIAAAAXABAAAAAGAAkAAAAXABEAAAAGAAoAAAAYAAcAAAAIAAIAAAAYAAgAAAAIAAIAAAAYAAkAAAAIAAIAAAAYAAoAAAAIAAIAAAAYAAsAAAAIAAIAAAAYAAwAAAAIAAIAAAAYAA0AAAAIAAIAAAAYAA4AAAAIAAIAAAAYAA8AAAAIAAIAAAAYABAAAAAHAAkAAAAYABEAAAAHAAoAAAAZAAcAAAAIAAIAAAAZAAgAAAAIAAIAAAAZAAkAAAAIAAIAAAAZAAoAAAAIAAIAAAAZAAsAAAAIAAIAAAAZAAwAAAAIAAIAAAAZAA0AAAAIAAIAAAAZAA4AAAAIAAIAAAAZAA8AAAAIAAIAAAAZABAAAAAGAAkAAAAZABEAAAAGAAoAAAAaAAgAAAADAAcAAAAaAAkAAAADAAcAAAAaAAoAAAADAAcAAAAaAAsAAAADAAcAAAAaAAwAAAADAAcAAAAaAA0AAAADAAcAAAAaAA4AAAADAAcAAAAaAA8AAAADAAcAAAAaABAAAAAHAAkAAAAaABEAAAAHAAoAAAAGAAQAAAAFAAYAAAAGAAUAAAADAAcAADAGAAYAAAADAAcAADAKAAYAAAAIAAIAAAALAAYAAAAIAAIAAAAMAAYAAAAIAAIAAAANAAUAAAAIAAIAAAANAAYAAAAIAAIAAAAOAAUAAAAIAAIAAAAOAAYAAAAIAAIAAAASAAYAAAAIAAIAAAATAAUAAAAIAAIAAAATAAYAAAAIAAIAAAAUAAYAAAAIAAIAAAAVAAYAAAAIAAIAAAAXAAYAAAAIAAIAAAAYAAYAAAAIAAIAAAAZAAYAAAAIAAIAAAAVAA8AAAAIAAIAAAAPAAwAAAAIAAIAAAAPAA0AAAAIAAIAAAAQAAwAAAAIAAIAAAAQAA0AAAAIAAIAAAARAAwAAAAIAAIAAAARAA0AAAAIAAIAAAASAAwAAAAIAAIAAAASAA0AAAAIAAIAAAATAAwAAAAIAAIAAAATAA0AAAAGAAIAAAAUAAwAAAAIAAIAAAAUAA0AAAAIAAIAAAAVAAwAAAAIAAIAAAAVAA0AAAAIAAIAAAAWAAwAAAAIAAIAAAAWAA0AAAABAAAAAFAXAAwAAAAIAAIAAAAXAA0AAAAIAAIAAAANAAIAAAALAAgAAAANAAMAAAALAAkAAAANAAQAAAALAAoAAAAOAAIAAAAMAAgAAAAOAAMAAAAMAAkAAAAOAAQAAAAMAAoAAAAPAAIAAAANAAgAAAAPAAMAAAANAAkAAAAQAAIAAAAOAAgAAAARAAIAAAALAAgAAAASAAIAAAAMAAgAAAASAAMAAAAMAAkAAAASAAQAAAAMAAoAAAATAAIAAAANAAgAAAATAAMAAAANAAkAAAATAAQAAAANAAoAAAAUAAIAAAAOAAgAAAAUAAMAAAAOAAkAAAAUAAQAAAAOAAoAAAAQAAMAAAAOAAkAAAARAAMAAAALAAkAAAAPAAQAAAANAAoAAAAPAAUAAAAIAAIAAAAQAAUAAAAIAAIAAAARAAQAAAALAAoAAAAQAAQAAAAOAAoAAAAVAAkAAAAIAAIAAAAVAAgAAAAIAAIAAAAVAAcAAAAFAAEAAAAWAAcAAAAIAAIAAAAWAAYAAAAIAAIAAAAaAAUAAAADAAcAAAAaAAYAAAADAAcAAAAaAAcAAAADAAcAAAAJAAcAAAABAAAAAAAHAAYAAAAFAAEAAAAIAAYAAAAAAAAAAAAMAAMAAAAGAAMAAAARAAYAAAAIAAIAAAAQAAYAAAAIAAIAAAAPAAcAAAAFAAEAAAAPAAgAAAAIAAIAAAAOAAgAAAAIAAIAAAAVAAMAAAAGAAMAAAAGABAAAAAGAAkAAAALAAMAAAAGAAMAAAAKAAMAAAAGAAMAAAAJAAMAAAAGAAMAAAAIAAMAAAAGAAMAAAAHAAMAAAAGAAMAAAAaAAQAAAAGAAYAAAALAAQAAAAGAAQAAAAKAAQAAAAGAAQAAAAJAAQAAAAGAAQAAAAIAAQAAAAGAAQAAAAHAAQAAAAGAAQAAAAMAAQAAAAGAAQAAAAVAAQAAAAGAAQAAAAWAAMAAAAGAAMAAAAWAAQAAAAGAAQAAAAXAAMAAAAGAAMAAAAXAAQAAAAGAAQAAAAYAAMAAAAGAAMAAAAYAAQAAAAGAAQAAAAZAAMAAAAGAAMAAAAZAAQAAAAGAAQAAAAGAAMAAAAGAAUAABAaAAMAAAAGAAUAAAAHAAUAAAAIAAIAAAAIAAUAAAAIAAIAAAAJAAUAAAAIAAIAAAAKAAUAAAAIAAIAAAALAAUAAAAIAAIAAAAMAAUAAAAIAAIAAAAJAAYAAAAIAAIAAAAUAAUAAAAIAAIAAAAVAAUAAAAIAAIAAAAWAAUAAAAIAAIAAAAXAAUAAAAIAAIAAAAYAAUAAAAIAAIAAAAZAAUAAAAIAAIAAAAEAAcAAAAFAAUAAAAGAAgAAAADAAkAAAAGAAcAAAADAAgAAAAFAAgAAAAGAAQAAAAEAAgAAAAFAAYAAAAEAAkAAAADAAcAADAEAAoAAAADAAcAADAEAAsAAAACAAcAAAAEAAwAAAAGAAkAAAAEAA0AAAAGAAoAAAAFAA0AAAAGAAoAAAAJAA4AAAAIAAIAAAAJAA0AAAAIAAIAAAAJAAwAAAAIAAIAAAAFAAwAAAAGAAkAAAAGAAwAAAACAAcAAAAGAA4AAAACAAcAAAAGAA8AAAACAAcAAAAGAA0AAAACAAcAAAAGAAsAAAACAAYAAAAFAAsAAAACAAYAAAAFAAkAAAACAAYAACAGAAkAAAACAAYAACAGAAoAAAABAAgAAAAFAAoAAAABAAgAABARAAcAAAAIAAIAAAAFAAcAAAAGAAMAAAAQABEAAAAHAAoAAAARABEAAAAHAAoAAAA=")
 tile_set = SubResource("TileSet_vcfm7")
 
-[node name="ControlPanel" type="Sprite2D" parent="level 1" unique_id=2099188004]
+[node name="ControlPanel" type="Sprite2D" parent="walls" unique_id=2099188004]
 position = Vector2(545, 142)
 texture = ExtResource("2_gcb1v")
 
-[node name="ControlPanelButtons" type="Sprite2D" parent="level 1/ControlPanel" unique_id=1772444405]
+[node name="ControlPanelButtons" type="Sprite2D" parent="walls/ControlPanel" unique_id=1772444405]
 position = Vector2(1, 0)
 texture = ExtResource("3_cbbi4")
 
-[node name="SmokeGrate" type="CPUParticles2D" parent="level 1" unique_id=897384913]
+[node name="Smoke" parent="walls" unique_id=2067158989 instance=ExtResource("4_vl84v")]
 position = Vector2(305, 239)
-amount = 7
-texture = ExtResource("4_3gcpo")
-lifetime = 1.48
-explosiveness = 0.25
-randomness = 0.34
-emission_shape = 3
-emission_rect_extents = Vector2(13.97, 11.92)
-gravity = Vector2(0, -98)
-angular_velocity_min = -100.41
-angular_velocity_max = 108.14
-scale_amount_max = 2.2
-script = ExtResource("5_c5ga1")
 
-[node name="GrateSound" type="AudioStreamPlayer2D" parent="level 1/SmokeGrate" unique_id=2045197629]
+[node name="GrateSound" type="AudioStreamPlayer2D" parent="walls/Smoke" unique_id=318803402]
 texture_filter = 1
 position = Vector2(0.25, -0.25)
 stream = ExtResource("6_c6pth")
@@ -442,22 +455,10 @@ max_distance = 136.0
 attenuation = 2.4623082
 panning_strength = 3.0
 
-[node name="SmokeGrate2" type="CPUParticles2D" parent="level 1" unique_id=1067868808]
-position = Vector2(333, 400)
-amount = 7
-texture = ExtResource("4_3gcpo")
-lifetime = 1.48
-explosiveness = 0.25
-randomness = 0.34
-emission_shape = 3
-emission_rect_extents = Vector2(13.97, 11.92)
-gravity = Vector2(0, -98)
-angular_velocity_min = -100.41
-angular_velocity_max = 108.14
-scale_amount_max = 2.2
-script = ExtResource("5_c5ga1")
+[node name="Smoke2" parent="walls" unique_id=87447560 instance=ExtResource("4_vl84v")]
+position = Vector2(335, 396)
 
-[node name="GrateSound" type="AudioStreamPlayer2D" parent="level 1/SmokeGrate2" unique_id=568322587]
+[node name="GrateSound" type="AudioStreamPlayer2D" parent="walls/Smoke2" unique_id=737058806]
 texture_filter = 1
 position = Vector2(0.25, -0.25)
 stream = ExtResource("6_c6pth")
@@ -467,22 +468,10 @@ max_distance = 136.0
 attenuation = 2.4623082
 panning_strength = 3.0
 
-[node name="SmokeGrate3" type="CPUParticles2D" parent="level 1" unique_id=515662855]
-position = Vector2(721, 432)
-amount = 7
-texture = ExtResource("4_3gcpo")
-lifetime = 1.48
-explosiveness = 0.25
-randomness = 0.34
-emission_shape = 3
-emission_rect_extents = Vector2(13.97, 11.92)
-gravity = Vector2(0, -98)
-angular_velocity_min = -100.41
-angular_velocity_max = 108.14
-scale_amount_max = 2.2
-script = ExtResource("5_c5ga1")
+[node name="Smoke3" parent="walls" unique_id=1463318528 instance=ExtResource("4_vl84v")]
+position = Vector2(622, 303)
 
-[node name="GrateSound" type="AudioStreamPlayer2D" parent="level 1/SmokeGrate3" unique_id=1731298492]
+[node name="GrateSound" type="AudioStreamPlayer2D" parent="walls/Smoke3" unique_id=1384605882]
 texture_filter = 1
 position = Vector2(0.25, -0.25)
 stream = ExtResource("6_c6pth")
@@ -492,22 +481,10 @@ max_distance = 136.0
 attenuation = 2.4623082
 panning_strength = 3.0
 
-[node name="SmokeGrate4" type="CPUParticles2D" parent="level 1" unique_id=723257848]
-position = Vector2(625, 304)
-amount = 7
-texture = ExtResource("4_3gcpo")
-lifetime = 1.48
-explosiveness = 0.25
-randomness = 0.34
-emission_shape = 3
-emission_rect_extents = Vector2(13.97, 11.92)
-gravity = Vector2(0, -98)
-angular_velocity_min = -100.41
-angular_velocity_max = 108.14
-scale_amount_max = 2.2
-script = ExtResource("5_c5ga1")
+[node name="Smoke4" parent="walls" unique_id=722339933 instance=ExtResource("4_vl84v")]
+position = Vector2(724, 431)
 
-[node name="GrateSound" type="AudioStreamPlayer2D" parent="level 1/SmokeGrate4" unique_id=30442382]
+[node name="GrateSound" type="AudioStreamPlayer2D" parent="walls/Smoke4" unique_id=97853880]
 texture_filter = 1
 position = Vector2(0.25, -0.25)
 stream = ExtResource("6_c6pth")
@@ -527,7 +504,6 @@ tile_set = SubResource("TileSet_v4iau")
 z_index = 1
 position = Vector2(543, 532)
 scale = Vector2(1.2, 1.2)
-next_room = ExtResource("8_1qr8y")
 
 [node name="Start_Spawn" type="Marker2D" parent="." unique_id=1539266836]
 position = Vector2(545, 211.99997)

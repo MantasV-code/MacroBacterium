@@ -4,14 +4,13 @@
 [ext_resource type="Script" uid="uid://1iimt4rkj2sh" path="res://scripts/test_room.gd" id="1_vf0v6"]
 [ext_resource type="PackedScene" uid="uid://dad7bc4523ujr" path="res://scenes/BOB/Bob.tscn" id="2_fn815"]
 [ext_resource type="PackedScene" uid="uid://d1h7kiatxxg1r" path="res://scenes/fire.tscn" id="3_6vnwl"]
-[ext_resource type="PackedScene" uid="uid://bxtcu3muha6qw" path="res://scenes/pick-ups/02_canister.tscn" id="4_i7p6j"]
 [ext_resource type="PackedScene" uid="uid://c0jndyr8fp3tf" path="res://scenes/Enemies/FlyingBac.tscn" id="5_betf1"]
-[ext_resource type="PackedScene" uid="uid://bbi71da74mjdb" path="res://scenes/Objects/door.tscn" id="6_nnide"]
+[ext_resource type="PackedScene" uid="uid://bbi71da74mjdb" path="res://scenes/Objects/door_up.tscn" id="6_nnide"]
 [ext_resource type="PackedScene" uid="uid://dv51qno6kgfef" path="res://scenes/Enemies/FlyingBacEvil.tscn" id="8_dp88d"]
 [ext_resource type="PackedScene" uid="uid://tgsbdc5ipb8v" path="res://scenes/pause_menu.tscn" id="9_vmham"]
 [ext_resource type="PackedScene" uid="uid://bhfsvxaamdty" path="res://scenes/pick-ups/Baseitem.tscn" id="10_suhbj"]
+[ext_resource type="PackedScene" uid="uid://bo2mecvsa5s3q" path="res://gas.tscn" id="11_lumvt"]
 [ext_resource type="PackedScene" uid="uid://cb4k5ekmbogkx" path="res://scenes/pick-ups/Cowboy.tscn" id="11_sdgtb"]
-[ext_resource type="PackedScene" uid="uid://dlochpdt6uibc" path="res://scenes/pick-ups/Goldeno2.tscn" id="12_7pvdv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fn815"]
 texture = ExtResource("1_mjm5x")
@@ -95,7 +94,7 @@ scale = Vector2(0.1, 0.1)
 position = Vector2(29.999996, 29.999996)
 zoom = Vector2(2.925, 2.925)
 
-[node name="02Canister" parent="." unique_id=1802849633 instance=ExtResource("4_i7p6j")]
+[node name="02Canister" parent="." unique_id=1802849633]
 position = Vector2(206, 62)
 
 [node name="fire" parent="." unique_id=1066398813 instance=ExtResource("3_6vnwl")]
@@ -103,18 +102,17 @@ position = Vector2(175, -4)
 
 [node name="Door" parent="." unique_id=1554866573 instance=ExtResource("6_nnide")]
 position = Vector2(-356, -273)
-spawn_target = "FromTestRoom2"
 
-[node name="02Canister2" parent="." unique_id=1044347921 instance=ExtResource("4_i7p6j")]
+[node name="02Canister2" parent="." unique_id=1044347921]
 position = Vector2(97, 361)
 
-[node name="02Canister3" parent="." unique_id=599457263 instance=ExtResource("4_i7p6j")]
+[node name="02Canister3" parent="." unique_id=599457263]
 position = Vector2(400, 317)
 
-[node name="02Canister4" parent="." unique_id=443336119 instance=ExtResource("4_i7p6j")]
+[node name="02Canister4" parent="." unique_id=443336119]
 position = Vector2(440, 119)
 
-[node name="02Canister5" parent="." unique_id=1620326636 instance=ExtResource("4_i7p6j")]
+[node name="02Canister5" parent="." unique_id=1620326636]
 position = Vector2(243, 265)
 
 [node name="FlyingBac" parent="." unique_id=1769072605 instance=ExtResource("5_betf1")]
@@ -141,8 +139,11 @@ position = Vector2(287, 290)
 [node name="Item" parent="." unique_id=1768825689 instance=ExtResource("11_sdgtb")]
 position = Vector2(339, 198)
 
-[node name="Item2" parent="." unique_id=1502466449 instance=ExtResource("12_7pvdv")]
+[node name="Item2" parent="." unique_id=1502466449]
 position = Vector2(154, 229)
 
-[node name="Item3" parent="." unique_id=191648081 instance=ExtResource("12_7pvdv")]
+[node name="Item3" parent="." unique_id=191648081]
 position = Vector2(116, 126)
+
+[node name="Gas" parent="." unique_id=25988489 instance=ExtResource("11_lumvt")]
+position = Vector2(101, 219)
