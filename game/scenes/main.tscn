@@ -30,6 +30,9 @@ position = Vector2(504, 317)
 [node name="PauseMenu" parent="." unique_id=1684603309 instance=ExtResource("14_a8y0u")]
 visible = false
 
+[node name="Bob" parent="." unique_id=1335707608 instance=ExtResource("1_ig7tw")]
+position = Vector2(3566, 2814)
+
 [node name="CockpitRoom" parent="." unique_id=1370299544 instance=ExtResource("2_ycdy4")]
 position = Vector2(-3, 4)
 

@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://dilstjfre0b03"]
+
+[ext_resource type="Script" uid="uid://dpyett7phhvs8" path="res://scripts/enemies/Turret.gd" id="1_jh4uv"]
+[ext_resource type="Texture2D" uid="uid://dpiy8fhvosbyi" path="res://assets/sprites/Enemies/Boss1/Boss10.png" id="2_nh6cm"]
+[ext_resource type="Texture2D" uid="uid://cyd8mowa4wiql" path="res://assets/sprites/Enemies/Boss1/Boss11.png" id="3_cjd7d"]
+[ext_resource type="Texture2D" uid="uid://be3531hpv8p77" path="res://assets/sprites/Enemies/Boss1/Boss12.png" id="4_ccya3"]
+[ext_resource type="Texture2D" uid="uid://dujehchrfc3ow" path="res://assets/sprites/Enemies/Boss1/Boss13.png" id="5_ihd8j"]
+[ext_resource type="Texture2D" uid="uid://0snke8b4pjlg" path="res://assets/sprites/Enemies/Boss1/Boss14.png" id="6_5mwp5"]
+[ext_resource type="AudioStream" uid="uid://buhob0qk5mcl3" path="res://assets/Bob/Sounds/dragon-studio-boom-copyright-free-487662.mp3" id="8_nh6cm"]
+[ext_resource type="Script" uid="uid://b7urnf0xu15fs" path="res://scripts/Health.gd" id="16_7cxkp"]
+[ext_resource type="AudioStream" uid="uid://bp7cbcb4gy6qn" path="res://assets/Bob/Sounds/freesound_community-water-squelch-36744.mp3" id="18_4bg40"]
+[ext_resource type="PackedScene" uid="uid://djohpnhiega2x" path="res://scenes/Enemies/damagezone.tscn" id="19_uhjpd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rn10s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nh6cm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cjd7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ccya3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ihd8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5mwp5")
+}],
+"loop": true,
+"name": &"float",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rnwy1"]
+radius = 23.853722
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_256iv"]
+radius = 21.360016
+
+[node name="Boss" type="Node2D" unique_id=1769072605]
+
+[node name="Boss" type="CharacterBody2D" parent="." unique_id=612914337 groups=["enemy"]]
+z_as_relative = false
+collision_mask = 2
+script = ExtResource("1_jh4uv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Boss" unique_id=676161281]
+visibility_layer = 2
+z_index = 3
+sprite_frames = SubResource("SpriteFrames_rn10s")
+animation = &"float"
+frame_progress = 0.9434694
+
+[node name="Hurtbox" type="CollisionShape2D" parent="Boss" unique_id=1105050103]
+unique_name_in_owner = true
+position = Vector2(0, -4)
+rotation = 0.5996482
+shape = SubResource("CircleShape2D_rnwy1")
+
+[node name="Health" type="Node" parent="Boss" unique_id=167018509]
+script = ExtResource("16_7cxkp")
+
+[node name="Shoot" type="AudioStreamPlayer2D" parent="Boss" unique_id=1742217652]
+unique_name_in_owner = true
+stream = ExtResource("8_nh6cm")
+volume_db = -2.473
+pitch_scale = 1.66
+autoplay = true
+max_distance = 476.0
+attenuation = 3.4822075
+panning_strength = 0.0
+
+[node name="Death" type="AudioStreamPlayer2D" parent="Boss" unique_id=492807155]
+unique_name_in_owner = true
+stream = ExtResource("18_4bg40")
+volume_db = 24.0
+pitch_scale = 2.0
+max_distance = 476.0
+attenuation = 3.4822075
+panning_strength = 3.0
+
+[node name="Damagezone" parent="Boss" unique_id=1596236458 instance=ExtResource("19_uhjpd")]
+collision_mask = 2
+
+[node name="Hurtbox2" type="CollisionShape2D" parent="Boss/Damagezone" unique_id=1737479315]
+unique_name_in_owner = true
+position = Vector2(1.0000001, -5.0000005)
+rotation = 0.58151925
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("CircleShape2D_256iv")
+
+[node name="ShootTimer" type="Timer" parent="Boss" unique_id=787769806]
+unique_name_in_owner = true
+autostart = true
