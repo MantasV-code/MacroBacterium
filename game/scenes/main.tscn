@@ -19,13 +19,11 @@
 [node name="Main" type="Node2D" unique_id=801401041]
 script = ExtResource("1_efxa6")
 
-[node name="Bob" parent="." unique_id=1335707608 groups=["player"] instance=ExtResource("1_ig7tw")]
-z_index = 10
-position = Vector2(3, 2.0000153)
-scale = Vector2(0.2, 0.2)
-
 [node name="Turret" parent="." unique_id=698863661 instance=ExtResource("15_jkv2x")]
 position = Vector2(470, 354)
+
+[node name="Bob" parent="." unique_id=1335707608 instance=ExtResource("1_ig7tw")]
+position = Vector2(15.415, 0)
 
 [node name="PauseMenu" parent="." unique_id=1684603309 instance=ExtResource("14_a8y0u")]
 visible = false

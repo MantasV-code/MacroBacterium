@@ -14,9 +14,6 @@ var bullet_scene = preload("res://scenes/BOB/Bullet.tscn")
 var is_shooting = false
 
 func _ready() -> void:
-	# Use PlayerData.SIZE for the scale
-	scale = Vector2(BobStats.SIZE, BobStats.SIZE)
-	
 	# Initialize health from PlayerData
 	$Health.max_health = BobStats.health
 	$Health.current_health = BobStats.health

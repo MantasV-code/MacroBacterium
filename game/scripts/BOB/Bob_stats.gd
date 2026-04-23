@@ -5,20 +5,19 @@ extends Node
 @export var SPEED = 200.0
 @export var ACCELERATION = 800.0
 @export var FRICTION = 2800.0
-@export var SIZE = 0.5
 @export var health = 3
 @export var Max_health = 3
 
 
 # --- Projectile Stats ---
 @export_group("Projectiles")
-@export var speed: float = 1000.0
+@export var speed: float = 100.0
 @export var damage: int = 1
 @export var piercing: bool = false
 @export var count: int = 1         
 @export var spread: float = 0.0    
 @export var color: Color = Color.SKY_BLUE
-@export var scale_multiplier: float = 5.0
+@export var scale_multiplier: float = 1
 @export var lifetime: float = 20.0
 @export var shoot_speed: float = 1
 
@@ -51,6 +50,3 @@ func apply_effect(upgrade_name: String) -> void:
 		"fast":
 			speed = 1400.0
 			SPEED = 350.0
-		"big":
-			scale_multiplier = 10.0
-			SIZE = 0.8
