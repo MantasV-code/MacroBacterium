@@ -3,16 +3,16 @@
 [ext_resource type="Texture2D" uid="uid://b8u6fhjt6x6p0" path="res://assets/sprites/Enviroment/test-room/Boarder walls.png" id="1_mjm5x"]
 [ext_resource type="Script" uid="uid://1iimt4rkj2sh" path="res://scripts/test_room.gd" id="1_vf0v6"]
 [ext_resource type="PackedScene" uid="uid://dad7bc4523ujr" path="res://scenes/BOB/Bob.tscn" id="2_fn815"]
+[ext_resource type="PackedScene" uid="uid://1v8e1uxk2s2a" path="res://UI/hud.tscn" id="2_sdgtb"]
 [ext_resource type="PackedScene" uid="uid://d1h7kiatxxg1r" path="res://scenes/fire.tscn" id="3_6vnwl"]
 [ext_resource type="PackedScene" uid="uid://bbi71da74mjdb" path="res://scenes/Objects/door_up.tscn" id="6_nnide"]
 [ext_resource type="PackedScene" uid="uid://tgsbdc5ipb8v" path="res://scenes/pause_menu.tscn" id="9_vmham"]
-[ext_resource type="PackedScene" uid="uid://qnn45oug1dvb" path="res://scenes/Enemies/EyeTurret.tscn" id="10_7pvdv"]
+[ext_resource type="PackedScene" uid="uid://bxtcu3muha6qw" path="res://scenes/pick-ups/02_canister.tscn" id="10_lumvt"]
 [ext_resource type="PackedScene" uid="uid://bhfsvxaamdty" path="res://scenes/pick-ups/Baseitem.tscn" id="10_suhbj"]
-[ext_resource type="PackedScene" uid="uid://bo2mecvsa5s3q" path="res://gas.tscn" id="11_lumvt"]
+[ext_resource type="PackedScene" uid="uid://dv6wf7iy3fe2o" path="res://scenes/pick-ups/Golden-02.tscn" id="11_7pvdv"]
 [ext_resource type="PackedScene" uid="uid://cb4k5ekmbogkx" path="res://scenes/pick-ups/Cowboy.tscn" id="11_sdgtb"]
-[ext_resource type="PackedScene" uid="uid://c0jndyr8fp3tf" path="res://scenes/Enemies/FlyingBac.tscn" id="11_u1vu7"]
-[ext_resource type="PackedScene" uid="uid://dv51qno6kgfef" path="res://scenes/Enemies/FlyingBacEvil.tscn" id="12_v7qoc"]
-[ext_resource type="PackedScene" uid="uid://7oxobf8klaua" path="res://scenes/Enemies/Turret.tscn" id="13_bswes"]
+[ext_resource type="PackedScene" uid="uid://bj35b3tmg4jvw" path="res://scenes/pick-ups/DoubleShot.tscn" id="12_sdgtb"]
+[ext_resource type="PackedScene" uid="uid://g8itdb840kyg" path="res://scenes/pick-ups/piercing.tscn" id="13_7pvdv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fn815"]
 texture = ExtResource("1_mjm5x")
@@ -84,6 +84,11 @@ script = ExtResource("1_vf0v6")
 [node name="FromTestRoom" type="Marker2D" parent="." unique_id=205126056]
 position = Vector2(118, 14)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=40676346]
+
+[node name="HUD" parent="CanvasLayer" unique_id=241693573 instance=ExtResource("2_sdgtb")]
+metadata/_edit_use_anchors_ = true
+
 [node name="Bob" parent="." unique_id=1335707608 instance=ExtResource("2_fn815")]
 position = Vector2(181, 82)
 
@@ -106,17 +111,14 @@ position = Vector2(287, 290)
 [node name="Item" parent="." unique_id=1768825689 instance=ExtResource("11_sdgtb")]
 position = Vector2(339, 198)
 
-[node name="Gas" parent="." unique_id=25988489 instance=ExtResource("11_lumvt")]
-position = Vector2(101, 219)
+[node name="02_canister" parent="." unique_id=961115757 instance=ExtResource("10_lumvt")]
+position = Vector2(110, 92)
 
-[node name="EyeTurret" parent="." unique_id=1769072605 instance=ExtResource("10_7pvdv")]
-position = Vector2(175, 172)
+[node name="Max_Health" parent="." unique_id=902219832 instance=ExtResource("11_7pvdv")]
+position = Vector2(174, 142)
 
-[node name="FlyingBac" parent="." unique_id=2118532848 instance=ExtResource("11_u1vu7")]
-position = Vector2(321, 141)
+[node name="DoubleShot" parent="." unique_id=1963573244 instance=ExtResource("12_sdgtb")]
+position = Vector2(175, 244)
 
-[node name="FlyingBacEvil" parent="." unique_id=1869535585 instance=ExtResource("12_v7qoc")]
-position = Vector2(159, 259)
-
-[node name="Turret" parent="." unique_id=370180606 instance=ExtResource("13_bswes")]
-position = Vector2(254, 249)
+[node name="Piercing" parent="." unique_id=174777786 instance=ExtResource("13_7pvdv")]
+position = Vector2(207, 180)

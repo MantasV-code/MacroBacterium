@@ -25,7 +25,7 @@ func decrease_health(amount: int) -> void:
 # Triggred by the health script when health is zero
 func on_death() -> void:
 	set_physics_process(false) # stop movement
-	$CollisionShape2D.disabled = true 
+	set_deferred("monitoring", false) # stop detecting player so enemey cant damage player
 	
 	sprite.play("Death") # play death animation
 	await sprite.animation_finished # wait for animation to finish
