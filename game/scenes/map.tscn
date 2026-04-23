@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bofwh2yc1wp3u"]
 
-[ext_resource type="Script" uid="uid://cf6fphg7xwrft" path="res://map.gd" id="1_gldc4"]
+[ext_resource type="Script" uid="uid://cf6fphg7xwrft" path="res://scripts/map.gd" id="1_gldc4"]
 [ext_resource type="Texture2D" uid="uid://cdw5456320o21" path="res://assets/sprites/Enviroment/Spritesheet-Spaceship2.png" id="2_0cso3"]
 [ext_resource type="PackedScene" uid="uid://dad7bc4523ujr" path="res://scenes/BOB/Bob.tscn" id="3_2klcf"]
 

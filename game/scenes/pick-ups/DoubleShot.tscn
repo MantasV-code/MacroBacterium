@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bj35b3tmg4jvw"]
 
-[ext_resource type="Script" uid="uid://bq6vq0p77bj6i" path="res://scripts/pick-ups/item_pickup.gd" id="1_g6oho"]
-[ext_resource type="Texture2D" uid="uid://coqv3bjdpbel3" path="res://assets/sprites/pick-ups/Mono0.png" id="2_6xvlm"]
+[ext_resource type="Script" uid="uid://bq6vq0p77bj6i" path="res://scripts/pick-ups/BaseItem.gd" id="1_g6oho"]
+[ext_resource type="Texture2D" uid="uid://coqv3bjdpbel3" path="res://assets/Items/Mono0.png" id="2_6xvlm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8ujmw"]
 animations = [{
@@ -15,23 +15,23 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nxbvv"]
-size = Vector2(7, 7)
+size = Vector2(20, 26)
 
 [node name="DoubleShot" type="Area2D" unique_id=895744004]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_g6oho")
+upgrade_name = "double_shot"
 display_name = "Seeing Double"
 item_color = Color(0.0627451, 1, 1, 1)
 
 [node name="ItemSprite" type="AnimatedSprite2D" parent="." unique_id=1389787839]
 unique_name_in_owner = true
-position = Vector2(-2, 3)
 sprite_frames = SubResource("SpriteFrames_8ujmw")
 frame_progress = 0.87401503
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1345347159]
-position = Vector2(-0.5, -3.5)
+position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_nxbvv")
 
 [node name="Label" type="Label" parent="." unique_id=1348467245]

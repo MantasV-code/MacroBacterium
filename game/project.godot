@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Global="*uid://bi5qkj2o1q0ai"
 BobStats="*uid://8myg3rwpym43"
+TurretStats="*uid://b70wivveckqu7"
 
 [dotnet]
 
@@ -27,6 +28,7 @@ project/assembly_name="MacroBacterium"
 [global_group]
 
 player=""
+enemy=""
 
 [input]
 
