@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d1h7kiatxxg1r" path="res://scenes/fire.tscn" id="3_6vnwl"]
 [ext_resource type="PackedScene" uid="uid://bbi71da74mjdb" path="res://scenes/Objects/door_up.tscn" id="6_nnide"]
 [ext_resource type="PackedScene" uid="uid://tgsbdc5ipb8v" path="res://scenes/pause_menu.tscn" id="9_vmham"]
-[ext_resource type="PackedScene" uid="uid://qnn45oug1dvb" path="res://scenes/Enemies/EyeTurret.tscn" id="10_lumvt"]
+[ext_resource type="PackedScene" uid="uid://dilstjfre0b03" path="res://scenes/Enemies/Boss.tscn" id="10_lumvt"]
 [ext_resource type="PackedScene" uid="uid://bhfsvxaamdty" path="res://scenes/pick-ups/Baseitem.tscn" id="10_suhbj"]
 [ext_resource type="PackedScene" uid="uid://bo2mecvsa5s3q" path="res://gas.tscn" id="11_lumvt"]
 [ext_resource type="PackedScene" uid="uid://cb4k5ekmbogkx" path="res://scenes/pick-ups/Cowboy.tscn" id="11_sdgtb"]
@@ -106,5 +106,5 @@ position = Vector2(339, 198)
 [node name="Gas" parent="." unique_id=25988489 instance=ExtResource("11_lumvt")]
 position = Vector2(101, 219)
 
-[node name="EyeTurret" parent="." unique_id=1769072605 instance=ExtResource("10_lumvt")]
-position = Vector2(233, 166)
+[node name="Boss" parent="." unique_id=1769072605 instance=ExtResource("10_lumvt")]
+position = Vector2(287, 164)
