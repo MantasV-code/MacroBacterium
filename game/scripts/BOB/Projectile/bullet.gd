@@ -48,14 +48,17 @@ func _physics_process(delta: float) -> void:
 		position += velocity_vec * delta
 
 func _on_body_entered(body: Node2D) -> void:
-	var from_enemy = get_meta("from_enemy")
-
+	var from_enemy = get_meta("from_enemy", false)
 	# Enemy bullet
 	if from_enemy and body.is_in_group("player"):
 		body.decrease_health(get_meta("damage"))
 		if not is_piercing:
 			_on_hit()
-
+			
+	elif body.is_in_group("wall"):
+		if not is_piercing:
+			_on_hit()
+		
 	# Player bullet
 	elif not from_enemy and body.is_in_group("enemy"):
 		body.decrease_health(get_meta("damage"))
@@ -71,10 +74,12 @@ func _on_area_entered(area: Node2D) -> void:
 func _on_hit() -> void:
 	if hit: return
 	hit = true
+	
 	velocity_vec = Vector2.ZERO
-	$CollisionShape2D.disabled = true
+	$CollisionShape2D.set_deferred("disabled", true)
+	
 	var sprite = $AnimatedSprite2D
 	sprite.play("Hit", 3.0)
 	hitsound.play()
+	
 	sprite.animation_finished.connect(queue_free)
-	$CollisionShape2D.disabled = false

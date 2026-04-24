@@ -21,8 +21,6 @@ func decrease_health(amount: int) -> void:
 	$Health.decrease_health(amount)
 func on_death() -> void:
 	set_physics_process(false)
-	hurtbox.disabled = true
-	hurtbox2.disabled = true
 	deathsound.play()
 	sprite.play("Death")
 	await sprite.animation_finished

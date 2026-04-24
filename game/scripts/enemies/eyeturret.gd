@@ -20,8 +20,6 @@ func decrease_health(amount: int) -> void:
 func on_death() -> void:
 	is_dead = true
 	shoot_timer.stop()
-	hurtbox.disabled = true
-	hurtbox2.disabled = true
 	sprite.play("Spin")
 	await sprite.animation_finished
 	sprite.play("Death")

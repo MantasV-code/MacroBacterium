@@ -30,6 +30,7 @@ project/assembly_name="MacroBacterium"
 
 player=""
 enemy=""
+wall=""
 
 [input]
 

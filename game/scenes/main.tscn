@@ -33,11 +33,15 @@ visible = false
 [node name="CockpitRoom" parent="." unique_id=1370299544 instance=ExtResource("2_ycdy4")]
 position = Vector2(-3, 4)
 
+[node name="walls" parent="CockpitRoom" index="0" unique_id=1746961756 groups=["wall"]]
+
 [node name="Door_Down" parent="CockpitRoom" index="2" unique_id=1715415514]
 target_spawn = NodePath("../../Map1/Spawn_Up")
 
 [node name="Map1" parent="." unique_id=708355498 instance=ExtResource("2_dg77c")]
 position = Vector2(-81, 589)
+
+[node name="walls" parent="Map1" index="1" unique_id=2035795041 groups=["wall"]]
 
 [node name="Door_Right" parent="Map1" index="3" unique_id=532208446]
 position = Vector2(903, 185)
@@ -55,14 +59,22 @@ position = Vector2(831, 183)
 [node name="map5" parent="." unique_id=601019442 instance=ExtResource("6_2cqfq")]
 position = Vector2(-68, 1267)
 
+[node name="walls" parent="map5" index="1" unique_id=1440348706 groups=["wall"]]
+
 [node name="Spawn_Up" parent="map5" index="7" unique_id=204261681]
 position = Vector2(646, 240)
 
 [node name="Map4" parent="." unique_id=400782626 instance=ExtResource("5_vivmo")]
 position = Vector2(641, 1922)
 
+[node name="walls" parent="Map4" index="1" unique_id=891616028 groups=["wall"]]
+
+[node name="walls2" parent="Map4" index="3" unique_id=1667351899 groups=["wall"]]
+
 [node name="MapNine" parent="." unique_id=1219816547 instance=ExtResource("11_trceg")]
 position = Vector2(1632, 1880)
+
+[node name="walls" parent="MapNine" index="1" unique_id=1893372043 groups=["wall"]]
 
 [node name="Door_Down" parent="MapNine" index="2" unique_id=1715415514]
 target_spawn = NodePath("../../MapTwo/Spawn_Up")
@@ -72,6 +84,8 @@ target_spawn = NodePath("../../Map4/Spawn_Right")
 
 [node name="Map3" parent="." unique_id=1353953917 instance=ExtResource("12_a8y0u")]
 position = Vector2(2563, 1821)
+
+[node name="walls" parent="Map3" index="1" unique_id=1593931889 groups=["wall"]]
 
 [node name="Door_Down" parent="Map3" index="2" unique_id=1715415514]
 position = Vector2(541.00006, 506)
@@ -83,14 +97,20 @@ target_spawn = NodePath("../../MapNine/Spawn_Right")
 [node name="MapTwo" parent="." unique_id=726016624 instance=ExtResource("3_ycdy4")]
 position = Vector2(2041, 2527)
 
+[node name="walls" parent="MapTwo" index="1" unique_id=1888321829 groups=["wall"]]
+
 [node name="Door_Right" parent="MapTwo" index="3" unique_id=532208446]
 target_spawn = NodePath("../../MapSix/Spawn_Right")
 
 [node name="MapEight" parent="." unique_id=414246913 instance=ExtResource("9_cegan")]
 position = Vector2(952, 573)
 
+[node name="Walls" parent="MapEight" index="1" unique_id=1431255289 groups=["wall"]]
+
 [node name="MapSix" parent="." unique_id=2126651744 instance=ExtResource("7_yaehf")]
 position = Vector2(2587, 2471)
+
+[node name="walls" parent="MapSix" index="1" unique_id=1871709899 groups=["wall"]]
 
 [node name="Door_Left" parent="MapSix" index="3" unique_id=456624691]
 target_spawn = NodePath("../../MapTwo/Spawn_Right")
@@ -98,8 +118,12 @@ target_spawn = NodePath("../../MapTwo/Spawn_Right")
 [node name="Map7" parent="." unique_id=1517613180 instance=ExtResource("8_074og")]
 position = Vector2(-1039, 1371)
 
+[node name="walls" parent="Map7" index="1" unique_id=1797353519 groups=["wall"]]
+
 [node name="Boss_Room" parent="." unique_id=1447262503 instance=ExtResource("12_ycdy4")]
 position = Vector2(3277, 2490)
+
+[node name="walls" parent="Boss_Room" index="1" unique_id=1341725598 groups=["wall"]]
 
 [node name="Door_Left" parent="Boss_Room" index="2" unique_id=456624691]
 locked = true
