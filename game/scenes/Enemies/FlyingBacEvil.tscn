@@ -70,9 +70,9 @@ gravity = Vector3(0, 98, 0)
 radius = 7.760246
 height = 27.745218
 
-[node name="FlyingBacEvil" type="Node2D" unique_id=1769072605]
+[node name="FlyingBacEvil" type="Node2D" unique_id=1769072605 groups=["enemy"]]
 
-[node name="FlyingBacEvil" type="CharacterBody2D" parent="." unique_id=612914337]
+[node name="FlyingBacEvil" type="CharacterBody2D" parent="." unique_id=612914337 groups=["enemy"]]
 collision_mask = 3
 script = ExtResource("1_f228v")
 

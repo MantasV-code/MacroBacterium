@@ -1,124 +1,93 @@
 extends CharacterBody2D
-
-const ORBIT_SPEED = 2.0  # Radians per second for orbit
-const ORBIT_DISTANCE = 200.0
-const DASH_SPEED = 600.0
-const DASH_COOLDOWN = 4.0  # Seconds between dashes
-const DASH_DURATION = 0.2  # How long the dash lasts
-const RETURN_SPEED = 150.0  # Speed to return to orbit after dash
-
+const SPEED = 100.0
+const TARGET_DISTANCE = 30.0
+const HOVER_STRENGTH = 20.0
+const SMOOTHING = 0.7  # Higher = more responsive
 @onready var deathsound = %Death
-@onready var Shootsound = $Shoot
 @onready var hurtbox = %Hurtbox
 @onready var hurtbox2 = %Hurtbox2
+var player: Node2D
+var bounce_timer := 0.0
+var orbit_angle := 0.0  # Track orbit position
+var bullet_scene = preload("res://scenes/BOB/Bullet.tscn")
 @onready var shoot_timer = %ShootTimer
 @onready var sprite = $AnimatedSprite2D
-
-var player: Node2D
-var bullet_scene = preload("res://scenes/BOB/Bullet.tscn")
-var is_dead = false
-
-# State management
-enum State { ORBITING, DASHING, RETURNING }
-var current_state = State.ORBITING
-
-# Orbit tracking
-var orbit_angle := 0.0
-
-# Dash tracking
-var dash_timer := 0.0
-var dash_direction := Vector2.ZERO
-var dash_elapsed := 0.0
-
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
 	sprite.play("Flying")
 	shoot_timer.timeout.connect(_on_shoot_timer_timeout)
-	orbit_angle = randf() * TAU  # Random starting position
-	dash_timer = DASH_COOLDOWN  # Start with full cooldown
-
+	orbit_angle = randf() * TAU  # Random starting orbit position
 func decrease_health(amount: int) -> void:
 	$Health.decrease_health(amount)
-
 func on_death() -> void:
-	is_dead = true
-	shoot_timer.stop()
-	hurtbox.disabled = true
-	hurtbox2.disabled = true
+	set_physics_process(false)
 	deathsound.play()
-	#sprite.play("Death")
-	#await sprite.animation_finished
+	sprite.play("Death")
+	await sprite.animation_finished
 	queue_free()
-
 func _physics_process(delta: float) -> void:
-	if !player or is_dead:
+	if !player:
 		return
 	
-	match current_state:
-		State.ORBITING:
-			handle_orbiting(delta)
-		State.DASHING:
-			handle_dashing(delta)
-		State.RETURNING:
-			handle_returning(delta)
+	# Update bounce timer
+	if bounce_timer > 0.0:
+		bounce_timer -= delta
 	
-	move_and_slide()
-
-func handle_orbiting(delta: float) -> void:
-	# Update orbit angle
-	orbit_angle += ORBIT_SPEED * delta
-	if orbit_angle > TAU:
-		orbit_angle -= TAU
+	var to_player = player.global_position - global_position
+	var distance = to_player.length()
+	var direction = to_player.normalized()
+	var desired_velocity = Vector2.ZERO
 	
-	# Calculate target orbit position
-	var orbit_offset = Vector2(cos(orbit_angle), sin(orbit_angle)) * ORBIT_DISTANCE
-	var target_pos = player.global_position + orbit_offset
+	var MIN_DISTANCE = TARGET_DISTANCE - 40
+	var MAX_DISTANCE = TARGET_DISTANCE + 40
 	
-	# Move smoothly toward orbit position
-	var direction = (target_pos - global_position).normalized()
-	velocity = direction * 150.0  # Movement speed while orbiting
-	
-	# Check if ready to dash
-	dash_timer -= delta
-	if dash_timer <= 0.0:
-		start_dash()
-
-func handle_dashing(delta: float) -> void:
-	# Dash straight toward where player was when dash started
-	velocity = dash_direction * DASH_SPEED
-	
-	dash_elapsed += delta
-	if dash_elapsed >= DASH_DURATION:
-		current_state = State.RETURNING
-		dash_elapsed = 0.0
-
-func handle_returning(delta: float) -> void:
-	# Return to orbit position
-	var orbit_offset = Vector2(cos(orbit_angle), sin(orbit_angle)) * ORBIT_DISTANCE
-	var target_pos = player.global_position + orbit_offset
-	var direction = (target_pos - global_position).normalized()
-	
-	velocity = direction * RETURN_SPEED
-	
-	# Check if close enough to orbit position
-	var distance = global_position.distance_to(target_pos)
-	if distance < 50.0:
-		current_state = State.ORBITING
-		dash_timer = DASH_COOLDOWN  # Reset dash cooldown
-
-func start_dash() -> void:
-	current_state = State.DASHING
-	dash_direction = (player.global_position - global_position).normalized()
-	dash_elapsed = 0.0
-
-func _on_shoot_timer_timeout() -> void:
-	if player and not is_dead and current_state == State.ORBITING:
-		fire_at_player()
+	if distance > MAX_DISTANCE:
+		# move toward player
+		desired_velocity = direction * SPEED
+		orbit_angle += delta * 2.0  # Update orbit angle while approaching
 		
-
-func fire_at_player() -> void:
-	var direction = (player.global_position - global_position).normalized()
-	var bullet = bullet_scene.instantiate()
-	get_parent().add_child(bullet)
-	bullet.global_position = global_position
-	bullet.setup(direction, Boss1Stats, Vector2.ZERO, true)
+	elif distance < MIN_DISTANCE:
+		# move away
+		desired_velocity = -direction * SPEED * 0.7
+		orbit_angle += delta * 2.0
+		
+	else:
+		# orbit around the player's CURRENT position
+		orbit_angle += delta * 1.5  # Rotate around player
+		
+		# Calculate ideal orbit position relative to player
+		var orbit_offset = Vector2(cos(orbit_angle), sin(orbit_angle)) * TARGET_DISTANCE
+		var target_pos = player.global_position + orbit_offset
+		
+		# Move toward that orbit position
+		var to_target = target_pos - global_position
+		desired_velocity = to_target.normalized() * SPEED
+	
+	# Smooth movement
+	velocity = velocity.lerp(desired_velocity, SMOOTHING)
+	
+	# Move + collision
+	var collision = move_and_collide(velocity * delta)
+	if collision:
+		var collider = collision.get_collider()
+		if collider == player and bounce_timer <= 0.0:
+			var bounce_dir = (global_position - player.global_position).normalized()
+			velocity = bounce_dir * 200.0
+			bounce_timer = 0.5
+		else:
+			velocity = velocity.bounce(collision.get_normal()) * 0.8
+			
+func _on_shoot_timer_timeout() -> void:
+	fire_in_four_directions()
+func fire_in_four_directions() -> void:
+	var directions = [
+		Vector2.RIGHT,
+		Vector2.LEFT,
+		Vector2.UP,
+		Vector2.DOWN
+	]
+	for dir in directions:
+		var bullet = bullet_scene.instantiate()
+		get_parent().add_child(bullet)
+		bullet.global_position = global_position
+		bullet.setup(dir, TurretStats, Vector2.ZERO, true)

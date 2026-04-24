@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://qnn45oug1dvb"]
 
-[ext_resource type="Script" uid="uid://dpyett7phhvs8" path="res://scripts/enemies/Turret.gd" id="1_snyvc"]
+[ext_resource type="Script" uid="uid://ysk7sbhhpmhc" path="res://scripts/enemies/eyeturret.gd" id="1_jmt5u"]
 [ext_resource type="Texture2D" uid="uid://ccujp0py5yaof" path="res://assets/sprites/Enemies/EyeTurret/EyeTurretDeath0.png" id="2_jmt5u"]
 [ext_resource type="Texture2D" uid="uid://cee53q1jjxtgf" path="res://assets/sprites/Enemies/EyeTurret/EyeTurret7.png" id="2_me0fg"]
 [ext_resource type="Texture2D" uid="uid://deh2vh1ilww1r" path="res://assets/sprites/Enemies/EyeTurret/EyeTurret0.png" id="3_khp0c"]
@@ -170,12 +170,12 @@ radius = 17.0
 radius = 10.816429
 height = 24.402706
 
-[node name="EyeTurret" type="Node2D" unique_id=1769072605]
+[node name="EyeTurret" type="Node2D" unique_id=1769072605 groups=["enemy"]]
 
 [node name="EyeTurret" type="CharacterBody2D" parent="." unique_id=612914337 groups=["enemy"]]
 z_as_relative = false
 collision_mask = 3
-script = ExtResource("1_snyvc")
+script = ExtResource("1_jmt5u")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="EyeTurret" unique_id=676161281]
 visibility_layer = 2

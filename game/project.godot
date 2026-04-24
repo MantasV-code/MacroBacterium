@@ -26,10 +26,15 @@ Boss1Stats="*uid://db2j66lqwaj8y"
 
 project/assembly_name="MacroBacterium"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gut/plugin.cfg")
+
 [global_group]
 
 player=""
 enemy=""
+wall=""
 
 [input]
 
