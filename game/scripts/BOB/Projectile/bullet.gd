@@ -56,8 +56,7 @@ func _on_body_entered(body: Node2D) -> void:
 			_on_hit()
 			
 	elif body.is_in_group("wall"):
-		if not is_piercing:
-			_on_hit()
+		_on_hit()
 		
 	# Player bullet
 	elif not from_enemy and body.is_in_group("enemy"):
