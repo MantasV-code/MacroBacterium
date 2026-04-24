@@ -36,9 +36,6 @@ func increase_health(amount: int) -> void:
 func increase_max_health(amount: int) -> void:
 	$Health.increase_max_health(amount)
 
-func decrease_health(amount: int) -> void:
-	$Health.decrease_health(amount)
-
 func on_death() -> void:
 	# prevent running death sequence multiple times
 	if is_dead:
