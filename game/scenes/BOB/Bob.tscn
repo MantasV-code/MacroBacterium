@@ -330,6 +330,7 @@ script = ExtResource("44_s2cy5")
 position = Vector2(4, -4)
 zoom = Vector2(2.345, 2.345)
 position_smoothing_enabled = true
+position_smoothing_speed = 2.5
 script = ExtResource("54_q6k22")
 
 [node name="Death" type="AudioStreamPlayer2D" parent="BOB" unique_id=1653916978]

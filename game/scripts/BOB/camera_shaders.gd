@@ -1,9 +1,12 @@
 extends Camera2D
 
+
+
 func _ready():
 	var canvas_layer = CanvasLayer.new()
 	canvas_layer.layer = 100
 	add_child(canvas_layer)
+	
 
 	# --- CRT SHADER ---
 	var crt_rect = ColorRect.new()
@@ -28,3 +31,7 @@ func _ready():
 	overlay_rect.material = overlay_material
 
 	canvas_layer.add_child(overlay_rect)
+	
+	
+	
+	

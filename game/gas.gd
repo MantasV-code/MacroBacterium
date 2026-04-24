@@ -17,7 +17,7 @@ func _ready() -> void:
 func _toggle_loop() -> void:
 	#while loop to turn gas on (show the particles, the area of damage when it appears)
 	while true:
-		print("gas on")
+		
 		#active_gas = true
 		particles.visible = true
 		particles.emitting = true
@@ -26,7 +26,7 @@ func _toggle_loop() -> void:
 		#time is on -> x second to y seconds
 		await get_tree().create_timer(randf_range(0.1, 2.0)).timeout
 		
-		print("gas off")
+		
 		#active_gas = false
 		particles.emitting = false
 		area.monitoring = false

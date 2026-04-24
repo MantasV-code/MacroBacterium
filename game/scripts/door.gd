@@ -2,6 +2,7 @@ extends Node2D
 
 @export var target_spawn: NodePath
 @export var locked := false
+@export var target_room: NodePath
 
 var is_triggered := false
 
@@ -19,9 +20,15 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		
 func change_room(body: Node2D) -> void:
 	var spawn = get_node_or_null(target_spawn)
+	var room = get_node_or_null(target_room)
 	
 	if spawn == null:
 		print("Spawn not found at door:", name)
+		is_triggered = false
+		return
+		
+	if room == null:
+		print("room not found")
 		is_triggered = false
 		return
 		
@@ -29,6 +36,8 @@ func change_room(body: Node2D) -> void:
 		body.velocity = Vector2.ZERO
 		
 	body.global_position = spawn.global_position
+	
+	get_tree().current_scene.set_camera_limits(room)
 	
 	await get_tree().physics_frame
 	

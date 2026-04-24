@@ -33,129 +33,93 @@ visible = false
 [node name="CockpitRoom" parent="." unique_id=1370299544 instance=ExtResource("2_ycdy4")]
 position = Vector2(-3, 4)
 
-[node name="Door_Down" parent="CockpitRoom" index="4" unique_id=1715415514]
+[node name="Door_Down" parent="CockpitRoom" index="2" unique_id=1715415514]
 target_spawn = NodePath("../../Map1/Spawn_Up")
 target_room = NodePath("../../Map1")
 
 [node name="Map1" parent="." unique_id=708355498 instance=ExtResource("2_dg77c")]
 position = Vector2(-81, 589)
 
-[node name="Door_Right" parent="Map1" index="6" unique_id=532208446]
+[node name="Door_Right" parent="Map1" index="3" unique_id=532208446]
 position = Vector2(903, 185)
 target_spawn = NodePath("../../MapEight/Spawn_Left")
 target_room = NodePath("../../MapEight")
 
-[node name="Door_Up" parent="Map1" index="7" unique_id=1554866573]
+[node name="Door_Up" parent="Map1" index="4" unique_id=1554866573]
 locked = true
 
-[node name="Door_Down" parent="Map1" index="8" unique_id=1715415514]
+[node name="Door_Down" parent="Map1" index="5" unique_id=1715415514]
 target_spawn = NodePath("../../map5/Spawn_Up")
-target_room = NodePath("../../map5")
+target_room = NodePath("../../map5/Spawn_Up")
 
-[node name="Spawn_Right" parent="Map1" index="11" unique_id=1098983145]
+[node name="Spawn_Right" parent="Map1" index="8" unique_id=1098983145]
 position = Vector2(831, 183)
 
 [node name="map5" parent="." unique_id=601019442 instance=ExtResource("6_2cqfq")]
 position = Vector2(-68, 1267)
 
-[node name="Door_Down" parent="map5" index="4" unique_id=1715415514]
-target_room = NodePath("../../Map4")
+[node name="Door_Up" parent="map5" index="3" unique_id=1554866573]
+target_room = NodePath("../../Map1/Spawn_Up")
 
-[node name="Door_Up" parent="map5" index="5" unique_id=1554866573]
-target_room = NodePath("../../Map1")
+[node name="Door_Left" parent="map5" index="4" unique_id=456624691]
+target_room = NodePath("../../Boss_Room/Spawn_Left")
 
-[node name="Door_Left" parent="map5" index="6" unique_id=456624691]
-target_room = NodePath("../../Map7")
-
-[node name="Spawn_Up" parent="map5" index="10" unique_id=204261681]
+[node name="Spawn_Up" parent="map5" index="7" unique_id=204261681]
 position = Vector2(646, 240)
 
 [node name="Map4" parent="." unique_id=400782626 instance=ExtResource("5_vivmo")]
 position = Vector2(641, 1922)
 
-[node name="Door_Right" parent="Map4" index="7" unique_id=532208446]
-target_room = NodePath("../../MapNine")
-
-[node name="Door_Up" parent="Map4" index="8" unique_id=1554866573]
-target_room = NodePath("../../map5")
-
 [node name="MapNine" parent="." unique_id=1219816547 instance=ExtResource("11_trceg")]
 position = Vector2(1632, 1880)
 
-[node name="Door_Down" parent="MapNine" index="5" unique_id=1715415514]
+[node name="Door_Down" parent="MapNine" index="2" unique_id=1715415514]
 target_spawn = NodePath("../../MapTwo/Spawn_Up")
-target_room = NodePath("../../MapTwo")
 
-[node name="Door_Left" parent="MapNine" index="6" unique_id=456624691]
+[node name="Door_Left" parent="MapNine" index="3" unique_id=456624691]
 target_spawn = NodePath("../../Map4/Spawn_Right")
-target_room = NodePath("../../Map4")
-
-[node name="Door_Right" parent="MapNine" index="7" unique_id=532208446]
-target_room = NodePath("../../Map3")
 
 [node name="Map3" parent="." unique_id=1353953917 instance=ExtResource("12_a8y0u")]
 position = Vector2(2563, 1821)
 
-[node name="Door_Down" parent="Map3" index="5" unique_id=1715415514]
+[node name="Door_Down" parent="Map3" index="2" unique_id=1715415514]
 position = Vector2(541.00006, 506)
 target_spawn = NodePath("../../MapSix/Spawn_Up")
-target_room = NodePath("../../MapSix")
 
-[node name="Door_Left" parent="Map3" index="6" unique_id=456624691]
+[node name="Door_Left" parent="Map3" index="3" unique_id=456624691]
 target_spawn = NodePath("../../MapNine/Spawn_Right")
-target_room = NodePath("../../MapNine")
 
 [node name="MapTwo" parent="." unique_id=726016624 instance=ExtResource("3_ycdy4")]
 position = Vector2(2041, 2527)
 
-[node name="Door_Up" parent="MapTwo" index="5" unique_id=1554866573]
-target_room = NodePath("../../MapNine")
-
-[node name="Door_Right" parent="MapTwo" index="6" unique_id=532208446]
+[node name="Door_Right" parent="MapTwo" index="3" unique_id=532208446]
 target_spawn = NodePath("../../MapSix/Spawn_Right")
-target_room = NodePath("../../MapSix")
 
 [node name="MapEight" parent="." unique_id=414246913 instance=ExtResource("9_cegan")]
 position = Vector2(952, 573)
 
-[node name="Door_Left" parent="MapEight" index="5" unique_id=456624691]
-target_room = NodePath("../../Map1")
+[node name="Door_Left" parent="MapEight" index="2" unique_id=456624691]
+target_room = NodePath("../../Map1/Spawn_Right")
 
 [node name="MapSix" parent="." unique_id=2126651744 instance=ExtResource("7_yaehf")]
 position = Vector2(2587, 2471)
 
-[node name="Door_Up" parent="MapSix" index="5" unique_id=1554866573]
-target_room = NodePath("../../Map3")
-
-[node name="Door_Left" parent="MapSix" index="6" unique_id=456624691]
+[node name="Door_Left" parent="MapSix" index="3" unique_id=456624691]
 target_spawn = NodePath("../../MapTwo/Spawn_Right")
-target_room = NodePath("../../MapTwo")
-
-[node name="Door_Right" parent="MapSix" index="7" unique_id=532208446]
-target_room = NodePath("../../Boss_Room")
 
 [node name="Map7" parent="." unique_id=1517613180 instance=ExtResource("8_074og")]
 position = Vector2(-1039, 1371)
 
-[node name="Door_Right" parent="Map7" index="5" unique_id=532208446]
-target_room = NodePath("../../map5")
+[node name="Door_Right" parent="Map7" index="2" unique_id=532208446]
+target_room = NodePath("../../map5/Spawn_Left")
 
 [node name="Boss_Room" parent="." unique_id=1447262503 instance=ExtResource("12_ycdy4")]
 position = Vector2(3277, 2490)
 
-[node name="CameraBottomRight_A" parent="Boss_Room" index="5" unique_id=428718097]
-position = Vector2(547, 630)
-
-[node name="CameraTopLeft_B" parent="Boss_Room" index="7" unique_id=1869381477]
-position = Vector2(545, 1)
-
-[node name="CollisionShape2D" parent="Boss_Room/BossThreshold" parent_id_path=PackedInt32Array(1447262503, 518671967) index="0" unique_id=796970450]
-position = Vector2(544, 318)
-
-[node name="Door_Left" parent="Boss_Room" index="9" unique_id=456624691]
+[node name="Door_Left" parent="Boss_Room" index="2" unique_id=456624691]
 locked = true
 
-[node name="Spawn_Left" parent="Boss_Room" index="10" unique_id=74460558]
+[node name="Spawn_Left" parent="Boss_Room" index="3" unique_id=74460558]
 position = Vector2(90, 332)
 
 [editable path="Bob"]

@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://dourefk4ke05y"]
 
 [ext_resource type="Texture2D" uid="uid://cdw5456320o21" path="res://assets/sprites/Enviroment/Spritesheet-Spaceship2.png" id="1_vwoav"]
+[ext_resource type="Texture2D" uid="uid://3x4cnhl7p175" path="res://assets/Font/one.png" id="2_icf6x"]
 [ext_resource type="PackedScene" uid="uid://w47dmkkdivf0" path="res://scenes/Objects/door_wall_right.tscn" id="2_t4fbb"]
 [ext_resource type="PackedScene" uid="uid://bbi71da74mjdb" path="res://scenes/Objects/door_up.tscn" id="4_e20lt"]
 [ext_resource type="Texture2D" uid="uid://tko2jlel4jc8" path="res://assets/sprites/Enviroment/Spaceship Objects/Panel3.png" id="5_01snh"]
@@ -231,6 +232,12 @@ sources/0 = SubResource("TileSetAtlasSource_t4fbb")
 
 [node name="Map1" type="Node2D" unique_id=708355498]
 
+[node name="CameraTopLeft" type="Marker2D" parent="." unique_id=2051036274]
+position = Vector2(270, 41)
+
+[node name="CameraBottomRight" type="Marker2D" parent="." unique_id=1267211538]
+position = Vector2(953, 751)
+
 [node name="floor" type="TileMapLayer" parent="." unique_id=1925382211]
 use_parent_material = true
 position = Vector2(-1.2, 0)
@@ -251,6 +258,11 @@ position = Vector2(-1.2, 0)
 scale = Vector2(1.2, 1.2)
 tile_map_data = PackedByteArray("AAAXAAYAAAABAAAAAAAOAAgAAAABAAAAAAANAAgAAAAAAAAAAAAMAAkAAAAFAAEAAAAMAAgAAAAGAAIAAAAUAAYAAAAGAAIAAAANAA0AAAACAAAAAGA=")
 tile_set = SubResource("TileSet_e20lt")
+
+[node name="One" type="Sprite2D" parent="." unique_id=26335676]
+position = Vector2(532.99994, 243)
+scale = Vector2(1.4999995, 1.2812499)
+texture = ExtResource("2_icf6x")
 
 [node name="Door_Right" parent="." unique_id=532208446 instance=ExtResource("2_t4fbb")]
 position = Vector2(909, 176)
