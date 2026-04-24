@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cdw5456320o21" path="res://assets/sprites/Enviroment/Spritesheet-Spaceship2.png" id="1_wk688"]
 [ext_resource type="PackedScene" uid="uid://bbi71da74mjdb" path="res://scenes/Objects/door_up.tscn" id="2_wk688"]
 [ext_resource type="PackedScene" uid="uid://dad7bc4523ujr" path="res://scenes/BOB/Bob.tscn" id="4_kpspm"]
-[ext_resource type="PackedScene" uid="uid://bo2mecvsa5s3q" path="res://gas.tscn" id="5_u8mh5"]
+[ext_resource type="PackedScene" uid="uid://bo2mecvsa5s3q" path="res://scenes/gas.tscn" id="5_u8mh5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mfg25"]
 texture = ExtResource("1_wk688")

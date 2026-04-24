@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dv51qno6kgfef" path="res://scenes/Enemies/FlyingBacEvil.tscn" id="8_dp88d"]
 [ext_resource type="PackedScene" uid="uid://tgsbdc5ipb8v" path="res://scenes/pause_menu.tscn" id="9_vmham"]
 [ext_resource type="PackedScene" uid="uid://bhfsvxaamdty" path="res://scenes/pick-ups/Baseitem.tscn" id="10_suhbj"]
-[ext_resource type="PackedScene" uid="uid://bo2mecvsa5s3q" path="res://gas.tscn" id="11_lumvt"]
+[ext_resource type="PackedScene" uid="uid://bo2mecvsa5s3q" path="res://scenes/gas.tscn" id="11_lumvt"]
 [ext_resource type="PackedScene" uid="uid://cb4k5ekmbogkx" path="res://scenes/pick-ups/Cowboy.tscn" id="11_sdgtb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fn815"]

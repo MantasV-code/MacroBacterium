@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://lxd7yatj5uop" path="res://assets/sprites/Enviroment/Spaceship Objects/Panel4.png" id="4_bii7d"]
 [ext_resource type="Texture2D" uid="uid://cxk018dqhgpaq" path="res://assets/sprites/Enviroment/Spaceship Objects/Panel6.png" id="5_e0soo"]
 [ext_resource type="Texture2D" uid="uid://bc35cesu4378t" path="res://assets/sprites/Enviroment/Spaceship Objects/Vent Front.png" id="6_ap5w0"]
-[ext_resource type="PackedScene" uid="uid://c4fu6jdqnbam8" path="res://smoke_wall.tscn" id="7_ap5w0"]
-[ext_resource type="PackedScene" uid="uid://c3o5wxbss70fi" path="res://smoke.tscn" id="8_jeold"]
+[ext_resource type="PackedScene" uid="uid://c4fu6jdqnbam8" path="res://scenes/smoke_wall.tscn" id="7_ap5w0"]
+[ext_resource type="PackedScene" uid="uid://c3o5wxbss70fi" path="res://scenes/smoke.tscn" id="8_jeold"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_toabr"]
 texture = ExtResource("1_4eeod")

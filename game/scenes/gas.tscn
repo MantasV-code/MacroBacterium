@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bo2mecvsa5s3q"]
 
 [ext_resource type="Texture2D" uid="uid://yk2ldrb7ltdg" path="res://assets/sprites/Enviroment/Smoke1.png" id="1_c8tse"]
-[ext_resource type="Script" uid="uid://c8q6y3853g56c" path="res://gas.gd" id="1_yjcoj"]
+[ext_resource type="Script" uid="uid://c8q6y3853g56c" path="res://scripts/gas.gd" id="1_yjcoj"]
 [ext_resource type="PackedScene" uid="uid://djohpnhiega2x" path="res://scenes/Enemies/damagezone.tscn" id="2_f70ue"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yjcoj"]

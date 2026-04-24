@@ -1,12 +1,12 @@
 [gd_scene format=4 uid="uid://cvabld60g5csq"]
 
 [ext_resource type="Texture2D" uid="uid://cdw5456320o21" path="res://assets/sprites/Enviroment/Spritesheet-Spaceship2.png" id="1_ve44f"]
-[ext_resource type="PackedScene" uid="uid://c3o5wxbss70fi" path="res://smoke.tscn" id="3_bm5hw"]
+[ext_resource type="PackedScene" uid="uid://c3o5wxbss70fi" path="res://scenes/smoke.tscn" id="3_bm5hw"]
 [ext_resource type="PackedScene" uid="uid://vy2iyhd7qumb" path="res://scenes/Objects/door_wall_left.tscn" id="4_e6x0d"]
 [ext_resource type="Texture2D" uid="uid://c1xq8ebktrpos" path="res://assets/sprites/Enviroment/Spaceship Objects/Control Panel Buttons.png" id="4_qfvvh"]
 [ext_resource type="Texture2D" uid="uid://bc35cesu4378t" path="res://assets/sprites/Enviroment/Spaceship Objects/Vent Front.png" id="5_2y12g"]
-[ext_resource type="PackedScene" uid="uid://c4fu6jdqnbam8" path="res://smoke_wall.tscn" id="6_m0gjn"]
-[ext_resource type="PackedScene" uid="uid://bo2mecvsa5s3q" path="res://gas.tscn" id="7_1cvy8"]
+[ext_resource type="PackedScene" uid="uid://c4fu6jdqnbam8" path="res://scenes/smoke_wall.tscn" id="6_m0gjn"]
+[ext_resource type="PackedScene" uid="uid://bo2mecvsa5s3q" path="res://scenes/gas.tscn" id="7_1cvy8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_any6y"]
 texture = ExtResource("1_ve44f")
