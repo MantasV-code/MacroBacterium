@@ -23,5 +23,7 @@ jobs:
       # run and check the project in headless mode
       - name: Import project in headless mode
         run: cd game && godot --headless --editor --quit
+      
+      # run all GUT tests in headless mode to verify game logic
       - name: Run GUT tests
         run: cd game && godot --headless -s addons/gut/gut_cmdln.gd -gdir=res://tests
