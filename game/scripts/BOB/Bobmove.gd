@@ -13,6 +13,8 @@ var bullet_scene = preload("res://scenes/BOB/Bullet.tscn")
 var is_shooting = false
 var is_dead = false
 
+var current_room: String = ""
+
 #=================================================================
 #================== INITIALIZATION ===============================
 #=================================================================
@@ -48,9 +50,10 @@ func on_death() -> void:
 	head.visible = false	
 	Body.play("Death")
 	Deathsound.play()
+	
 	# wait for death animation to complete
 	await Body.animation_finished
-	# small pause before transitioning
+	# small pause before transitioning to game over scene
 	await get_tree().create_timer(0.5).timeout
 	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 	queue_free()

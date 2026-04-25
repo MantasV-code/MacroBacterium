@@ -14,6 +14,9 @@ const RETURN_SPEED = 150.0  # Speed to return to orbit after dash
 @onready var shoot_timer = %ShootTimer
 @onready var sprite = $AnimatedSprite2D
 
+#setting enemy id for room
+@export var enemy_room: String 
+
 var player: Node2D
 var bullet_scene = preload("res://scenes/BOB/Bullet.tscn")
 var is_dead = false
@@ -48,12 +51,21 @@ func on_death() -> void:
 	deathsound.play()
 	#sprite.play("Death")
 	#await sprite.animation_finished
+	
+	
+	await get_tree().create_timer(2.0).timeout
+	get_tree().change_scene_to_file("res://scenes/game_complete.tscn")
 	queue_free()
 
 func _physics_process(delta: float) -> void:
 	if !player or is_dead:
 		return
 	
+	#stop boss unless bob is in the same room
+	if player.current_room != enemy_room:
+		velocity = Vector2.ZERO
+		return
+		
 	match current_state:
 		State.ORBITING:
 			handle_orbiting(delta)
@@ -113,7 +125,8 @@ func start_dash() -> void:
 
 func _on_shoot_timer_timeout() -> void:
 	if player and not is_dead and current_state == State.ORBITING:
-		fire_at_player()
+		if player.current_room == enemy_room:
+			fire_at_player()
 		
 
 func fire_at_player() -> void:

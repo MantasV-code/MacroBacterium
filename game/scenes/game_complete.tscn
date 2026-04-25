@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://binhbx7vbdiju"]
+
+[ext_resource type="Script" uid="uid://b2kujf3l1eyc8" path="res://game_complete.gd" id="1_54mvl"]
+[ext_resource type="FontFile" uid="uid://cd2a6d43gtthe" path="res://assets/Font/Press_Start_2P/PressStart2P-Regular.ttf" id="2_rfabi"]
+[ext_resource type="AudioStream" uid="uid://r317syt4cigb" path="res://assets/Music/8bit-whoosh-ni-sound-1-00-06.mp3" id="3_ddd6m"]
+[ext_resource type="AudioStream" uid="uid://ditrh08ilojcf" path="res://assets/Music/lucadialessandro-arcade-fx-288597.mp3" id="4_cewsy"]
+
+[sub_resource type="FontVariation" id="FontVariation_05lnj"]
+base_font = ExtResource("2_rfabi")
+
+[sub_resource type="FontVariation" id="FontVariation_jg8ls"]
+base_font = ExtResource("2_rfabi")
+
+[sub_resource type="FontVariation" id="FontVariation_u063c"]
+base_font = ExtResource("2_rfabi")
+
+[node name="GameComplete" type="Control" unique_id=1340650200]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_54mvl")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=887910702]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 1152.0
+offset_bottom = 642.0
+color = Color(0, 0, 0, 1)
+
+[node name="GAME COMPLETE" type="Label" parent="." unique_id=1642684006]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 141.0
+offset_right = 977.0
+offset_bottom = 201.0
+theme_override_colors/font_color = Color(1, 0.015686275, 0.015686275, 1)
+theme_override_colors/font_shadow_color = Color(0.23137255, 1, 0.28235295, 1)
+theme_override_colors/font_outline_color = Color(0, 0.2784314, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_05lnj")
+theme_override_font_sizes/font_size = 55
+text = "GAME COMPLETE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=956648944]
+layout_mode = 0
+offset_left = 419.0
+offset_top = 313.0
+offset_right = 777.0
+offset_bottom = 420.0
+
+[node name="PLAY" type="Button" parent="VBoxContainer" unique_id=1958380036]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_jg8ls")
+theme_override_font_sizes/font_size = 32
+text = "PLAY AGAIN"
+
+[node name="QUIT" type="Button" parent="VBoxContainer" unique_id=915463202]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_u063c")
+theme_override_font_sizes/font_size = 32
+text = "QUIT
+"
+
+[node name="Cursor" type="Label" parent="." unique_id=483997607]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 312.0
+offset_right = 415.0
+offset_bottom = 354.0
+theme_override_font_sizes/font_size = 30
+text = "▶"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SelectOptionSound" type="AudioStreamPlayer" parent="." unique_id=1167506671]
+stream = ExtResource("3_ddd6m")
+
+[node name="CusorMoveSound" type="AudioStreamPlayer" parent="." unique_id=2113919789]
+stream = ExtResource("4_cewsy")
+
+[connection signal="pressed" from="VBoxContainer/PLAY" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="VBoxContainer/QUIT" to="." method="_on_quit_pressed"]
