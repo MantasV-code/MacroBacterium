@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://tko2jlel4jc8" path="res://assets/sprites/Enviroment/Spaceship Objects/Panel3.png" id="5_01snh"]
 [ext_resource type="PackedScene" uid="uid://bn8rkmhj7e8yb" path="res://scenes/Objects/door_down.tscn" id="5_e20lt"]
 [ext_resource type="PackedScene" uid="uid://c3o5wxbss70fi" path="res://smoke.tscn" id="6_01snh"]
+[ext_resource type="Script" uid="uid://cpkoqks6li2s3" path="res://scenes/rooms/maps/player_detection.gd" id="8_vlq7q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t4fbb"]
 texture = ExtResource("1_vwoav")
@@ -230,6 +231,9 @@ physics_layer_0/collision_layer = 1
 physics_layer_1/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_t4fbb")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_icf6x"]
+size = Vector2(631, 580)
+
 [node name="Map1" type="Node2D" unique_id=708355498]
 
 [node name="CameraTopLeft" type="Marker2D" parent="." unique_id=2051036274]
@@ -297,3 +301,14 @@ position = Vector2(555, 319)
 
 [node name="Smoke2" parent="." unique_id=354350483 instance=ExtResource("6_01snh")]
 position = Vector2(515, 512)
+
+[node name="PlayerDetection" type="Area2D" parent="." unique_id=885075385]
+position = Vector2(-2, 2)
+collision_mask = 2
+script = ExtResource("8_vlq7q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection" unique_id=1542967292]
+position = Vector2(619.5, 399)
+shape = SubResource("RectangleShape2D_icf6x")
+
+[connection signal="body_entered" from="PlayerDetection" to="PlayerDetection" method="_on_body_entered"]

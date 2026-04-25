@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bof6hcj6dtroh" path="res://assets/sprites/Enviroment/Spaceship Objects/Panel2.png" id="8_aquyb"]
 [ext_resource type="Texture2D" uid="uid://dj2fgomux0or" path="res://assets/sprites/Enviroment/Spaceship Objects/Generic Panel Front.png" id="9_e8vuq"]
 [ext_resource type="Texture2D" uid="uid://hv7c5xnfag2y" path="res://assets/sprites/Enviroment/Spaceship Objects/Panel5.png" id="10_kcc21"]
+[ext_resource type="Script" uid="uid://cpkoqks6li2s3" path="res://scenes/rooms/maps/player_detection.gd" id="12_sulmy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_id32h"]
 texture = ExtResource("1_id32h")
@@ -266,6 +267,9 @@ physics_layer_1/collision_layer = 1
 physics_layer_2/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_id32h")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nqcdq"]
+size = Vector2(1099, 515)
+
 [node name="map4" type="Node2D" unique_id=400782626]
 
 [node name="CameraTopLeft" type="Marker2D" parent="." unique_id=2086816315]
@@ -345,3 +349,13 @@ texture = ExtResource("9_e8vuq")
 [node name="Panel5" type="Sprite2D" parent="." unique_id=1188767932]
 position = Vector2(542, 49)
 texture = ExtResource("10_kcc21")
+
+[node name="PlayerDetection" type="Area2D" parent="." unique_id=763106300]
+script = ExtResource("12_sulmy")
+room_id = "map4"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection" unique_id=1600352110]
+position = Vector2(579.5, 316.5)
+shape = SubResource("RectangleShape2D_nqcdq")
+
+[connection signal="body_entered" from="PlayerDetection" to="PlayerDetection" method="_on_body_entered"]

@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c3o5wxbss70fi" path="res://smoke.tscn" id="10_1rd07"]
 [ext_resource type="PackedScene" uid="uid://c4fu6jdqnbam8" path="res://smoke_wall.tscn" id="11_onxx7"]
 [ext_resource type="PackedScene" uid="uid://bo2mecvsa5s3q" path="res://gas.tscn" id="11_wfgn7"]
+[ext_resource type="Script" uid="uid://cpkoqks6li2s3" path="res://scenes/rooms/maps/player_detection.gd" id="12_onxx7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nh8aw"]
 texture = ExtResource("1_5bwnj")
@@ -245,6 +246,9 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_nh8aw")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wfgn7"]
+size = Vector2(715, 547)
+
 [node name="Map2" type="Node2D" unique_id=726016624]
 
 [node name="CameraTopLeft" type="Marker2D" parent="." unique_id=155897560]
@@ -323,3 +327,14 @@ position = Vector2(627, 393)
 
 [node name="smokeWall" parent="." unique_id=1704080401 instance=ExtResource("11_onxx7")]
 position = Vector2(459, 50)
+
+[node name="PlayerDetection" type="Area2D" parent="." unique_id=88944967]
+collision_mask = 2
+script = ExtResource("12_onxx7")
+room_id = "map2"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection" unique_id=2127531191]
+position = Vector2(375.5, 334.5)
+shape = SubResource("RectangleShape2D_wfgn7")
+
+[connection signal="body_entered" from="PlayerDetection" to="PlayerDetection" method="_on_body_entered"]

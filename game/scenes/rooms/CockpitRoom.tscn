@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://bn8rkmhj7e8yb" path="res://scenes/Objects/door_down.tscn" id="7_wbsnh"]
 [ext_resource type="PackedScene" uid="uid://dv6wf7iy3fe2o" path="res://scenes/pick-ups/Golden-02.tscn" id="8_lgee6"]
 [ext_resource type="PackedScene" uid="uid://g8itdb840kyg" path="res://scenes/pick-ups/piercing.tscn" id="9_i4gom"]
-[ext_resource type="PackedScene" uid="uid://dv51qno6kgfef" path="res://scenes/Enemies/FlyingBacEvil.tscn" id="10_la3y7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t7lg8"]
 texture = ExtResource("1_wbsnh")
@@ -527,6 +526,3 @@ position = Vector2(465, 416)
 
 [node name="Piercing" parent="." unique_id=174777786 instance=ExtResource("9_i4gom")]
 position = Vector2(364, 354)
-
-[node name="FlyingBacEvil" parent="." unique_id=1769072605 instance=ExtResource("10_la3y7")]
-position = Vector2(302, 451)
