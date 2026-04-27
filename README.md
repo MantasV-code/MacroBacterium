@@ -15,14 +15,22 @@ The game will simple open source top view 2D game using the Godot Game Engine an
 - External Editor: Visual Studio Code
 - Version Control: GitHub
 
-## Planned Features
+## Features
 
-The planned features for the game follows:
+The features for the game follows:
  - Player movement
  - Combat system
  - Various enemy enemies types
  - Backtrack and explore
  - Community-added assests and maps
+
+## Controls
+
+Here are the basic controls for the game (keyboard):
+- W,A,S,D to move
+- Directional keys to shoot
+- ESC to pause
+- Directional keys for selecting option in the menu settings (Pause screen, game over screen, start screen)
 
 ## Contributing
 We welcome everyone! Developers, game designers, gaming enthusiasts, artists.<br>
