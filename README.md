@@ -1,4 +1,7 @@
 # MacroBacterium
+
+<img width="1920" height="1080" alt="gamelogo2" src="https://github.com/user-attachments/assets/2a8d7acc-21f4-4a4e-a588-29770b1335ef" />
+
 ## Overview
 This projects aim is to develop an open-source rogue-like adventure game inspired by other titles such as "The Binding Of Issac", while keeping the old school acrade feel to it. The game will focus on replayability. We encourage contribuitions to build on the world or even create a new world after what happens. It's your story.
 
