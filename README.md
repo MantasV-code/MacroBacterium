@@ -44,7 +44,6 @@ Please read the <code>CONTRIBUTING.md</code> for more guidelines on getting star
 /scenes<br>
 /scripts<br></code>
 
-Project structure may change during development!
 
 # License
 MIT License - Please see the <code>License.md</code>
