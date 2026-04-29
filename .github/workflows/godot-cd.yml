@@ -30,7 +30,7 @@ jobs:
           cp -r /root/.local/share/godot/export_templates/4.5.2.stable/* ~/.local/share/godot/export_templates/4.5.2.stable/
 
       # import the project to ensure all dependencies are downloaded and the project is ready for export
-      - name : Import project
+      - name: Import project
         run: cd game && godot --headless --editor --quit
         
       # export the project for Windows platform
@@ -60,3 +60,15 @@ jobs:
         with:
           name: MacroBacterium-Linux
           path: build/linux/MacroBacterium.x86_64
+
+      # create release and upload builds to release
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1 # action to create a release on GitHub
+        with:
+          tag_name: build-${{ github.run_number }} # use build number as tag name
+          name: MacroBacterium Build ${{ github.run_number }} # release name
+          files: |
+            build/windows/MacroBacterium.exe
+            build/linux/MacroBacterium.x86_64
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # token to authenticate with GitHub
