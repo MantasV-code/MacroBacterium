@@ -2,12 +2,11 @@
 
 [ext_resource type="Script" uid="uid://buy74r57txq30" path="res://scenes/rooms/boss_room.gd" id="1_qfvvh"]
 [ext_resource type="Texture2D" uid="uid://cdw5456320o21" path="res://assets/sprites/Enviroment/Spritesheet-Spaceship2.png" id="1_ve44f"]
-[ext_resource type="PackedScene" uid="uid://c3o5wxbss70fi" path="res://smoke.tscn" id="3_bm5hw"]
+[ext_resource type="PackedScene" uid="uid://c3o5wxbss70fi" path="res://scenes/smoke.tscn" id="3_bm5hw"]
 [ext_resource type="PackedScene" uid="uid://vy2iyhd7qumb" path="res://scenes/Objects/door_wall_left.tscn" id="4_e6x0d"]
 [ext_resource type="Texture2D" uid="uid://c1xq8ebktrpos" path="res://assets/sprites/Enviroment/Spaceship Objects/Control Panel Buttons.png" id="4_qfvvh"]
 [ext_resource type="Texture2D" uid="uid://bc35cesu4378t" path="res://assets/sprites/Enviroment/Spaceship Objects/Vent Front.png" id="5_2y12g"]
-[ext_resource type="PackedScene" uid="uid://c4fu6jdqnbam8" path="res://smoke_wall.tscn" id="6_m0gjn"]
-[ext_resource type="PackedScene" uid="uid://bo2mecvsa5s3q" path="res://gas.tscn" id="7_1cvy8"]
+[ext_resource type="PackedScene" uid="uid://c4fu6jdqnbam8" path="res://scenes/smoke_wall.tscn" id="6_m0gjn"]
 [ext_resource type="PackedScene" uid="uid://dilstjfre0b03" path="res://scenes/Enemies/Boss.tscn" id="9_2y12g"]
 [ext_resource type="Script" uid="uid://dd2dx2xrba0vr" path="res://scenes/rooms/player_detection.gd" id="10_m0gjn"]
 
@@ -497,9 +496,6 @@ texture = ExtResource("5_2y12g")
 [node name="smokeWall" parent="." unique_id=1704080401 instance=ExtResource("6_m0gjn")]
 position = Vector2(418, 43)
 
-[node name="Gas" parent="." unique_id=25988489 instance=ExtResource("7_1cvy8")]
-position = Vector2(880, 430)
-
 [node name="Boss" parent="." unique_id=1769072605 instance=ExtResource("9_2y12g")]
 position = Vector2(967, 309)
 
@@ -511,6 +507,9 @@ script = ExtResource("10_m0gjn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection" unique_id=88634140]
 position = Vector2(846.5, 316.5)
 shape = SubResource("RectangleShape2D_m0gjn")
+
+[node name="Smoke4" parent="." unique_id=1469247191 instance=ExtResource("3_bm5hw")]
+position = Vector2(879, 426)
 
 [connection signal="body_entered" from="BossThreshold" to="." method="_on_boss_threshold_body_entered"]
 [connection signal="body_entered" from="PlayerDetection" to="PlayerDetection" method="_on_body_entered"]

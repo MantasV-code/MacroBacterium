@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://1v8e1uxk2s2a" path="res://UI/hud.tscn" id="2_sdgtb"]
 [ext_resource type="PackedScene" uid="uid://d1h7kiatxxg1r" path="res://scenes/fire.tscn" id="3_6vnwl"]
 [ext_resource type="PackedScene" uid="uid://bbi71da74mjdb" path="res://scenes/Objects/door_up.tscn" id="6_nnide"]
-[ext_resource type="PackedScene" uid="uid://tgsbdc5ipb8v" path="res://scenes/pause_menu.tscn" id="9_vmham"]
+[ext_resource type="PackedScene" uid="uid://tgsbdc5ipb8v" path="res://UI/pause_menu.tscn" id="9_vmham"]
 [ext_resource type="PackedScene" uid="uid://bxtcu3muha6qw" path="res://scenes/pick-ups/02_canister.tscn" id="10_lumvt"]
 [ext_resource type="PackedScene" uid="uid://bhfsvxaamdty" path="res://scenes/pick-ups/Baseitem.tscn" id="10_suhbj"]
 [ext_resource type="PackedScene" uid="uid://dv6wf7iy3fe2o" path="res://scenes/pick-ups/Golden-02.tscn" id="11_7pvdv"]

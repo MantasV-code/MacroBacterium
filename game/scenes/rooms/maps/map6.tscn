@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://tko2jlel4jc8" path="res://assets/sprites/Enviroment/Spaceship Objects/Panel3.png" id="5_ox44s"]
 [ext_resource type="Texture2D" uid="uid://lxd7yatj5uop" path="res://assets/sprites/Enviroment/Spaceship Objects/Panel4.png" id="6_1rwnm"]
 [ext_resource type="Texture2D" uid="uid://ctfh1kj1dbhvb" path="res://assets/sprites/Enviroment/Spaceship Objects/Vent Left Leaning.png" id="7_yk7q0"]
-[ext_resource type="PackedScene" uid="uid://c4fu6jdqnbam8" path="res://smoke_wall.tscn" id="8_1rwnm"]
+[ext_resource type="PackedScene" uid="uid://c4fu6jdqnbam8" path="res://scenes/smoke_wall.tscn" id="8_1rwnm"]
 [ext_resource type="Texture2D" uid="uid://coa4fb1kyjrrg" path="res://assets/Font/six.png" id="9_yk7q0"]
 [ext_resource type="Script" uid="uid://cpkoqks6li2s3" path="res://scenes/rooms/maps/player_detection.gd" id="10_nisrc"]
 

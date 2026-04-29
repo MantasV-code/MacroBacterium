@@ -1,23 +1,23 @@
 [gd_scene format=3 uid="uid://binhbx7vbdiju"]
 
-[ext_resource type="Script" uid="uid://b2kujf3l1eyc8" path="res://game_complete.gd" id="1_54mvl"]
-[ext_resource type="FontFile" uid="uid://cd2a6d43gtthe" path="res://assets/Font/Press_Start_2P/PressStart2P-Regular.ttf" id="2_rfabi"]
-[ext_resource type="AudioStream" uid="uid://r317syt4cigb" path="res://assets/Music/8bit-whoosh-ni-sound-1-00-06.mp3" id="3_ddd6m"]
-[ext_resource type="AudioStream" uid="uid://ditrh08ilojcf" path="res://assets/Music/lucadialessandro-arcade-fx-288597.mp3" id="4_cewsy"]
+[ext_resource type="Script" uid="uid://b2kujf3l1eyc8" path="res://scripts/game_complete.gd" id="1_48l2u"]
+[ext_resource type="FontFile" uid="uid://cd2a6d43gtthe" path="res://assets/Font/Press_Start_2P/PressStart2P-Regular.ttf" id="2_kwlwe"]
+[ext_resource type="AudioStream" uid="uid://r317syt4cigb" path="res://assets/Music/8bit-whoosh-ni-sound-1-00-06.mp3" id="3_qfccs"]
+[ext_resource type="AudioStream" uid="uid://ditrh08ilojcf" path="res://assets/Music/lucadialessandro-arcade-fx-288597.mp3" id="4_221i6"]
 
 [sub_resource type="FontVariation" id="FontVariation_05lnj"]
-base_font = ExtResource("2_rfabi")
+base_font = ExtResource("2_kwlwe")
 
 [sub_resource type="FontVariation" id="FontVariation_jg8ls"]
-base_font = ExtResource("2_rfabi")
+base_font = ExtResource("2_kwlwe")
 
 [sub_resource type="FontVariation" id="FontVariation_u063c"]
-base_font = ExtResource("2_rfabi")
+base_font = ExtResource("2_kwlwe")
 
 [node name="GameComplete" type="Control" unique_id=1340650200]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_54mvl")
+script = ExtResource("1_48l2u")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=887910702]
 layout_mode = 0
@@ -75,10 +75,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="SelectOptionSound" type="AudioStreamPlayer" parent="." unique_id=1167506671]
-stream = ExtResource("3_ddd6m")
+stream = ExtResource("3_qfccs")
 
 [node name="CusorMoveSound" type="AudioStreamPlayer" parent="." unique_id=2113919789]
-stream = ExtResource("4_cewsy")
+stream = ExtResource("4_221i6")
 
 [connection signal="pressed" from="VBoxContainer/PLAY" to="." method="_on_retry_pressed"]
 [connection signal="pressed" from="VBoxContainer/QUIT" to="." method="_on_quit_pressed"]

@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bxg6d8a3u7cu0" path="res://scenes/rooms/maps/map9.tscn" id="11_trceg"]
 [ext_resource type="PackedScene" uid="uid://bdp7vy0trxqsg" path="res://scenes/rooms/maps/map3.tscn" id="12_a8y0u"]
 [ext_resource type="PackedScene" uid="uid://cvabld60g5csq" path="res://scenes/rooms/boss_room.tscn" id="12_ycdy4"]
-[ext_resource type="PackedScene" uid="uid://tgsbdc5ipb8v" path="res://scenes/pause_menu.tscn" id="14_a8y0u"]
+[ext_resource type="PackedScene" uid="uid://tgsbdc5ipb8v" path="res://UI/pause_menu.tscn" id="14_a8y0u"]
 
 [node name="Main" type="Node2D" unique_id=801401041]
 script = ExtResource("1_efxa6")

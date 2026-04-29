@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c612wtbr2iaov" path="res://assets/sprites/Enviroment/Spritesheet-Spaceship.png" id="1_wbsnh"]
 [ext_resource type="Texture2D" uid="uid://boyjonr6hdflo" path="res://assets/sprites/Enviroment/Spaceship Objects/Control Panel.png" id="2_gcb1v"]
 [ext_resource type="Texture2D" uid="uid://c1xq8ebktrpos" path="res://assets/sprites/Enviroment/Spaceship Objects/Control Panel Buttons.png" id="3_cbbi4"]
-[ext_resource type="PackedScene" uid="uid://c3o5wxbss70fi" path="res://smoke.tscn" id="4_vl84v"]
+[ext_resource type="PackedScene" uid="uid://c3o5wxbss70fi" path="res://scenes/smoke.tscn" id="4_vl84v"]
 [ext_resource type="AudioStream" uid="uid://bn0j77dnrke8v" path="res://assets/Music/freesound_community-steam-2-36231.mp3" id="6_c6pth"]
 [ext_resource type="PackedScene" uid="uid://bxtcu3muha6qw" path="res://scenes/pick-ups/02_canister.tscn" id="7_1qr8y"]
 [ext_resource type="PackedScene" uid="uid://bn8rkmhj7e8yb" path="res://scenes/Objects/door_down.tscn" id="7_wbsnh"]
