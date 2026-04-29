@@ -26,7 +26,7 @@ jobs:
       #export templates
       - name: Install export templates
         run: |
-          mkdir -p ~/.local/share/godot/templates/4.5.2.stable
+          mkdir -p ~/.local/share/godot/export_templates/4.5.2.stable
           cp -r /root/.local/share/godot/export_templates/4.5.2.stable/* ~/.local/share/godot/export_templates/4.5.2.stable/
 
       # import the project to ensure all dependencies are downloaded and the project is ready for export
