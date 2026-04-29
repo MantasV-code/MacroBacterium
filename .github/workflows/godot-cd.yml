@@ -1,0 +1,52 @@
+name: Godot CD
+
+# run when code is pushed to main branch
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: write # allow workflow to push to repository
+
+jobs:
+  export:
+    runs-on: ubuntu-latest # use linux runner
+    container:
+      image: barichello/godot-ci:4.5.2 # Docker image with Godot pre-installed for CI
+
+    steps:
+      # download repo into runner
+      - name: Checkout repository
+        uses: actions/checkout@v4
+  
+      # Check Godot version
+      - name: Check Godot version
+        run: godot --version
+        
+      # export the project for Windows platform
+      - name: Export project for Windows platform
+        run: |
+          cd game
+          mkdir -p ../build/windows
+          godot --headless --export-release "Windows Desktop" ../build/windows/MacroBacterium.exe
+
+      #export the project for Linux platform
+      - name: Export project for Linux platform
+        run: |
+          cd game
+          mkdir -p ../build/linux
+          godot --headless --export-release "Linux" ../build/linux/MacroBacterium.x86_64
+      
+      # upload windows build as artifact for later use in release workflow
+      - name: Upload Windows build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: MacroBacterium-Windows
+          path: build/windows/MacroBacterium.exe
+
+      # upload linux build as artifact for later use in release workflow
+      - name: Upload Linux build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: MacroBacterium-Linux
+          path: build/linux/MacroBacterium.x86_64
