@@ -22,6 +22,10 @@ jobs:
       # Check Godot version
       - name: Check Godot version
         run: godot --version
+
+      # import the project to ensure all dependencies are downloaded and the project is ready for export
+      - name : Import project
+        run: cd game && godot --headless --editor --quit
         
       # export the project for Windows platform
       - name: Export project for Windows platform
