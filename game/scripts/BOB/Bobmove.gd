@@ -55,7 +55,7 @@ func on_death() -> void:
 	await Body.animation_finished
 	# small pause before transitioning to game over scene
 	await get_tree().create_timer(0.5).timeout
-	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
+	get_tree().change_scene_to_file("res://UI/game_over.tscn")
 	queue_free()
 
 #=================================================================

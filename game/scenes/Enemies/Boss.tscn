@@ -44,8 +44,7 @@ radius = 21.360016
 
 [node name="Boss" type="CharacterBody2D" parent="." unique_id=612914337 groups=["enemy"]]
 z_as_relative = false
-collision_layer = 2
-collision_mask = 2
+collision_mask = 3
 script = ExtResource("1_nh6cm")
 enemy_room = "boss_room"
 
