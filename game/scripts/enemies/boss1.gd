@@ -35,7 +35,7 @@ var dash_elapsed := 0.0
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
-	sprite.play("Flying")
+	sprite.play("float")
 	shoot_timer.timeout.connect(_on_shoot_timer_timeout)
 	orbit_angle = randf() * TAU  # Random starting position
 	dash_timer = DASH_COOLDOWN  # Start with full cooldown

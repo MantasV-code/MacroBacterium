@@ -305,6 +305,7 @@ texture = ExtResource("7_yk7q0")
 position = Vector2(337, -16)
 
 [node name="PlayerDetection" type="Area2D" parent="." unique_id=576680425]
+collision_mask = 2
 script = ExtResource("10_nisrc")
 room_id = "map6"
 

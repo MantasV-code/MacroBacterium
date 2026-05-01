@@ -1,8 +1,11 @@
 [gd_scene format=4 uid="uid://dourefk4ke05y"]
 
+[ext_resource type="Script" uid="uid://b5n4pnpx08aop" path="res://scripts/rooms/room_spawn_points.gd" id="1_8uwpj"]
 [ext_resource type="Texture2D" uid="uid://cdw5456320o21" path="res://assets/sprites/Enviroment/Spritesheet-Spaceship2.png" id="1_vwoav"]
+[ext_resource type="PackedScene" uid="uid://c0jndyr8fp3tf" path="res://scenes/Enemies/FlyingBac.tscn" id="2_eudf2"]
 [ext_resource type="Texture2D" uid="uid://3x4cnhl7p175" path="res://assets/Font/one.png" id="2_icf6x"]
 [ext_resource type="PackedScene" uid="uid://w47dmkkdivf0" path="res://scenes/Objects/door_wall_right.tscn" id="2_t4fbb"]
+[ext_resource type="PackedScene" uid="uid://dv51qno6kgfef" path="res://scenes/Enemies/FlyingBacEvil.tscn" id="3_pt38a"]
 [ext_resource type="PackedScene" uid="uid://bbi71da74mjdb" path="res://scenes/Objects/door_up.tscn" id="4_e20lt"]
 [ext_resource type="Texture2D" uid="uid://tko2jlel4jc8" path="res://assets/sprites/Enviroment/Spaceship Objects/Panel3.png" id="5_01snh"]
 [ext_resource type="PackedScene" uid="uid://bn8rkmhj7e8yb" path="res://scenes/Objects/door_down.tscn" id="5_e20lt"]
@@ -235,6 +238,8 @@ sources/0 = SubResource("TileSetAtlasSource_t4fbb")
 size = Vector2(631, 580)
 
 [node name="Map1" type="Node2D" unique_id=708355498]
+script = ExtResource("1_8uwpj")
+enemy_scenes = Array[PackedScene]([ExtResource("2_eudf2"), ExtResource("3_pt38a"), ExtResource("2_eudf2")])
 
 [node name="CameraTopLeft" type="Marker2D" parent="." unique_id=2051036274]
 position = Vector2(270, 41)
@@ -306,9 +311,21 @@ position = Vector2(515, 512)
 position = Vector2(-2, 2)
 collision_mask = 2
 script = ExtResource("8_vlq7q")
+room_id = "map1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection" unique_id=1542967292]
 position = Vector2(619.5, 399)
 shape = SubResource("RectangleShape2D_icf6x")
+
+[node name="EnemySpawnPoints" type="Node" parent="." unique_id=1254044686]
+
+[node name="Spawn1" type="Marker2D" parent="EnemySpawnPoints" unique_id=1987094536]
+position = Vector2(384, 609)
+
+[node name="Spawn2" type="Marker2D" parent="EnemySpawnPoints" unique_id=596237452]
+position = Vector2(850, 612)
+
+[node name="Spawn3" type="Marker2D" parent="EnemySpawnPoints" unique_id=1311483778]
+position = Vector2(661, 182)
 
 [connection signal="body_entered" from="PlayerDetection" to="PlayerDetection" method="_on_body_entered"]

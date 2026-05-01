@@ -277,6 +277,7 @@ position = Vector2(487, 75)
 position = Vector2(974, 85)
 
 [node name="PlayerDetection" type="Area2D" parent="." unique_id=621688940]
+collision_mask = 2
 script = ExtResource("8_85pil")
 room_id = "map7"
 

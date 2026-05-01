@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cb4k5ekmbogkx" path="res://scenes/pick-ups/Cowboy.tscn" id="11_sdgtb"]
 [ext_resource type="PackedScene" uid="uid://bj35b3tmg4jvw" path="res://scenes/pick-ups/DoubleShot.tscn" id="12_sdgtb"]
 [ext_resource type="PackedScene" uid="uid://g8itdb840kyg" path="res://scenes/pick-ups/piercing.tscn" id="13_7pvdv"]
+[ext_resource type="PackedScene" uid="uid://qnn45oug1dvb" path="res://scenes/Enemies/EyeTurret.tscn" id="14_u1vu7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fn815"]
 texture = ExtResource("1_mjm5x")
@@ -122,3 +123,9 @@ position = Vector2(175, 244)
 
 [node name="Piercing" parent="." unique_id=174777786 instance=ExtResource("13_7pvdv")]
 position = Vector2(207, 180)
+
+[node name="EnemySpawn" type="Marker2D" parent="." unique_id=1679323064]
+position = Vector2(269, 47)
+
+[node name="EyeTurret" parent="." unique_id=1769072605 instance=ExtResource("14_u1vu7")]
+position = Vector2(111, 142)

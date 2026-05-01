@@ -7,7 +7,13 @@ extends Area2D
 
 # -- Player detection for enemies --
 func _on_body_entered(body: Node2D) -> void:
-	print("bob detected")
+	
 	if body.is_in_group("player"):
+		print("bob detected")
 		body.current_room = room_id
-		print("bob is in the room", body.current_room)# Called when the node enters the scene tree for the first time.
+		print("bob is in the room: ", body.current_room)# Called when the node enters the scene tree for the first time.
+		
+		var room = get_parent()
+		
+		if room and room.has_method("spawn_enemies"):
+			room.spawn_enemies()

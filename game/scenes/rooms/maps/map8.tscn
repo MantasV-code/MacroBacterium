@@ -1,6 +1,8 @@
 [gd_scene format=4 uid="uid://dw3f1nqc5xasr"]
 
 [ext_resource type="Texture2D" uid="uid://cdw5456320o21" path="res://assets/sprites/Enviroment/Spritesheet-Spaceship2.png" id="1_hk4yp"]
+[ext_resource type="Script" uid="uid://b5n4pnpx08aop" path="res://scripts/rooms/room_spawn_points.gd" id="1_jiskv"]
+[ext_resource type="PackedScene" uid="uid://qnn45oug1dvb" path="res://scenes/Enemies/EyeTurret.tscn" id="2_d0ie5"]
 [ext_resource type="Texture2D" uid="uid://tifuuuxqrtaa" path="res://assets/Font/eight.png" id="2_exdjl"]
 [ext_resource type="Texture2D" uid="uid://dj2fgomux0or" path="res://assets/sprites/Enviroment/Spaceship Objects/Generic Panel Front.png" id="3_0tam6"]
 [ext_resource type="PackedScene" uid="uid://vy2iyhd7qumb" path="res://scenes/Objects/door_wall_left.tscn" id="3_7gqb3"]
@@ -427,6 +429,8 @@ sources/0 = SubResource("TileSetAtlasSource_7gqb3")
 size = Vector2(396, 259)
 
 [node name="Map8" type="Node2D" unique_id=414246913]
+script = ExtResource("1_jiskv")
+enemy_scenes = Array[PackedScene]([ExtResource("2_d0ie5")])
 
 [node name="CameraTopLeft" type="Marker2D" parent="." unique_id=1743738826]
 position = Vector2(2, 67)
@@ -476,11 +480,20 @@ position = Vector2(215, 112)
 position = Vector2(369, 110)
 
 [node name="PlayerDetection" type="Area2D" parent="." unique_id=1014153106]
+collision_mask = 2
 script = ExtResource("8_g1bjc")
 room_id = "map8"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection" unique_id=221069130]
 position = Vector2(226, 257.5)
 shape = SubResource("RectangleShape2D_exdjl")
+
+[node name="EnemySpawnPoints" type="Node" parent="." unique_id=706038515]
+
+[node name="Spawn1" type="Marker2D" parent="EnemySpawnPoints" unique_id=1405149035]
+position = Vector2(264, 351)
+
+[node name="Spawn2" type="Marker2D" parent="EnemySpawnPoints" unique_id=1854677156]
+position = Vector2(268, 159)
 
 [connection signal="body_entered" from="PlayerDetection" to="PlayerDetection" method="_on_body_entered"]
