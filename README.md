@@ -47,14 +47,16 @@ Please read the <code>CONTRIBUTING.md</code> for more guidelines on getting star
 ## Project Setup
 These are the requirements and steps needed to start editing and playing this project, windows 10,11 and Linux have been tested, feel free to test MacOS if you have the means to, and let us know if there are any issues.
 
-	1. Download Godot 4.6 or greater, make sure its Godot 4.x not Godot 5.x if that's available at time of reading.
-	This is available on steam, although its recommended to use the website (https://godotengine.org/download/windows/)
-	The .net version is not needed.
+1. Download Godot 4.6 or greater, make sure its Godot 4.x not Godot 5.x if that's available at time of reading.
+This is available on steam, although its recommended to use the website (https://godotengine.org/download/windows/)
+The .net version is not needed.
 	
-	2. Once Godot and the project is downloaded, open Godot and click "import", from here locate the project file,
-	(/MacroBacterium/game/project.godot), then open that file. That will load the project correctly
+2. Once Godot and the project is downloaded, open Godot and click "import", from here locate the project file,
+(/MacroBacterium/game/project.godot), then open that file. That will load the project correctly
 
-	3. To play the game, simple press F5, this will boot it, a controller is recommended. It should look like the Gif below.
+3. To play the game, simple press F5, this will boot it, a controller is recommended. It should look like the Gif below.
+
+   ![](https://github.com/MantasV-code/MacroBacterium/blob/main/info.gif)
 
 # License
 MIT License - Please see the <code>License.md</code>
