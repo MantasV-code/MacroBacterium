@@ -54,6 +54,7 @@ func on_death() -> void:
 	# wait for death animation to complete
 	await Body.animation_finished
 	# small pause before transitioning to game over scene
+	BobStats.Death()
 	await get_tree().create_timer(0.5).timeout
 	get_tree().change_scene_to_file("res://UI/game_over.tscn")
 	queue_free()

@@ -89,3 +89,6 @@ unique_name_in_owner = true
 stream = ExtResource("14_6ied8")
 volume_db = 8.21
 pitch_scale = 3.26
+attenuation = 7.369578
+max_polyphony = 10
+panning_strength = 3.0

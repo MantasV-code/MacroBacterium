@@ -21,6 +21,21 @@ extends Node
 @export var lifetime: float = 20.0
 @export var shoot_speed: float = 1
 
+func Death():
+	SPEED = 200.0
+	ACCELERATION = 800.0
+	FRICTION = 2800.0
+	Max_health = 3
+	speed = 100.0
+	damage = 1
+	piercing = false
+	count = 1   
+	spread = 0.0
+	color = Color.SKY_BLUE
+	scale_multiplier = 1
+	lifetime = 20.0
+	shoot_speed = 1
+	
 func modify_health(item_effect: String, value: int) -> void:
 	match item_effect:
 		"increase_health":
