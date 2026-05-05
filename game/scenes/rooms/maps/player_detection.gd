@@ -13,7 +13,11 @@ func _on_body_entered(body: Node2D) -> void:
 		body.current_room = room_id
 		print("bob is in the room: ", body.current_room)# Called when the node enters the scene tree for the first time.
 		
-		var room = get_parent()
+		var room = get_parent() # get the parent node
 		
+		# If the room exists and has enemy and item functions call them
 		if room and room.has_method("spawn_enemies"):
-			room.spawn_enemies()
+			room.call_deferred("spawn_enemies")
+		
+		if room.has_method("spawn_items"):
+			room.call_deferred("spawn_items")

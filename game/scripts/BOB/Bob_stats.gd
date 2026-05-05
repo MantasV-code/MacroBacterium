@@ -43,9 +43,8 @@ func apply_effect(item_effect: String) -> void:
 		"piercing":
 			piercing = true
 			color = Color.YELLOW
-		"Power":
+		"power":
 			color = Color.RED
-			damage += 0.5
-		"fast":
-			speed = 1400.0
-			SPEED = 350.0
+			damage += 1
+		"speed":
+			SPEED += 50.0

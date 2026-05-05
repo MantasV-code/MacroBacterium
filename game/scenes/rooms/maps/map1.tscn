@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://dourefk4ke05y"]
 
-[ext_resource type="Script" uid="uid://b5n4pnpx08aop" path="res://scripts/rooms/room_spawn_points.gd" id="1_8uwpj"]
+[ext_resource type="Script" uid="uid://b5n4pnpx08aop" path="res://scripts/rooms/room_spawn_manager.gd" id="1_8uwpj"]
 [ext_resource type="Texture2D" uid="uid://cdw5456320o21" path="res://assets/sprites/Enviroment/Spritesheet-Spaceship2.png" id="1_vwoav"]
 [ext_resource type="PackedScene" uid="uid://c0jndyr8fp3tf" path="res://scenes/Enemies/FlyingBac.tscn" id="2_eudf2"]
 [ext_resource type="Texture2D" uid="uid://3x4cnhl7p175" path="res://assets/Font/one.png" id="2_icf6x"]
@@ -319,13 +319,13 @@ shape = SubResource("RectangleShape2D_icf6x")
 
 [node name="EnemySpawnPoints" type="Node" parent="." unique_id=1254044686]
 
-[node name="Spawn1" type="Marker2D" parent="EnemySpawnPoints" unique_id=1987094536]
+[node name="E_Spawn1" type="Marker2D" parent="EnemySpawnPoints" unique_id=1987094536]
 position = Vector2(384, 609)
 
-[node name="Spawn2" type="Marker2D" parent="EnemySpawnPoints" unique_id=596237452]
+[node name="E_Spawn2" type="Marker2D" parent="EnemySpawnPoints" unique_id=596237452]
 position = Vector2(850, 612)
 
-[node name="Spawn3" type="Marker2D" parent="EnemySpawnPoints" unique_id=1311483778]
+[node name="E_Spawn3" type="Marker2D" parent="EnemySpawnPoints" unique_id=1311483778]
 position = Vector2(661, 182)
 
 [connection signal="body_entered" from="PlayerDetection" to="PlayerDetection" method="_on_body_entered"]

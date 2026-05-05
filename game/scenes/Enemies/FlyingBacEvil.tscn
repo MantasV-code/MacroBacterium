@@ -80,9 +80,7 @@ script = ExtResource("1_f228v")
 visibility_layer = 2
 z_index = 3
 sprite_frames = SubResource("SpriteFrames_ddru3")
-animation = &"Death"
-frame = 6
-frame_progress = 1.0
+animation = &"Flying"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FlyingBacEvil" unique_id=601539986]
 position = Vector2(0, -1)
