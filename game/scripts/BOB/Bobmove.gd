@@ -21,8 +21,8 @@ var current_room: String = ""
 
 func _ready() -> void:
 	# sync health component with player stats from autoload
-	$Health.max_health = BobStats.health
-	$Health.current_health = BobStats.health
+	#$Health.max_health = BobStats.health
+	#$Health.current_health = BobStats.health
 	
 	# disable looping for all shoot animations so they play once
 	for anim in ["ShootF", "ShootB", "ShootLR"]:

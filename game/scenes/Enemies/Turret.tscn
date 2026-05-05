@@ -95,6 +95,7 @@ shape = SubResource("CircleShape2D_rnwy1")
 
 [node name="Health" type="Node" parent="Turret" unique_id=167018509]
 script = ExtResource("11_3g5b1")
+max_health = 5
 
 [node name="Electrichum" type="AudioStreamPlayer2D" parent="Turret" unique_id=1742217652]
 stream = ExtResource("15_a5cub")

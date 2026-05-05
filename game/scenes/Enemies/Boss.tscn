@@ -63,6 +63,7 @@ shape = SubResource("CircleShape2D_rnwy1")
 
 [node name="Health" type="Node" parent="Boss" unique_id=167018509]
 script = ExtResource("16_7cxkp")
+max_health = 15
 
 [node name="Shoot" type="AudioStreamPlayer2D" parent="Boss" unique_id=1742217652]
 unique_name_in_owner = true

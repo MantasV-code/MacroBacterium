@@ -181,9 +181,7 @@ script = ExtResource("1_jmt5u")
 visibility_layer = 2
 z_index = 3
 sprite_frames = SubResource("SpriteFrames_rn10s")
-animation = &"Death"
-frame = 5
-frame_progress = 1.0
+animation = &"LookF"
 
 [node name="Hurtbox" type="CollisionShape2D" parent="EyeTurret" unique_id=1105050103]
 unique_name_in_owner = true
@@ -193,6 +191,7 @@ shape = SubResource("CircleShape2D_rnwy1")
 
 [node name="Health" type="Node" parent="EyeTurret" unique_id=167018509]
 script = ExtResource("14_r1eg5")
+max_health = 8
 
 [node name="Turn" type="AudioStreamPlayer2D" parent="EyeTurret" unique_id=1742217652]
 unique_name_in_owner = true

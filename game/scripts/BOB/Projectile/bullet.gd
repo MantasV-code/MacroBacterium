@@ -19,7 +19,7 @@ func setup(dir: Vector2, stats: Node, player_velocity: Vector2 = Vector2.ZERO, i
 	if is_enemy:
 		# hit player only
 		collision_layer = 1
-		collision_mask = 2
+		collision_mask = 1 | 2
 				
 		set_meta("from_enemy", true)
 	
@@ -49,15 +49,17 @@ func _physics_process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	var from_enemy = get_meta("from_enemy", false)
+	
+	if body.is_in_group("wall"):
+		if not is_piercing:
+			_on_hit()
+
 	# Enemy bullet
-	if from_enemy and body.is_in_group("player"):
+	elif from_enemy and body.is_in_group("player"):
 		body.decrease_health(get_meta("damage"))
 		if not is_piercing:
 			_on_hit()
-			
-	elif body.is_in_group("wall"):
-		_on_hit()
-		
+
 	# Player bullet
 	elif not from_enemy and body.is_in_group("enemy"):
 		body.decrease_health(get_meta("damage"))

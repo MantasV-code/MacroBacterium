@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://cf3emj21m1t57"]
+
+[ext_resource type="Script" uid="uid://bq6vq0p77bj6i" path="res://scripts/pick-ups/item_pickup.gd" id="1_3jprm"]
+[ext_resource type="Texture2D" uid="uid://ce0pt7rfcmycg" path="res://assets/sprites/pick-ups/speed_shoes.png" id="2_4dvhp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wnkdo"]
+atlas = ExtResource("2_4dvhp")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ea0yd"]
+atlas = ExtResource("2_4dvhp")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2qmu"]
+atlas = ExtResource("2_4dvhp")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2dexi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wnkdo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ea0yd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2qmu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nxbvv"]
+size = Vector2(30, 19)
+
+[node name="Speed" type="Area2D" unique_id=895744004]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_3jprm")
+item_type = "power_up"
+item_effect = "speed"
+display_name = "On The Move"
+item_color = Color(0, 0.18039216, 0.69803923, 1)
+
+[node name="ItemSprite" type="AnimatedSprite2D" parent="." unique_id=1257382380]
+unique_name_in_owner = true
+position = Vector2(1, -9)
+sprite_frames = SubResource("SpriteFrames_2dexi")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1345347159]
+position = Vector2(1, -9.5)
+shape = SubResource("RectangleShape2D_nxbvv")
+
+[node name="Label" type="Label" parent="." unique_id=1348467245]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

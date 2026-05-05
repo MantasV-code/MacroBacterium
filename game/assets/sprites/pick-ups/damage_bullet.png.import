@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwdrlkg6owtne"
-path="res://.godot/imported/piercing_bullet.png-b920f531bda505427c9993090d6ecbb5.ctex"
+uid="uid://bm783xjjieiu5"
+path="res://.godot/imported/damage_bullet.png-092f0ca0121ea89213612b0c9d4859d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/pick-ups/piercing_bullet.png"
-dest_files=["res://.godot/imported/piercing_bullet.png-b920f531bda505427c9993090d6ecbb5.ctex"]
+source_file="res://assets/sprites/pick-ups/damage_bullet.png"
+dest_files=["res://.godot/imported/damage_bullet.png-092f0ca0121ea89213612b0c9d4859d2.ctex"]
 
 [params]
 
