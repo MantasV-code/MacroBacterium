@@ -11,7 +11,7 @@ func _input(event):
 		if start_btn.has_focus():
 			$SelectOptionSound.play() #if user press enter 
 			await get_tree().create_timer(1.0).timeout #wait 1 second then switch to next scene
-			get_tree().change_scene_to_file("res://scenes/intro/space_flight.tscn")
+			get_tree().change_scene_to_file("res://scenes/main.tscn")
 	
 	if Input.is_action_just_pressed("ui_up") or Input.is_action_just_pressed("ui_down"):
 		$CusorMoveSound.play() #if user goes through options
