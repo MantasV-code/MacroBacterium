@@ -27,6 +27,9 @@ The features for the game follows:
  - Backtrack and explore
  - Community-added assests and maps
 
+   <img width="488" height="276" alt="2026-05-06_13-57-28-ezgif com-optimize" src="https://github.com/user-attachments/assets/6015abc3-200b-4e90-8f93-d79ab014c51f" />
+
+
 ## Controls
 
 Here are the basic controls for the game:
